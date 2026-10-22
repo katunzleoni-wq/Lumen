@@ -37,6 +37,11 @@ cada edição; `source.provider`, `source.url`, `source.license` e
 - **Project Gutenberg:** os três EPUBs são cópias oficiais do Project Gutenberg,
   preservadas sem modificação. A marca e a licença do Project Gutenberg são
   respeitadas; o projeto não cobra pelo acesso.
+- **FEB / Guillon Ribeiro:** _O Livro dos Médiuns_ em português usa o texto da
+  tradução de Guillon Ribeiro com autorização da FEB de 22/10/2026, registrada
+  em [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). A edição foi
+  recomposta pela Lumen, com capa e projeto gráfico próprios; não usa capa,
+  logotipo, diagramação ou notas editoriais da FEB.
 
 ## Transformação editorial
 
@@ -68,15 +73,15 @@ francês pela equipe editorial.
 
 Estas fontes foram examinadas e **não** foram usadas nem incluídas no repositório:
 
-| Item                                                      | Motivo da rejeição                                                                                                                |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| _The Spirits’ Book_ (Internet Archive, edição em inglês)  | Texto contém “Copyright © 2006 International Spiritist Council”. A marcação de domínio público no IA não corresponde ao conteúdo. |
-| _What is Spiritism?_ (Internet Archive, edição em inglês) | Texto contém “Copyright © 2010 International Spiritist Council”.                                                                  |
-| _Le Ciel et l’Enfer_ (OCR)                                | “Copyright (C) 2006 Encyclopédie Spirite”.                                                                                        |
-| _Qu’est-ce que le Spiritisme ?_ (OCR/Gallica)             | Termos de reutilização não comercial da BnF; fora da política de licença do projeto.                                              |
-| _Œuvres posthumes_ (OCR)                                  | “Nouvelle édition conforme à l’édition de 1927”; edição editorial moderna, não a original.                                        |
-| _Le Livre des Médiums_ (item CC BY-NC-ND)                 | Licença incompatível com a redistribuição aberta do EPUB.                                                                         |
-| Traduções brasileiras modernas de Kardec                  | Traduções protegidas; usamos apenas os originais franceses.                                                                       |
+| Item                                                      | Motivo da rejeição                                                                                                                 |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| _The Spirits’ Book_ (Internet Archive, edição em inglês)  | Texto contém “Copyright © 2006 International Spiritist Council”. A marcação de domínio público no IA não corresponde ao conteúdo.  |
+| _What is Spiritism?_ (Internet Archive, edição em inglês) | Texto contém “Copyright © 2010 International Spiritist Council”.                                                                   |
+| _Le Ciel et l’Enfer_ (OCR)                                | “Copyright (C) 2006 Encyclopédie Spirite”.                                                                                         |
+| _Qu’est-ce que le Spiritisme ?_ (OCR/Gallica)             | Termos de reutilização não comercial da BnF; fora da política de licença do projeto.                                               |
+| _Œuvres posthumes_ (OCR)                                  | “Nouvelle édition conforme à l’édition de 1927”; edição editorial moderna, não a original.                                         |
+| _Le Livre des Médiums_ (item CC BY-NC-ND)                 | Licença incompatível com a redistribuição aberta do EPUB.                                                                          |
+| Traduções brasileiras modernas de Kardec                  | Protegidas. A exceção é a edição de _O Livro dos Médiuns_ expressamente autorizada pela FEB em 2026; as demais seguem sem licença. |
 
 ## Autores com direitos ativos
 
@@ -93,6 +98,8 @@ canais oficiais.
 npm run sources:fetch     # baixa as fontes públicas para content-sources/raw
 npm run assets:generate   # reconstrói EPUBs, PDF e capas
 npm run assets:verify     # valida estrutura, metadados, sumário, capa e hashes
+npm run build:feb         # gera a edição PT autorizada (PDF + EPUB)
+npm run verify:feb        # valida a edição PT, créditos, capa e sumário
 ```
 
 Os arquivos brutos e as capas PNG de build ficam em `content-sources/raw/` e

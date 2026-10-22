@@ -113,6 +113,10 @@ async function main() {
       const category = categories.find((item) => item.id === book.category);
       const categoryName = category ? localized(category.name, locale) : book.category;
       const chapters = toc[book.slug] ?? [];
+      const alternateChapters =
+        book.alternateEditions?.flatMap(
+          (edition) => toc[`${book.slug}.${edition.language}`] ?? [],
+        ) ?? [];
       await add({
         url: `/${locale}/livro/${book.slug}`,
         language: locale,
@@ -132,6 +136,7 @@ async function main() {
           book.source.license,
           book.formats.join(" "),
           ...chapters,
+          ...alternateChapters,
         ].join(". "),
         meta: {
           title: localized(book.title, locale),

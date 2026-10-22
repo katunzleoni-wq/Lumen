@@ -11,12 +11,13 @@ Uma biblioteca digital editorial para leitura de obras espíritas em **EPUB** e 
 - **Leitor PDF** com react-pdf/PDF.js, renderização responsiva, navegação por página, zoom e retomada por página.
 - **Progresso e favoritos locais** com Dexie/IndexedDB — sem cadastro e sem servidor para a estante.
 - **Busca multilíngue Pagefind** sobre obras, descrições, sumários e metadados de fonte, com filtros por idioma, tipo e categoria.
+- **Edição em português autorizada pela FEB**: _O Livro dos Médiuns_, com texto de Guillon Ribeiro, PDF/EPUB próprios, capa Lumen e avisos de licença.
 - **Formulários validados** com react-hook-form + Zod: inscrição na carta editorial (persistência local) e contato com API local, honeypot e rate limit.
 - **Design system próprio** baseado em Tailwind CSS e componentes shadcn/ui sobre Radix, com tipografia Plus Jakarta Sans + Lora, capas SVG geradas e identidade editorial consistente.
 - **Acessibilidade** com navegação por teclado, skip link, foco visível, rótulos, `aria-pressed`, diálogos Radix, contraste e respeito a `prefers-reduced-motion`.
 - **Qualidade automatizada**: ESLint, TypeScript `strict`, Prettier, Husky, lint-staged, commitlint, Vitest + Testing Library, Playwright e GitHub Actions.
 
-> **Escopo do acervo:** as oito obras são **edições integrais em domínio público**, obtidas de Wikisource, Internet Archive e Project Gutenberg. A fonte, a edição de origem, a licença e a data de captura estão no catálogo e em [`docs/content-sources.md`](docs/content-sources.md). Autores com direitos ativos aparecem apenas como perfis editoriais, sem textos hospedados.
+> **Escopo do acervo:** as oito obras são **edições integrais em domínio público**, obtidas de Wikisource, Internet Archive e Project Gutenberg. _O Livro dos Médiuns_ também tem uma edição em português licenciada pela FEB, com texto de Guillon Ribeiro e projeto gráfico próprio. A fonte, a edição de origem, a licença e a data de captura estão no catálogo e em [`docs/content-sources.md`](docs/content-sources.md). Autores com direitos ativos aparecem apenas como perfis editoriais, sem textos hospedados.
 
 ## Telas
 
@@ -88,7 +89,9 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 | `npm run search:index`            | Reconstrói o índice Pagefind                              |
 | `npm run sources:fetch`           | Baixa as fontes públicas para `content-sources/raw/`      |
 | `npm run assets:generate`         | Reconstrói capas, EPUBs e o PDF a partir das fontes       |
+| `npm run build:feb`               | Gera a edição PT autorizada da FEB (PDF + EPUB)           |
 | `npm run verify:editions`         | Valida metadados, sumário, capa, idioma e hashes          |
+| `npm run verify:feb`              | Valida a edição PT, capa, créditos e sumário              |
 | `npm run assets:og`               | Regenera a imagem social `public/og.jpg`                  |
 
 ## Arquitetura
@@ -233,7 +236,7 @@ npm run test:e2e
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.
-- O acervo hospedado está em francês e inglês, nos idiomas originais; títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas protegidas.
+- O acervo hospedado está em francês e inglês, nos idiomas originais, com _O Livro dos Médiuns_ também em português; títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas sem licença.
 
 ## Próximos passos naturais
 
@@ -246,7 +249,7 @@ npm run test:e2e
 
 ## Direitos
 
-O código da aplicação está sob [MIT](LICENSE). As obras originais de Allan Kardec, Camille Flammarion e Arthur Conan Doyle estão em domínio público; a transcrição de _Le Livre des Esprits_ usada no EPUB é CC BY-SA 4.0 e mantém sua atribuição. Capas, descrições, seleções e identidade Lumen são produções editoriais e não estão cobertas pela licença MIT do código. Textos de Chico Xavier, Divaldo Pereira Franco e Yvonne do Amaral Pereira não são hospedados; consulte as editoras oficiais.
+O código da aplicação está sob [MIT](LICENSE). As obras originais de Allan Kardec, Camille Flammarion e Arthur Conan Doyle estão em domínio público; a transcrição de _Le Livre des Esprits_ usada no EPUB é CC BY-SA 4.0 e mantém sua atribuição. A edição em português de _O Livro dos Médiuns_ usa a tradução de Guillon Ribeiro com autorização da FEB, registrada em [`docs/licenses/feb-2026.md`](docs/licenses/feb-2026.md); o texto não foi alterado e a capa/projeto gráfico são da Lumen. Capas, descrições, seleções e identidade Lumen são produções editoriais e não estão cobertas pela licença MIT do código. Textos de Chico Xavier, Divaldo Pereira Franco e Yvonne do Amaral Pereira não são hospedados; consulte as editoras oficiais.
 
 ---
 

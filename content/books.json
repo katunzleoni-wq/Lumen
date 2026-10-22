@@ -133,7 +133,24 @@
         "edition": "9e édition, Paris, 1865",
         "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
         "capturedAt": "2026-10-21"
-      }
+      },
+      "alternateEditions": [
+        {
+          "id": "pt-feb-guillon",
+          "language": "pt",
+          "label": {
+            "pt": "Português — tradução de Guillon Ribeiro",
+            "en": "Portuguese — Guillon Ribeiro translation",
+            "es": "Portugués — traducción de Guillon Ribeiro",
+            "fr": "Portugais — traduction de Guillon Ribeiro"
+          },
+          "translator": "Guillon Ribeiro",
+          "license": "Licença FEB 2026 · uso não comercial · texto integral",
+          "pdf": "/books/o-livro-dos-mediuns.pt.pdf",
+          "epub": "/books/o-livro-dos-mediuns.pt.epub",
+          "cover": "/covers/o-livro-dos-mediuns-pt.svg"
+        }
+      ]
     },
     {
       "id": "a-genese",

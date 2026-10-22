@@ -5,7 +5,7 @@ import { ArrowLeft, Check, Download, Maximize2, Minimize2, Settings2, Type } fro
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/navigation";
-import type { Book, BookFormat } from "@/content/books";
+import type { Book, BookEdition, BookFormat } from "@/content/books";
 import {
   MAX_FONT_SIZE,
   MIN_FONT_SIZE,
@@ -37,10 +37,17 @@ const PdfReader = dynamic(() => import("./pdf-reader"), {
 
 interface ReaderExperienceProps {
   book: Book;
+  edition?: BookEdition;
   initialFormat: BookFormat;
+  readingId: string;
 }
 
-export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps) {
+export function ReaderExperience({
+  book,
+  edition,
+  initialFormat,
+  readingId,
+}: ReaderExperienceProps) {
   const t = useTranslations("reader");
   const tCommon = useTranslations("common");
   const locale = useLocale();
@@ -60,7 +67,7 @@ export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps)
 
   useEffect(() => {
     setMounted(true);
-    Promise.all([getReadingProgress(book.id, "epub"), getReadingProgress(book.id, "pdf")])
+    Promise.all([getReadingProgress(readingId, "epub"), getReadingProgress(readingId, "pdf")])
       .then(([epub, pdf]) => {
         setProgress({ epub: epub?.percent ?? 0, pdf: pdf?.percent ?? 0 });
       })
@@ -72,7 +79,7 @@ export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps)
     return () => {
       document.body.style.overflow = previousOverflow;
     };
-  }, [book.id]);
+  }, [readingId]);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -136,7 +143,15 @@ export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps)
   }
 
   const title = book.title[locale as keyof typeof book.title] ?? book.title.pt;
-  const fileUrl = `/books/${book.slug}.${format}`;
+  const formats = edition
+    ? [
+        ...(edition.epub ? (["epub"] as BookFormat[]) : []),
+        ...(edition.pdf ? (["pdf"] as BookFormat[]) : []),
+      ]
+    : book.formats;
+  const fileUrl =
+    (format === "pdf" ? edition?.pdf : edition?.epub) ?? `/books/${book.slug}.${format}`;
+  const editionLabel = edition?.label[locale as keyof typeof edition.label];
 
   return (
     <main
@@ -165,16 +180,53 @@ export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps)
             Lumen
           </p>
           <h1 className="mt-0.5 truncate font-serif text-sm font-medium sm:text-base">{title}</h1>
+          {editionLabel && (
+            <p className="truncate text-[0.6rem] text-muted-foreground">{editionLabel}</p>
+          )}
         </div>
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          {book.formats.length > 1 && (
+          {book.alternateEditions && book.alternateEditions.length > 0 && (
+            <div
+              className="hidden items-center rounded-full border border-black/10 bg-white/40 p-0.5 sm:flex"
+              role="group"
+              aria-label={tCommon("language")}
+            >
+              <Link
+                href={`/ler/${book.slug}`}
+                aria-current={!edition ? "page" : undefined}
+                className={
+                  !edition
+                    ? "rounded-full bg-primary px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-primary-foreground"
+                    : "rounded-full px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-muted-foreground hover:text-foreground"
+                }
+              >
+                {book.language.toUpperCase()}
+              </Link>
+              {book.alternateEditions.map((alt) => (
+                <Link
+                  key={alt.id}
+                  href={`/ler/${book.slug}?lang=${alt.language}${alt.pdf ? "&formato=pdf" : ""}`}
+                  aria-current={edition?.id === alt.id ? "page" : undefined}
+                  className={
+                    edition?.id === alt.id
+                      ? "rounded-full bg-primary px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-primary-foreground"
+                      : "rounded-full px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-muted-foreground hover:text-foreground"
+                  }
+                >
+                  {alt.language.toUpperCase()}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {formats.length > 1 && (
             <div
               className="flex items-center rounded-full border border-black/10 bg-white/40 p-0.5"
               role="group"
               aria-label={t("format")}
             >
-              {book.formats.map((item) => (
+              {formats.map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -336,14 +388,14 @@ export function ReaderExperience({ book, initialFormat }: ReaderExperienceProps)
       <div className="relative min-h-0 flex-1">
         {format === "epub" ? (
           <EpubReader
-            bookId={book.id}
+            bookId={readingId}
             url={fileUrl}
             theme={theme}
             fontSize={fontSize}
             onProgress={handleProgress}
           />
         ) : (
-          <PdfReader bookId={book.id} url={fileUrl} onProgress={handleProgress} />
+          <PdfReader bookId={readingId} url={fileUrl} onProgress={handleProgress} />
         )}
       </div>
     </main>

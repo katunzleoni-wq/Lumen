@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-22",
+  "config": {
+    "slug": "o-livro-dos-mediuns",
+    "source": "o-livro-dos-mediuns.pdf",
+    "startPage": 11,
+    "title": "O Livro dos Médiuns",
+    "subtitle": "ou Guia dos Médiuns e dos Evocadores",
+    "author": "Allan Kardec",
+    "translator": "Guillon Ribeiro",
+    "license": "Obra de Allan Kardec. Tradução de Guillon Ribeiro. Tradução e edição © Federação Espírita Brasileira. Uso autorizado ao projeto Lumen para disponibilização gratuita e sem fins lucrativos.",
+    "description": "Ensino especial dos Espíritos sobre a teoria de todos os gêneros de manifestações, os meios de comunicação com o mundo invisível e o desenvolvimento da mediunidade.",
+    "year": 1861,
+    "editionNote": "Edição Lumen preparada a partir do texto da tradução de Guillon Ribeiro, com autorização da FEB."
+  },
+  "chapters": 37,
+  "pdf": {
+    "file": "public/books/o-livro-dos-mediuns.pt.pdf",
+    "bytes": 2567052,
+    "pages": 501,
+    "sha256": "696a0932640b621801b1b2189d0f9a4068500d4837f77e72039d535bdee5424b"
+  },
+  "epub": {
+    "file": "public/books/o-livro-dos-mediuns.pt.epub",
+    "bytes": 655182,
+    "sha256": "fd90132f9958b1c0d99e99994e494271b0ad23180a52b2e97273fa8188061fd5"
+  }
+}

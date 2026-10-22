@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { books, getBookBySlug, type BookFormat } from "@/content/books";
+import {
+  books,
+  getBookBySlug,
+  getBookEdition,
+  getEditionFormats,
+  type BookFormat,
+} from "@/content/books";
 import { isLocale, locales, type Locale } from "@/i18n";
 import { createPageMetadata } from "@/lib/metadata";
 import { ReaderExperience } from "@/components/reader/reader-experience";
@@ -44,7 +50,7 @@ export default async function ReaderPage({
   searchParams,
 }: {
   params: { locale: string; slug: string };
-  searchParams: { formato?: string };
+  searchParams: { formato?: string; lang?: string };
 }) {
   if (!isLocale(params.locale)) notFound();
   const locale: Locale = params.locale;
@@ -52,7 +58,16 @@ export default async function ReaderPage({
   const book = getBookBySlug(params.slug);
   if (!book) notFound();
 
-  const initialFormat = resolveFormat(searchParams.formato, book.formats);
+  const edition = getBookEdition(book, searchParams.lang);
+  const formats = edition ? getEditionFormats(edition) : book.formats;
+  const initialFormat = resolveFormat(searchParams.formato, formats);
 
-  return <ReaderExperience book={book} initialFormat={initialFormat} />;
+  return (
+    <ReaderExperience
+      book={book}
+      edition={edition}
+      initialFormat={initialFormat}
+      readingId={edition ? `${book.id}:${edition.id}` : book.id}
+    />
+  );
 }

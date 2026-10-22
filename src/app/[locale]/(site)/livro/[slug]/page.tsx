@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
+  BookOpen,
   CalendarDays,
   ChevronRight,
   Clock3,
@@ -243,6 +244,67 @@ export default async function BookPage({ params }: { params: { locale: string; s
                   </p>
                 </div>
               </div>
+
+              {book.alternateEditions?.map((edition) => (
+                <section
+                  key={edition.id}
+                  className="mt-8 rounded-2xl border border-forest-200/70 bg-forest-50/50 p-5 sm:p-6"
+                  aria-labelledby={`edition-${edition.id}`}
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-forest-700">
+                        <Languages className="size-3.5" aria-hidden="true" />
+                        {t("book.otherLanguages")}
+                      </p>
+                      <h2
+                        id={`edition-${edition.id}`}
+                        className="mt-2 font-serif text-xl font-medium"
+                      >
+                        {edition.label[locale]}
+                      </h2>
+                      {edition.translator && (
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {edition.translator} · {edition.license}
+                        </p>
+                      )}
+                    </div>
+                    <Badge variant="secondary">
+                      <ShieldCheck className="size-3" aria-hidden="true" />
+                      {t("book.licensedByFeb")}
+                    </Badge>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {edition.pdf && (
+                      <Button asChild size="sm">
+                        <Link href={`/ler/${book.slug}?lang=${edition.language}&formato=pdf`}>
+                          <BookOpen className="size-4" aria-hidden="true" />
+                          {t("book.readThisEdition")}
+                        </Link>
+                      </Button>
+                    )}
+                    {edition.pdf && (
+                      <Button asChild variant="outline" size="sm">
+                        <a href={edition.pdf} download>
+                          <Download className="size-3.5" aria-hidden="true" />
+                          PDF
+                        </a>
+                      </Button>
+                    )}
+                    {edition.epub && (
+                      <Button asChild variant="outline" size="sm">
+                        <a href={edition.epub} download>
+                          <Download className="size-3.5" aria-hidden="true" />
+                          EPUB
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                  <p className="mt-3 text-[0.66rem] leading-relaxed text-muted-foreground">
+                    {t("book.sampleNote")}
+                  </p>
+                </section>
+              ))}
 
               {toc.length > 0 && (
                 <section className="mt-12" aria-labelledby="toc-heading">

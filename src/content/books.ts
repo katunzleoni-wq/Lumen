@@ -20,6 +20,17 @@ export interface BookSource {
   capturedAt: string;
 }
 
+export interface BookEdition {
+  id: string;
+  language: Locale;
+  label: LocalizedText;
+  translator?: string;
+  license: string;
+  pdf?: string;
+  epub?: string;
+  cover: string;
+}
+
 export interface Book {
   id: string;
   slug: string;
@@ -40,6 +51,7 @@ export interface Book {
   subtitle: LocalizedText;
   description: LocalizedText;
   source: BookSource;
+  alternateEditions?: BookEdition[];
 }
 
 export interface Category {
@@ -91,6 +103,19 @@ export function getBookToc(slug: string): string[] {
 
 export function getBookAsset(slug: string, format: BookFormat): string {
   return `/books/${slug}.${format}`;
+}
+
+export function getBookEdition(book: Book, language?: string): BookEdition | undefined {
+  if (!language) return undefined;
+  return book.alternateEditions?.find((edition) => edition.language === language);
+}
+
+export function getEditionFormats(edition: BookEdition): BookFormat[] {
+  return [...(edition.epub ? (["epub"] as const) : []), ...(edition.pdf ? (["pdf"] as const) : [])];
+}
+
+export function getEditionAsset(edition: BookEdition, format: BookFormat): string | undefined {
+  return format === "pdf" ? edition.pdf : edition.epub;
 }
 
 export function getBookCover(slug: string): string {

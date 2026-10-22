@@ -69,6 +69,26 @@ test("navigates through the EPUB table of contents", async ({ page }) => {
   });
 });
 
+test("opens the FEB-authorized Portuguese edition and switches format", async ({ page }) => {
+  await page.goto("/pt/livro/o-livro-dos-mediuns");
+  await expect(
+    page.getByRole("heading", { name: "Português — tradução de Guillon Ribeiro" }),
+  ).toBeVisible();
+  const readLink = page.getByRole("link", { name: "Ler nesta edição" });
+  await expect(readLink).toHaveAttribute("href", "/pt/ler/o-livro-dos-mediuns?lang=pt&formato=pdf");
+  await readLink.click();
+  await expect(page.getByTestId("reader-shell")).toHaveAttribute("data-reader-format", "pdf");
+  await expect(page.getByText(/Página 1 de \d+/)).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByText("Português — tradução de Guillon Ribeiro")).toBeVisible();
+
+  await page.getByRole("button", { name: "EPUB" }).click();
+  await expect(page.getByTestId("reader-shell")).toHaveAttribute("data-reader-format", "epub");
+  const frame = page.frameLocator("iframe");
+  await expect(frame.locator("body")).toContainText("Nota sobre esta edição", {
+    timeout: 20_000,
+  });
+});
+
 test("restores reading progress from IndexedDB on the edition page", async ({ page }) => {
   await page.goto("/pt/ler/o-livro-dos-espiritos");
   await expect(page.locator("iframe")).toBeVisible();
