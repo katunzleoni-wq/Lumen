@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-22",
+  "config": {
+    "slug": "o-evangelho-segundo-o-espiritismo",
+    "source": "o-evangelho-segundo-o-espiritismo.pdf",
+    "startPage": 19,
+    "title": "O Evangelho segundo o Espiritismo",
+    "subtitle": "A moral de Jesus à luz do Espiritismo",
+    "author": "Allan Kardec",
+    "translator": "Guillon Ribeiro",
+    "license": "Obra de Allan Kardec. Tradução de Guillon Ribeiro. Tradução e edição © Federação Espírita Brasileira. Uso autorizado ao projeto Lumen para disponibilização gratuita e sem fins lucrativos.",
+    "description": "Explicação das máximas morais do Cristo em concordância com o Espiritismo e suas aplicações às diversas circunstâncias da vida.",
+    "year": 1864,
+    "editionNote": "Edição Lumen preparada a partir do texto da tradução de Guillon Ribeiro, com autorização da FEB."
+  },
+  "chapters": 31,
+  "pdf": {
+    "file": "public/books/o-evangelho-segundo-o-espiritismo.pdf",
+    "bytes": 2511574,
+    "pages": 484,
+    "sha256": "6e2646452dde8c586110bff561854eb029301c90ae9aa96da97074695525a3b9"
+  },
+  "epub": {
+    "file": "public/books/o-evangelho-segundo-o-espiritismo.epub",
+    "bytes": 640377,
+    "sha256": "7a418ed4615aeee47fe83e92518c250553fd3352c57993b4811cac5734801050"
+  }
+}

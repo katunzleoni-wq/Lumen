@@ -17,11 +17,16 @@
     },
     "o-evangelho-segundo-o-espiritismo": {
       "file": "public/books/o-evangelho-segundo-o-espiritismo.epub",
-      "sha256": "94757384c2c55e851e6d6c48c9dc04c588eb1d3755a5bf4bccf104074aa4d6b5",
-      "bytes": 913121,
-      "language": "fr",
-      "chapters": 29,
-      "strategy": "ocr"
+      "sha256": "7a418ed4615aeee47fe83e92518c250553fd3352c57993b4811cac5734801050",
+      "bytes": 640377,
+      "language": "pt",
+      "chapters": 31,
+      "strategy": "feb",
+      "pdf": {
+        "file": "public/books/o-evangelho-segundo-o-espiritismo.pdf",
+        "sha256": "6e2646452dde8c586110bff561854eb029301c90ae9aa96da97074695525a3b9",
+        "bytes": 2511574
+      }
     },
     "o-livro-dos-mediuns": {
       "file": "public/books/o-livro-dos-mediuns.epub",

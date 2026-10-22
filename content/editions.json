@@ -6,48 +6,10 @@
     "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "o-evangelho-segundo-o-espiritismo": {
-    "strategy": "ocr",
-    "rawFile": "evangile.txt",
-    "fetchUrl": "https://archive.org/download/bub_gb_yfcU9eVzmVMC/bub_gb_yfcU9eVzmVMC_djvu.txt",
-    "language": "fr",
+    "strategy": "external",
+    "language": "pt",
     "year": 1864,
-    "editionNote": "3e édition, Paris, 1866",
-    "introStart": 170,
-    "end": 21514,
-    "chapters": [
-      1779, 2293, 2638, 3212, 3930, 5554, 5850, 6561, 7228, 7601, 8295, 8990, 9761, 10928, 11501,
-      11920, 12887, 13720, 14459, 14909, 15150, 15806, 16004, 16591, 17077, 17421, 17688, 18498
-    ],
-    "chapterTitles": [
-      "Je ne suis point venu détruire la loi",
-      "Mon royaume n’est pas de ce monde",
-      "Il y a plusieurs demeures dans la maison de mon Père",
-      "Personne ne peut voir le royaume de Dieu s’il ne naît de nouveau",
-      "Bienheureux les affligés",
-      "Le Christ consolateur",
-      "Bienheureux les pauvres d’esprit",
-      "Bienheureux ceux qui ont le cœur pur",
-      "Bienheureux ceux qui sont doux et pacifiques",
-      "Bienheureux ceux qui sont miséricordieux",
-      "Aimer son prochain comme soi-même",
-      "Aimez vos ennemis",
-      "Que votre main gauche ne sache pas ce que donne votre main droite",
-      "Honorez votre père et votre mère",
-      "Hors la charité, point de salut",
-      "On ne peut servir Dieu et Mammon",
-      "Soyez parfaits",
-      "Beaucoup d’appelés et peu d’élus",
-      "La foi transporte les montagnes",
-      "Les ouvriers de la dernière heure",
-      "Il y aura de faux christs et de faux prophètes",
-      "Ne séparez pas ce que Dieu a joint",
-      "Morale étrange",
-      "Ne mettez pas la lampe sous le boisseau",
-      "Cherchez et vous trouverez",
-      "Donnez gratuitement ce que vous avez reçu gratuitement",
-      "Demandez et vous obtiendrez",
-      "Recueil de prières spirites"
-    ]
+    "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "o-livro-dos-mediuns": {
     "strategy": "external",
