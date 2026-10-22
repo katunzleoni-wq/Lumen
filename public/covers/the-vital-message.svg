@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-label="Capa de The Vital Message">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34252a"/>
+      <stop offset=".6" stop-color="#67515a"/>
+      <stop offset="1" stop-color="#34252a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".32" r=".6">
+      <stop offset="0" stop-color="#d9bfa4" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#d9bfa4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <rect width="600" height="900" fill="url(#glow)"/>
+  <rect x="24" y="24" width="552" height="852" fill="none" stroke="#f8f3e8" stroke-opacity=".2"/>
+  <text x="300" y="84" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="7" fill="#f8f3e8" fill-opacity=".82">LUMEN</text>
+  <text x="300" y="107" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.4" letter-spacing="2.2" fill="#f8f3e8" fill-opacity=".52">BIBLIOTECA DIGITAL ESPÍRITA INTERNACIONAL</text>
+  
+    <g fill="none" stroke="#d9bfa4" stroke-width="1.2" opacity=".6">
+      <path d="M-20 292c70-54 142-54 212 0s142 54 212 0 142-54 212 0"/>
+      <path d="M-20 340c70-54 142-54 212 0s142 54 212 0 142-54 212 0" opacity=".7"/>
+      <path d="M-20 388c70-54 142-54 212 0s142 54 212 0 142-54 212 0" opacity=".45"/>
+    </g>
+  <text x="300" y="476" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" letter-spacing="-.5" fill="#f8f3e8">The Vital Message</text>
+  <line x1="238" y1="526" x2="362" y2="526" stroke="#d9bfa4" stroke-opacity=".75"/>
+  <text x="300" y="563" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" letter-spacing="2.5" fill="#f8f3e8" fill-opacity=".85">ARTHUR CONAN DOYLE</text>
+  <text x="300" y="814" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#f8f3e8" fill-opacity=".72">Spiritualism and the renewal of hope</text>
+  <text x="300" y="847" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.4" letter-spacing="1.8" fill="#f8f3e8" fill-opacity=".48">COMPLETE EDITION · PUBLIC DOMAIN · 1919</text>
+  <rect width="600" height="900" filter="url(#grain)" opacity=".7"/>
+</svg>

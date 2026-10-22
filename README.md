@@ -10,13 +10,13 @@ Uma biblioteca digital editorial para leitura de obras espíritas em **EPUB** e 
 - **Leitor EPUB** com epub.js + react-reader, sumário, navegação, temas (papel, sépia, noturno), tamanho de texto, tela cheia e retomada por CFI.
 - **Leitor PDF** com react-pdf/PDF.js, renderização responsiva, navegação por página, zoom e retomada por página.
 - **Progresso e favoritos locais** com Dexie/IndexedDB — sem cadastro e sem servidor para a estante.
-- **Busca multilíngue Pagefind** sobre obras, descrições e conteúdo das amostras, com filtros por idioma, tipo e categoria.
+- **Busca multilíngue Pagefind** sobre obras, descrições, sumários e metadados de fonte, com filtros por idioma, tipo e categoria.
 - **Formulários validados** com react-hook-form + Zod: inscrição na carta editorial (persistência local) e contato com API local, honeypot e rate limit.
 - **Design system próprio** baseado em Tailwind CSS e componentes shadcn/ui sobre Radix, com tipografia Plus Jakarta Sans + Lora, capas SVG geradas e identidade editorial consistente.
 - **Acessibilidade** com navegação por teclado, skip link, foco visível, rótulos, `aria-pressed`, diálogos Radix, contraste e respeito a `prefers-reduced-motion`.
 - **Qualidade automatizada**: ESLint, TypeScript `strict`, Prettier, Husky, lint-staged, commitlint, Vitest + Testing Library, Playwright e GitHub Actions.
 
-> **Escopo do acervo:** as oito obras são reais e estão em domínio público, mas os arquivos incluídos são **edições de amostra** produzidas pela Lumen para demonstrar o produto. O texto integral pode ser incorporado sem alterar a arquitetura.
+> **Escopo do acervo:** as oito obras são **edições integrais em domínio público**, obtidas de Wikisource, Internet Archive e Project Gutenberg. A fonte, a edição de origem, a licença e a data de captura estão no catálogo e em [`docs/content-sources.md`](docs/content-sources.md). Autores com direitos ativos aparecem apenas como perfis editoriais, sem textos hospedados.
 
 ## Telas
 
@@ -78,7 +78,7 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 | Comando                           | O que faz                                                 |
 | --------------------------------- | --------------------------------------------------------- |
 | `npm run dev`                     | Gera o índice de busca e inicia o Next em desenvolvimento |
-| `npm run build`                   | Gera o índice e compila a aplicação para produção         |
+| `npm run build`                   | Gera o índice, valida as edições e compila para produção  |
 | `npm start`                       | Sobe o build de produção                                  |
 | `npm run lint`                    | ESLint via `next lint`                                    |
 | `npm run typecheck`               | `tsc --noEmit` em modo strict                             |
@@ -86,7 +86,9 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 | `npm run test:e2e`                | Fluxos críticos no Chromium (Playwright)                  |
 | `npm run format` / `format:check` | Prettier                                                  |
 | `npm run search:index`            | Reconstrói o índice Pagefind                              |
-| `npm run assets:generate`         | Regenera capas e edições de amostra EPUB/PDF              |
+| `npm run sources:fetch`           | Baixa as fontes públicas para `content-sources/raw/`      |
+| `npm run assets:generate`         | Reconstrói capas, EPUBs e o PDF a partir das fontes       |
+| `npm run verify:editions`         | Valida metadados, sumário, capa, idioma e hashes          |
 | `npm run assets:og`               | Regenera a imagem social `public/og.jpg`                  |
 
 ## Arquitetura
@@ -95,10 +97,15 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 .
 ├── content/
 │   ├── books.json              # fonte canônica do acervo e das categorias
-│   └── samples.json            # capítulos das edições de amostra
+│   ├── editions.json           # estratégia de build e capítulos das fontes
+│   ├── editions.lock.json      # hashes SHA-256, tamanho e contagem de seções
+│   ├── toc.json                # sumários reais exibidos nas páginas das obras
+│   └── authors.json            # perfis de autores com direitos ativos
 ├── scripts/
 │   ├── build-search-index.mjs  # registros Pagefind por rota e idioma
-│   ├── generate-book-assets.mjs# capas SVG + EPUB 3 + PDF
+│   ├── build-real-editions.mjs # capas SVG + EPUB 3 a partir das fontes
+│   ├── validate-editions.mjs   # OPF, idioma, nav/NCX, capa, hash e PDF
+│   ├── fetch-sources.mjs       # download reprodutível das fontes públicas
 │   └── copy-pdf-worker.mjs     # assets do PDF.js após instalar
 ├── src/
 │   ├── app/
@@ -113,7 +120,8 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 │   │   ├── reader/             # shell, EPUB, PDF, loading
 │   │   ├── site/               # header, footer, marca, idioma, favorito
 │   │   └── ui/                 # primitivas shadcn/Radix
-│   ├── content/books.ts        # tipos e consultas do acervo
+│   ├── content/books.ts        # tipos e consultas do acervo e do sumário
+│   ├── content/authors.ts      # perfis de autores protegidos
 │   ├── lib/                    # catálogo, DB, schemas, SEO, utils
 │   ├── messages/               # pt, en, es, fr
 │   ├── stores/reader-store.ts  # preferências persistidas
@@ -126,33 +134,33 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 
 ### Rotas
 
-| Rota                                     | Conteúdo                                                   |
-| ---------------------------------------- | ---------------------------------------------------------- |
-| `/[locale]`                              | Home editorial, destaque, categorias, princípios e carta   |
-| `/[locale]/biblioteca`                   | Catálogo filtrável e ordenável                             |
-| `/[locale]/livro/[slug]`                 | Detalhe da obra, metadados, sumário da amostra e downloads |
-| `/[locale]/ler/[slug]?formato=epub\|pdf` | Leitor imersivo                                            |
-| `/[locale]/busca`                        | Busca Pagefind com filtros                                 |
-| `/[locale]/favoritos`                    | Estante local via IndexedDB                                |
-| `/[locale]/sobre`                        | Projeto, direitos, privacidade, FAQ e contato              |
+| Rota                                     | Conteúdo                                                    |
+| ---------------------------------------- | ----------------------------------------------------------- |
+| `/[locale]`                              | Home editorial, destaque, categorias, princípios e carta    |
+| `/[locale]/biblioteca`                   | Catálogo filtrável e ordenável                              |
+| `/[locale]/livro/[slug]`                 | Detalhe, metadados, sumário real, fonte/licença e downloads |
+| `/[locale]/ler/[slug]?formato=epub\|pdf` | Leitor imersivo                                             |
+| `/[locale]/busca`                        | Busca Pagefind com filtros                                  |
+| `/[locale]/favoritos`                    | Estante local via IndexedDB                                 |
+| `/[locale]/sobre`                        | Projeto, direitos, privacidade, FAQ e contato               |
 
 ### Decisões de engenharia
 
 - **Route group `(site)`**: permite que o leitor ocupe a viewport inteira sem header/footer, sem duplicar layouts nem recorrer a CSS frágil.
 - **Índice Pagefind próprio**: em vez de depender do diretório interno do Next, o script cria um registro explícito por rota/idioma via API Node do Pagefind. O índice fica determinístico e permite filtros tipados (`locale`, `type`, `category`, `format`).
 - **Conteúdo como dado**: o acervo vive em JSON, fora dos componentes. Trocar ou acrescentar obras não exige tocar em páginas, leitores ou busca.
-- **Assets reprodutíveis**: capas e edições de amostra são geradas por script. Os binários finais são versionados para que clone + install já funcione; a origem continua auditável.
+- **Assets reprodutíveis**: capas e edições integrais são geradas por script a partir de fontes públicas registradas em `content/editions.json`. Os binários finais são versionados para que clone + install já funcione; a origem, a licença e os hashes continuam auditáveis.
 - **Persistência local primeiro**: favoritos e progresso nunca exigem login. A integração de sincronização futura pode ser adicionada sobre a camada Dexie, sem alterar a UI.
 - **Preferências separadas de progresso**: Zustand guarda tema/tamanho de fonte (leve e síncrono); Dexie guarda fatos do livro (posição, página, percentual). Cada um no lugar certo.
 - **Busca carregada sob demanda**: Pagefind só é importado quando há consulta, mantendo o First Load JS da página em ~190 kB.
 
 ## Adicionando uma obra
 
-1. Acrescente o registro em `content/books.json` com título/subtítulo/descrição nos quatro idiomas, categoria, ano, paleta, motivo da capa e formatos.
-2. Acrescente os capítulos de amostra em `content/samples.json` (texto no idioma da edição).
-3. Rode `npm run assets:generate` para criar `public/covers/<slug>.svg`, `public/books/<slug>.epub` e `.pdf`.
-4. Rode `npm run search:index` (ou apenas `npm run build`, que já faz isso).
-5. Valide com `npm test` e `npm run test:e2e`.
+1. Acrescente o registro em `content/books.json` com título/subtítulo/descrição nos quatro idiomas, categoria, ano, paleta, motivo da capa, formatos e bloco `source`.
+2. Descreva a estratégia em `content/editions.json` (`wikisource`, `ocr` ou `copy-epub`) e, quando aplicável, as linhas de início dos capítulos.
+3. Rode `npm run sources:fetch` para baixar a fonte pública e `npm run assets:generate` para criar `public/covers/<slug>.svg`, `public/books/<slug>.epub` e o PDF.
+4. Rode `npm run verify:editions` e `npm run search:index` (ou apenas `npm run build`).
+5. Valide com `npm test` e `npm run test:e2e` e registre a procedência em `docs/content-sources.md`.
 
 O schema fica em `src/content/books.ts`; a página de detalhe, os cards, o catálogo e o índice leem a mesma fonte.
 
@@ -170,7 +178,7 @@ Preferências do leitor usam `localStorage` (`lumen-reader-preferences`), versio
 
 ## Busca
 
-O índice é gerado com a API Node do Pagefind a partir de 44 registros: **3 páginas + 8 obras por idioma**. O conteúdo inclui metadados localizados e, no português, também os capítulos da amostra. O cliente:
+O índice é gerado com a API Node do Pagefind a partir de 44 registros: **3 páginas + 8 obras por idioma**. O conteúdo inclui metadados localizados, fonte, licença e os títulos reais do sumário de cada edição. O cliente:
 
 1. importa `/pagefind/pagefind.js` apenas quando necessário;
 2. aplica filtros `locale`, `type` e `category`;
@@ -196,7 +204,7 @@ npm run test:e2e
 ```
 
 - **Unitários/componentes:** filtros do catálogo, schemas, store do leitor, paridade de mensagens, card de obra e newsletter (validação + persistência mockada).
-- **E2E:** redirecionamento de locale, troca de idioma, filtros e deep links, busca Pagefind, leitor EPUB (tema e navegação), leitor PDF (página e largura responsiva), troca de formato, favoritos com persistência após reload.
+- **E2E:** redirecionamento de locale, troca de idioma, filtros e deep links, busca Pagefind, leitor EPUB (tema, sumário e navegação), leitor PDF de 164 páginas (paginação e largura responsiva), troca de formato, favoritos com persistência após reload.
 - **Hooks:** `pre-commit` roda lint-staged; `commit-msg` aplica Conventional Commits.
 - **CI:** dois jobs no GitHub Actions — qualidade/build e Playwright com Chromium.
 
@@ -219,17 +227,17 @@ npm run test:e2e
 
 ## Limitações conhecidas
 
-- As edições são amostras editoriais; não são textos integrais nem edições críticas.
+- As edições são integrais, mas não são edições críticas. Os textos franceses do Internet Archive passaram por OCR e podem conter erros residuais; a transcrição de _O Livro dos Espíritos_ vem do Wikisource e está sob CC BY-SA 4.0.
 - A “carta editorial” persiste apenas localmente na demonstração; não há envio de e-mail.
 - O contato grava em disco local, apropriado para execução local/self-hosted, não para serverless somente-leitura.
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.
-- O acervo demonstrativo é em português; a interface e a busca são multilíngues.
+- O acervo hospedado está em francês e inglês, nos idiomas originais; títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas protegidas.
 
 ## Próximos passos naturais
 
-- Substituir as amostras por edições integrais revisadas e adicionar um pipeline de importação/validação de EPUB.
+- Ampliar o acervo com novas edições originais em domínio público e revisar o OCR contra os fac-símiles.
 - Sincronização opcional de favoritos/progresso (Supabase, PocketBase ou API própria).
 - Anotações e destaques com exportação.
 - Integração da newsletter com provedor real e double opt-in.
@@ -238,7 +246,7 @@ npm run test:e2e
 
 ## Direitos
 
-O código da aplicação está sob [MIT](LICENSE). As obras originais de Allan Kardec estão em domínio público. Capas, seleções, textos de apresentação e a identidade Lumen são produções editoriais e não estão cobertas pela licença MIT do código.
+O código da aplicação está sob [MIT](LICENSE). As obras originais de Allan Kardec, Camille Flammarion e Arthur Conan Doyle estão em domínio público; a transcrição de _Le Livre des Esprits_ usada no EPUB é CC BY-SA 4.0 e mantém sua atribuição. Capas, descrições, seleções e identidade Lumen são produções editoriais e não estão cobertas pela licença MIT do código. Textos de Chico Xavier, Divaldo Pereira Franco e Yvonne do Amaral Pereira não são hospedados; consulte as editoras oficiais.
 
 ---
 

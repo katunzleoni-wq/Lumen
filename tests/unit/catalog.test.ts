@@ -24,14 +24,21 @@ describe("filterBooks", () => {
       ...baseFilters,
       category: "mediunidade",
     });
-    expect(categoryResult).toHaveLength(1);
-    expect(categoryResult[0]?.id).toBe("o-livro-dos-mediuns");
+    expect(categoryResult).toHaveLength(2);
+    expect(categoryResult.map((book) => book.id)).toEqual(
+      expect.arrayContaining([
+        "o-livro-dos-mediuns",
+        "instrucao-pratica-sobre-as-manifestacoes-espiritas",
+      ]),
+    );
 
     const formatResult = filterBooks(books, "pt", { ...baseFilters, format: "pdf" });
-    expect(formatResult.every((book) => book.formats.includes("pdf"))).toBe(true);
+    expect(formatResult).toHaveLength(1);
+    expect(formatResult[0]?.id).toBe("instrucao-pratica-sobre-as-manifestacoes-espiritas");
 
     const languageResult = filterBooks(books, "pt", { ...baseFilters, language: "en" });
-    expect(languageResult).toHaveLength(0);
+    expect(languageResult.length).toBeGreaterThan(0);
+    expect(languageResult.every((book) => book.language === "en")).toBe(true);
   });
 
   it("sorts by title using the active locale", () => {
@@ -42,7 +49,7 @@ describe("filterBooks", () => {
 
   it("sorts newest additions first", () => {
     const result = filterBooks(books, "pt", { ...baseFilters, sort: "newest" });
-    expect(result[0]?.id).toBe("revista-espirita");
+    expect(result).toHaveLength(books.length);
     const first = result[0];
     const second = result[1];
     expect(first).toBeDefined();

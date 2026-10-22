@@ -6,13 +6,14 @@
       "author": "Allan Kardec",
       "originalTitle": "Le Livre des Esprits",
       "year": 1857,
-      "language": "pt",
+      "language": "fr",
       "category": "fundamentos",
-      "pages": 512,
-      "readingMinutes": 690,
-      "formats": ["epub", "pdf"],
+      "readingMinutes": 540,
+      "formats": ["epub"],
       "featured": true,
-      "addedAt": "2026-01-12",
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#153f36", "#2f6b57", "#d4ad68"],
       "motif": "orbit",
       "title": {
@@ -28,10 +29,20 @@
         "fr": "Principes de la doctrine spirite"
       },
       "description": {
-        "pt": "A obra inaugural do Espiritismo, organizada em perguntas e respostas que investigam a natureza do Espírito, as leis morais e o sentido da existência.",
-        "en": "The founding work of Spiritism, arranged as questions and answers that examine the nature of the Spirit, moral law and the meaning of existence.",
-        "es": "La obra inaugural del Espiritismo, organizada en preguntas y respuestas que investigan la naturaleza del Espíritu, las leyes morales y el sentido de la existencia.",
-        "fr": "L'œuvre fondatrice du spiritisme, organisée en questions et réponses qui explorent la nature de l'Esprit, les lois morales et le sens de l'existence."
+        "pt": "A obra fundadora do Espiritismo, em edição integral. Perguntas e respostas investigam a natureza do Espírito, as leis morais e o destino humano.",
+        "en": "The founding work of Spiritism, in a complete edition. Questions and answers examine the nature of spirits, moral law and human destiny.",
+        "es": "La obra fundadora del Espiritismo, en edición integral. Preguntas y respuestas investigan la naturaleza del Espíritu, las leyes morales y el destino humano.",
+        "fr": "L’œuvre fondatrice du spiritisme, en édition intégrale. Les questions et réponses explorent la nature des Esprits, les lois morales et la destinée humaine."
+      },
+      "source": {
+        "provider": "Wikisource (français)",
+        "publisher": "Didier",
+        "url": "https://fr.wikisource.org/wiki/Le_Livre_des_Esprits/Texte_entier",
+        "license": "Domínio público; transcrição CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "edition": "Didier, Paris, 1860",
+        "editionNote": "Transcrição colaborativa da edição de 1860.",
+        "capturedAt": "2026-10-21"
       }
     },
     {
@@ -40,13 +51,14 @@
       "author": "Allan Kardec",
       "originalTitle": "L'Évangile selon le Spiritisme",
       "year": 1864,
-      "language": "pt",
+      "language": "fr",
       "category": "evangelho",
-      "pages": 424,
-      "readingMinutes": 560,
-      "formats": ["epub", "pdf"],
+      "readingMinutes": 480,
+      "formats": ["epub"],
       "featured": true,
-      "addedAt": "2026-02-02",
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#4a2c2a", "#8a5b46", "#e0bd83"],
       "motif": "arches",
       "title": {
@@ -62,10 +74,20 @@
         "fr": "La morale de Jésus à la lumière de la raison"
       },
       "description": {
-        "pt": "Uma leitura serena das máximas evangélicas, aproximando a ética de Jesus das perguntas concretas da vida e da experiência espírita.",
-        "en": "A serene reading of the Gospel's teachings, bringing the ethics of Jesus close to the concrete questions of life and Spiritist experience.",
-        "es": "Una lectura serena de las máximas evangélicas, que acerca la ética de Jesús a las preguntas concretas de la vida y de la experiencia espírita.",
-        "fr": "Une lecture sereine des maximes évangéliques, qui rapproche l'éthique de Jésus des questions concrètes de la vie et de l'expérience spirite."
+        "pt": "Leitura das máximas evangélicas em diálogo com a razão e a experiência espírita. Uma ética de caridade, esperança e responsabilidade.",
+        "en": "A reading of Gospel teachings in dialogue with reason and Spiritist experience. An ethics of charity, hope and responsibility.",
+        "es": "Una lectura de las máximas evangélicas en diálogo con la razón y la experiencia espírita. Una ética de caridad, esperanza y responsabilidad.",
+        "fr": "Une lecture des maximes évangéliques en dialogue avec la raison et l’expérience spirite. Une éthique de charité, d’espérance et de responsabilité."
+      },
+      "source": {
+        "provider": "Internet Archive",
+        "publisher": "Librairie Internationale",
+        "url": "https://archive.org/details/bub_gb_yfcU9eVzmVMC",
+        "license": "Public Domain Mark 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "3e édition, Paris, 1866",
+        "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
+        "capturedAt": "2026-10-21"
       }
     },
     {
@@ -74,13 +96,14 @@
       "author": "Allan Kardec",
       "originalTitle": "Le Livre des Médiums",
       "year": 1861,
-      "language": "pt",
+      "language": "fr",
       "category": "mediunidade",
-      "pages": 448,
-      "readingMinutes": 600,
-      "formats": ["epub", "pdf"],
+      "readingMinutes": 540,
+      "formats": ["epub"],
       "featured": true,
-      "addedAt": "2026-01-28",
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#252b4a", "#4f5d8c", "#d9c79a"],
       "motif": "constellation",
       "title": {
@@ -90,50 +113,26 @@
         "fr": "Le Livre des Médiums"
       },
       "subtitle": {
-        "pt": "O estudo da mediunidade e das manifestações",
-        "en": "The study of mediumship and manifestations",
-        "es": "El estudio de la mediumnidad y de las manifestaciones",
-        "fr": "L'étude de la médiumnité et des manifestations"
+        "pt": "Guia dos médiuns e dos evocadores",
+        "en": "Guide for mediums and evokers",
+        "es": "Guía de los médiums y de los evocadores",
+        "fr": "Guide des médiums et des évocateurs"
       },
       "description": {
-        "pt": "Um guia para compreender a mediunidade com discernimento: faculdades, práticas, riscos e a responsabilidade moral de quem serve.",
-        "en": "A guide to understanding mediumship with discernment: faculties, practices, risks and the moral responsibility of those who serve.",
-        "es": "Una guía para comprender la mediumnidad con discernimiento: facultades, prácticas, riesgos y la responsabilidad moral de quien sirve.",
-        "fr": "Un guide pour comprendre la médiumnité avec discernement : facultés, pratiques, risques et responsabilité morale de celui qui sert."
-      }
-    },
-    {
-      "id": "o-ceu-e-o-inferno",
-      "slug": "o-ceu-e-o-inferno",
-      "author": "Allan Kardec",
-      "originalTitle": "Le Ciel et l'Enfer",
-      "year": 1865,
-      "language": "pt",
-      "category": "filosofia",
-      "pages": 360,
-      "readingMinutes": 480,
-      "formats": ["epub", "pdf"],
-      "featured": true,
-      "addedAt": "2026-02-18",
-      "palette": ["#3b2440", "#6c4c6f", "#d7b77a"],
-      "motif": "moon",
-      "title": {
-        "pt": "O Céu e o Inferno",
-        "en": "Heaven and Hell",
-        "es": "El Cielo y el Infierno",
-        "fr": "Le Ciel et l'Enfer"
+        "pt": "Estudo das manifestações espíritas, das faculdades mediúnicas e das condições morais do exercício da mediunidade.",
+        "en": "A study of spirit manifestations, mediumistic faculties and the moral conditions of mediumship.",
+        "es": "Un estudio de las manifestaciones espíritas, las facultades mediúnicas y las condiciones morales de la mediumnidad.",
+        "fr": "Une étude des manifestations spirites, des facultés médiumniques et des conditions morales de la médiumnité."
       },
-      "subtitle": {
-        "pt": "A justiça divina segundo o Espiritismo",
-        "en": "Divine justice according to Spiritism",
-        "es": "La justicia divina según el Espiritismo",
-        "fr": "La justice divine selon le spiritisme"
-      },
-      "description": {
-        "pt": "Uma meditação sobre justiça, esperança e continuidade da vida, afastando imagens de castigo eterno e abrindo espaço para a reparação.",
-        "en": "A meditation on justice, hope and the continuity of life, setting aside images of eternal punishment and making room for reparation.",
-        "es": "Una meditación sobre la justicia, la esperanza y la continuidad de la vida, que deja atrás las imágenes de castigo eterno y abre espacio a la reparación.",
-        "fr": "Une méditation sur la justice, l'espérance et la continuité de la vie, qui écarte les images de châtiment éternel et ouvre l'espace de la réparation."
+      "source": {
+        "provider": "Internet Archive",
+        "publisher": "Didier et Cie",
+        "url": "https://archive.org/details/bub_gb_bfFnqBlQGq8C",
+        "license": "Public Domain Mark 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "9e édition, Paris, 1865",
+        "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
+        "capturedAt": "2026-10-21"
       }
     },
     {
@@ -142,13 +141,14 @@
       "author": "Allan Kardec",
       "originalTitle": "La Genèse",
       "year": 1868,
-      "language": "pt",
+      "language": "fr",
       "category": "fundamentos",
-      "pages": 336,
-      "readingMinutes": 450,
-      "formats": ["epub", "pdf"],
+      "readingMinutes": 420,
+      "formats": ["epub"],
       "featured": false,
-      "addedAt": "2026-03-03",
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#1f3e45", "#477079", "#ddc38e"],
       "motif": "seed",
       "title": {
@@ -158,118 +158,206 @@
         "fr": "La Genèse"
       },
       "subtitle": {
-        "pt": "Os milagres e as predições",
-        "en": "Miracles and predictions",
-        "es": "Los milagros y las predicciones",
-        "fr": "Les miracles et les prédictions"
+        "pt": "Os milagres e as predições segundo o Espiritismo",
+        "en": "Miracles and predictions according to Spiritism",
+        "es": "Los milagros y las predicciones según el Espiritismo",
+        "fr": "Les miracles et les prédictions selon le spiritisme"
       },
       "description": {
-        "pt": "Uma ponte entre ciência, criação e espiritualidade, propondo ler os relatos bíblicos como linguagem simbólica e convite à investigação.",
-        "en": "A bridge between science, creation and spirituality, proposing to read biblical accounts as symbolic language and an invitation to inquiry.",
-        "es": "Un puente entre ciencia, creación y espiritualidad, que propone leer los relatos bíblicos como lenguaje simbólico y una invitación a la investigación.",
-        "fr": "Un pont entre science, création et spiritualité, proposant de lire les récits bibliques comme un langage symbolique et une invitation à la recherche."
+        "pt": "A criação, os chamados milagres e as profecias lidos à luz das leis naturais e da investigação espírita.",
+        "en": "Creation, the so-called miracles and prophecy read through natural law and Spiritist inquiry.",
+        "es": "La creación, los llamados milagros y las profecías leídos a la luz de las leyes naturales y de la investigación espírita.",
+        "fr": "La création, les miracles et les prophéties relus à la lumière des lois naturelles et de la recherche spirite."
+      },
+      "source": {
+        "provider": "Internet Archive",
+        "publisher": "Librairie Internationale / A. Lacroix",
+        "url": "https://archive.org/details/bub_gb_DIErB97VOk8C",
+        "license": "Public Domain Mark 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "A. Lacroix, Paris, 1868",
+        "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
+        "capturedAt": "2026-10-21"
       }
     },
     {
-      "id": "o-que-e-o-espiritismo",
-      "slug": "o-que-e-o-espiritismo",
+      "id": "instrucao-pratica-sobre-as-manifestacoes-espiritas",
+      "slug": "instrucao-pratica-sobre-as-manifestacoes-espiritas",
       "author": "Allan Kardec",
-      "originalTitle": "Qu'est-ce que le Spiritisme ?",
-      "year": 1859,
-      "language": "pt",
-      "category": "introducao",
-      "pages": 168,
-      "readingMinutes": 220,
+      "originalTitle": "Instruction pratique sur les manifestations spirites",
+      "year": 1858,
+      "language": "fr",
+      "category": "mediunidade",
+      "readingMinutes": 120,
       "formats": ["epub", "pdf"],
       "featured": false,
-      "addedAt": "2026-03-19",
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#3e3524", "#80704b", "#e4ca91"],
       "motif": "rays",
       "title": {
-        "pt": "O Que é o Espiritismo?",
-        "en": "What Is Spiritism?",
-        "es": "¿Qué es el Espiritismo?",
-        "fr": "Qu'est-ce que le Spiritisme ?"
+        "pt": "Instrução Prática sobre as Manifestações Espíritas",
+        "en": "Practical Instruction on Spirit Manifestations",
+        "es": "Instrucción práctica sobre las manifestaciones espíritas",
+        "fr": "Instruction pratique sur les manifestations spirites"
       },
       "subtitle": {
-        "pt": "Perguntas e respostas para começar",
-        "en": "Questions and answers for beginners",
-        "es": "Preguntas y respuestas para comenzar",
-        "fr": "Questions et réponses pour commencer"
+        "pt": "Condições e meios de comunicação com os Espíritos",
+        "en": "Conditions and means of communicating with spirits",
+        "es": "Condiciones y medios de comunicación con los Espíritus",
+        "fr": "Conditions et moyens de communiquer avec les Esprits"
       },
       "description": {
-        "pt": "Uma porta de entrada acessível: noções essenciais, respostas às objeções mais comuns e um convite ao estudo sem pressa.",
-        "en": "An accessible doorway: essential notions, answers to common objections and an invitation to unhurried study.",
-        "es": "Una puerta de entrada accesible: nociones esenciales, respuestas a las objeciones más comunes y una invitación al estudio sin prisa.",
-        "fr": "Une porte d'entrée accessible : notions essentielles, réponses aux objections courantes et invitation à une étude sans hâte."
+        "pt": "Um guia curto e direto sobre as condições do intercâmbio espiritual, publicado por Kardec em 1858.",
+        "en": "A short, direct guide to the conditions of spirit communication, published by Kardec in 1858.",
+        "es": "Una guía breve y directa sobre las condiciones del intercambio espiritual, publicada por Kardec en 1858.",
+        "fr": "Un guide court et direct sur les conditions de la communication spirite, publié par Kardec en 1858."
+      },
+      "source": {
+        "provider": "Internet Archive",
+        "publisher": "E. Dentu",
+        "url": "https://archive.org/details/bub_gb_o2bo1lt3i00C",
+        "license": "Public Domain Mark 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "E. Dentu, Paris, 1858",
+        "editionNote": "Digitalização Google; EPUB gerado a partir do OCR; PDF original preservado.",
+        "capturedAt": "2026-10-21"
       }
     },
     {
-      "id": "obras-postumas",
-      "slug": "obras-postumas",
-      "author": "Allan Kardec",
-      "originalTitle": "Œuvres posthumes",
-      "year": 1890,
-      "language": "pt",
-      "category": "filosofia",
-      "pages": 304,
-      "readingMinutes": 410,
-      "formats": ["epub", "pdf"],
-      "featured": false,
-      "addedAt": "2026-04-07",
-      "palette": ["#34252a", "#67515a", "#d9bfa4"],
-      "motif": "waves",
-      "title": {
-        "pt": "Obras Póstumas",
-        "en": "Posthumous Works",
-        "es": "Obras Póstumas",
-        "fr": "Œuvres posthumes"
-      },
-      "subtitle": {
-        "pt": "Reflexões sobre a vida e o além",
-        "en": "Reflections on life and the beyond",
-        "es": "Reflexiones sobre la vida y el más allá",
-        "fr": "Réflexions sur la vie et l'au-delà"
-      },
-      "description": {
-        "pt": "Notas e meditações que retomam a travessia da morte, o papel da fé e a construção de uma esperança lúcida e responsável.",
-        "en": "Notes and meditations revisiting the passage of death, the role of faith and the building of a lucid, responsible hope.",
-        "es": "Notas y meditaciones que retoman el tránsito de la muerte, el papel de la fe y la construcción de una esperanza lúcida y responsable.",
-        "fr": "Notes et méditations qui revisitent le passage de la mort, le rôle de la foi et la construction d'une espérance lucide et responsable."
-      }
-    },
-    {
-      "id": "revista-espirita",
-      "slug": "revista-espirita",
-      "author": "Allan Kardec",
-      "originalTitle": "Revue Spirite",
-      "year": 1858,
-      "language": "pt",
-      "category": "revista",
-      "pages": 256,
-      "readingMinutes": 330,
-      "formats": ["epub", "pdf"],
-      "featured": false,
-      "addedAt": "2026-04-24",
+      "id": "mysterious-psychic-forces",
+      "slug": "mysterious-psychic-forces",
+      "author": "Camille Flammarion",
+      "originalTitle": "Les Forces naturelles inconnues",
+      "year": 1907,
+      "language": "en",
+      "category": "pesquisa",
+      "readingMinutes": 420,
+      "formats": ["epub"],
+      "featured": true,
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
       "palette": ["#283d30", "#58725d", "#d8c08a"],
       "motif": "grid",
       "title": {
-        "pt": "Revista Espírita — Antologia",
-        "en": "Spiritist Review — Anthology",
-        "es": "Revista Espírita — Antología",
-        "fr": "Revue Spirite — Anthologie"
+        "pt": "Forças Psíquicas Misteriosas",
+        "en": "Mysterious Psychic Forces",
+        "es": "Fuerzas psíquicas misteriosas",
+        "fr": "Forces psychiques mystérieuses"
       },
       "subtitle": {
-        "pt": "Uma janela para o século XIX",
-        "en": "A window onto the nineteenth century",
-        "es": "Una ventana al siglo XIX",
-        "fr": "Une fenêtre sur le XIXe siècle"
+        "pt": "Investigações sobre mediunidade e fenômenos psíquicos",
+        "en": "Investigations into mediumship and psychic phenomena",
+        "es": "Investigaciones sobre mediumnidad y fenómenos psíquicos",
+        "fr": "Enquêtes sur la médiumnité et les phénomènes psychiques"
       },
       "description": {
-        "pt": "Uma seleção de crônicas e estudos que mostram como o movimento espírita nasceu em diálogo com a imprensa, a ciência e a vida cotidiana.",
-        "en": "A selection of columns and studies showing how the Spiritist movement emerged in dialogue with the press, science and everyday life.",
-        "es": "Una selección de crónicas y estudios que muestran cómo el movimiento espírita nació en diálogo con la prensa, la ciencia y la vida cotidiana.",
-        "fr": "Une sélection de chroniques et d'études montrant comment le mouvement spirite est né au dialogue avec la presse, la science et la vie quotidienne."
+        "pt": "O astrônomo Camille Flammarion relata investigações com médiuns e examina, com ceticismo metódico, os fenômenos psíquicos de seu tempo.",
+        "en": "Astronomer Camille Flammarion reports investigations with mediums and examines the psychic phenomena of his time with methodical scepticism.",
+        "es": "El astrónomo Camille Flammarion relata investigaciones con médiums y examina con escepticismo metódico los fenómenos psíquicos de su época.",
+        "fr": "L’astronome Camille Flammarion relate ses enquêtes avec des médiums et examine avec un scepticisme méthodique les phénomènes psychiques de son temps."
+      },
+      "source": {
+        "provider": "Project Gutenberg",
+        "publisher": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/39279",
+        "license": "Domínio público nos EUA; Project Gutenberg License",
+        "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+        "edition": "English edition, 1907; eBook #39279",
+        "editionNote": "EPUB oficial do Project Gutenberg, preservado sem alterações.",
+        "capturedAt": "2026-10-21"
+      }
+    },
+    {
+      "id": "lumen",
+      "slug": "lumen",
+      "author": "Camille Flammarion",
+      "originalTitle": "Lumen",
+      "year": 1872,
+      "language": "en",
+      "category": "pesquisa",
+      "readingMinutes": 240,
+      "formats": ["epub"],
+      "featured": false,
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
+      "palette": ["#3b2440", "#6c4c6f", "#d7b77a"],
+      "motif": "moon",
+      "title": {
+        "pt": "Lumen",
+        "en": "Lumen",
+        "es": "Lumen",
+        "fr": "Lumen"
+      },
+      "subtitle": {
+        "pt": "Diálogos sobre a vida depois da morte",
+        "en": "Dialogues on life after death",
+        "es": "Diálogos sobre la vida después de la muerte",
+        "fr": "Dialogues sur la vie après la mort"
+      },
+      "description": {
+        "pt": "Um romance filosófico sobre a continuidade da consciência, o tempo profundo e a imensidão do cosmo, por um dos grandes divulgadores da astronomia.",
+        "en": "A philosophical novel about the continuity of consciousness, deep time and the immensity of the cosmos, by one of astronomy's great popularisers.",
+        "es": "Una novela filosófica sobre la continuidad de la conciencia, el tiempo profundo y la inmensidad del cosmos, por uno de los grandes divulgadores de la astronomía.",
+        "fr": "Un roman philosophique sur la continuité de la conscience, le temps profond et l’immensité du cosmos, par un grand vulgarisateur de l’astronomie."
+      },
+      "source": {
+        "provider": "Project Gutenberg",
+        "publisher": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/43835",
+        "license": "Domínio público nos EUA; Project Gutenberg License",
+        "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+        "edition": "English translation; eBook #43835",
+        "editionNote": "EPUB oficial do Project Gutenberg, preservado sem alterações.",
+        "capturedAt": "2026-10-21"
+      }
+    },
+    {
+      "id": "the-vital-message",
+      "slug": "the-vital-message",
+      "author": "Arthur Conan Doyle",
+      "originalTitle": "The Vital Message",
+      "year": 1919,
+      "language": "en",
+      "category": "espiritualismo",
+      "readingMinutes": 150,
+      "formats": ["epub"],
+      "featured": false,
+      "addedAt": "2026-10-21",
+      "rights": "public-domain",
+      "availability": "full",
+      "palette": ["#34252a", "#67515a", "#d9bfa4"],
+      "motif": "waves",
+      "title": {
+        "pt": "A Mensagem Vital",
+        "en": "The Vital Message",
+        "es": "El Mensaje Vital",
+        "fr": "Le Message Vital"
+      },
+      "subtitle": {
+        "pt": "Espiritualismo e a renovação da esperança",
+        "en": "Spiritualism and the renewal of hope",
+        "es": "Espiritualismo y la renovación de la esperanza",
+        "fr": "Spiritualisme et renouveau de l’espérance"
+      },
+      "description": {
+        "pt": "Ensaios de Arthur Conan Doyle sobre a sobrevivência da personalidade e o significado espiritual de uma época marcada pela guerra.",
+        "en": "Essays by Arthur Conan Doyle on the survival of personality and the spiritual meaning of an age marked by war.",
+        "es": "Ensayos de Arthur Conan Doyle sobre la supervivencia de la personalidad y el significado espiritual de una época marcada por la guerra.",
+        "fr": "Essais d’Arthur Conan Doyle sur la survie de la personnalité et la signification spirituelle d’une époque marquée par la guerre."
+      },
+      "source": {
+        "provider": "Project Gutenberg",
+        "publisher": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/439",
+        "license": "Domínio público nos EUA; Project Gutenberg License",
+        "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+        "edition": "First edition, 1919; eBook #439",
+        "editionNote": "EPUB oficial do Project Gutenberg, preservado sem alterações.",
+        "capturedAt": "2026-10-21"
       }
     }
   ],
@@ -320,48 +408,33 @@
       }
     },
     {
-      "id": "filosofia",
+      "id": "pesquisa",
       "name": {
-        "pt": "Filosofia",
-        "en": "Philosophy",
-        "es": "Filosofía",
-        "fr": "Philosophie"
+        "pt": "Pesquisa psíquica",
+        "en": "Psychic research",
+        "es": "Investigación psíquica",
+        "fr": "Recherche psychique"
       },
       "description": {
-        "pt": "Perguntas sobre justiça, destino e continuidade.",
-        "en": "Questions about justice, destiny and continuity.",
-        "es": "Preguntas sobre justicia, destino y continuidad.",
-        "fr": "Questions sur la justice, le destin et la continuité."
+        "pt": "Investigações e relatos de fronteira.",
+        "en": "Frontier investigations and accounts.",
+        "es": "Investigaciones y relatos de frontera.",
+        "fr": "Enquêtes et récits de frontière."
       }
     },
     {
-      "id": "introducao",
+      "id": "espiritualismo",
       "name": {
-        "pt": "Introdução",
-        "en": "Introduction",
-        "es": "Introducción",
-        "fr": "Introduction"
+        "pt": "Espiritualismo",
+        "en": "Spiritualism",
+        "es": "Espiritualismo",
+        "fr": "Spiritualisme"
       },
       "description": {
-        "pt": "Primeiros passos para quem chega agora.",
-        "en": "First steps for those arriving now.",
-        "es": "Primeros pasos para quien llega ahora.",
-        "fr": "Premiers pas pour celles et ceux qui arrivent."
-      }
-    },
-    {
-      "id": "revista",
-      "name": {
-        "pt": "Revista",
-        "en": "Journal",
-        "es": "Revista",
-        "fr": "Revue"
-      },
-      "description": {
-        "pt": "Crônicas, cartas e estudos de época.",
-        "en": "Columns, letters and studies from the period.",
-        "es": "Crónicas, cartas y estudios de época.",
-        "fr": "Chroniques, lettres et études d'époque."
+        "pt": "Vozes do movimento espiritualista moderno.",
+        "en": "Voices from the modern Spiritualist movement.",
+        "es": "Voces del movimiento espiritualista moderno.",
+        "fr": "Voix du mouvement spiritualiste moderne."
       }
     }
   ]

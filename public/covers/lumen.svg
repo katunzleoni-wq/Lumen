@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-label="Capa de Lumen">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b2440"/>
+      <stop offset=".6" stop-color="#6c4c6f"/>
+      <stop offset="1" stop-color="#3b2440"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".32" r=".6">
+      <stop offset="0" stop-color="#d7b77a" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#d7b77a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <rect width="600" height="900" fill="url(#glow)"/>
+  <rect x="24" y="24" width="552" height="852" fill="none" stroke="#f8f3e8" stroke-opacity=".2"/>
+  <text x="300" y="84" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="7" fill="#f8f3e8" fill-opacity=".82">LUMEN</text>
+  <text x="300" y="107" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.4" letter-spacing="2.2" fill="#f8f3e8" fill-opacity=".52">BIBLIOTECA DIGITAL ESPÍRITA INTERNACIONAL</text>
+  
+    <circle cx="300" cy="292" r="108" fill="#d7b77a" opacity=".12"/>
+    <path d="M346 201a104 104 0 1 0 55 155 86 86 0 0 1-55-155z" fill="#d7b77a" opacity=".45"/>
+    <g fill="#d7b77a" opacity=".65">
+      <circle cx="184" cy="176" r="2"/><circle cx="412" cy="153" r="2.8"/>
+      <circle cx="448" cy="345" r="1.8"/><circle cx="153" cy="401" r="2.4"/>
+    </g>
+  <text x="300" y="476" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" letter-spacing="-.5" fill="#f8f3e8">Lumen</text>
+  <line x1="238" y1="526" x2="362" y2="526" stroke="#d7b77a" stroke-opacity=".75"/>
+  <text x="300" y="563" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" letter-spacing="2.5" fill="#f8f3e8" fill-opacity=".85">CAMILLE FLAMMARION</text>
+  <text x="300" y="814" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#f8f3e8" fill-opacity=".72">Dialogues on life after death</text>
+  <text x="300" y="847" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.4" letter-spacing="1.8" fill="#f8f3e8" fill-opacity=".48">COMPLETE EDITION · PUBLIC DOMAIN · 1872</text>
+  <rect width="600" height="900" filter="url(#grain)" opacity=".7"/>
+</svg>

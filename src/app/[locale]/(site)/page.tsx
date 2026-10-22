@@ -5,12 +5,12 @@ import {
   BookOpen,
   Bookmark,
   Compass,
-  GraduationCap,
   HeartHandshake,
-  Newspaper,
   Search,
   ShieldCheck,
   Sparkles,
+  Sun,
+  Telescope,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { isLocale, type Locale } from "@/i18n";
@@ -29,9 +29,8 @@ const categoryIcons = {
   fundamentos: Compass,
   evangelho: HeartHandshake,
   mediunidade: Sparkles,
-  filosofia: BookOpen,
-  introducao: GraduationCap,
-  revista: Newspaper,
+  pesquisa: Telescope,
+  espiritualismo: Sun,
 } as const;
 
 export default async function HomePage({ params }: { params: { locale: string } }) {

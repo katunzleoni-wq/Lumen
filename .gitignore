@@ -46,5 +46,7 @@ yarn-error.log*
 /public/pdf.worker.min.mjs
 /.pagefind-src/
 
-# local data
+# local data and raw source downloads
 /.data/
+/content-sources/raw/
+/content-sources/build/

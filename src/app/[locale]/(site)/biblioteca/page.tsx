@@ -1,10 +1,13 @@
 import { Suspense } from "react";
-import { BookOpen, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen, ShieldCheck } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { getBooks } from "@/content/books";
+import { protectedAuthors } from "@/content/authors";
 import { isLocale, type Locale } from "@/i18n";
+import { Link } from "@/navigation";
 import { CatalogExplorer } from "@/components/catalog-explorer";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -100,6 +103,23 @@ export default async function LibraryPage({ params }: { params: { locale: string
           <ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-gold-600" aria-hidden="true" />
           {t("home.sampleNotice")}
         </p>
+
+        <aside className="mt-8 rounded-2xl border border-border/80 bg-card/60 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+          <div>
+            <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
+              {t("about.rightsAuthorsTitle")}
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+              {protectedAuthors.map((author) => `${author.name} (${author.years})`).join(" · ")}
+            </p>
+          </div>
+          <Button asChild variant="outline" size="sm" className="mt-4 shrink-0 sm:mt-0">
+            <Link href="/sobre#autores">
+              {t("about.rightsAuthorsView")}
+              <ArrowRight className="size-3.5" aria-hidden="true" />
+            </Link>
+          </Button>
+        </aside>
       </section>
     </>
   );

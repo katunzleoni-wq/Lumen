@@ -5,15 +5,18 @@ import {
   ArrowUpRight,
   BookMarked,
   Database,
+  ExternalLink,
   HeartHandshake,
   LockKeyhole,
   Scale,
   ShieldCheck,
+  UserRound,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { isLocale, locales, type Locale } from "@/i18n";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
+import { protectedAuthors } from "@/content/authors";
 import { JsonLd } from "@/components/json-ld";
 import { ContactForm } from "@/components/about/contact-form";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -213,7 +216,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
                 {t("about.rightsBody")}
               </p>
               <div className="mt-8">
-                <Badge variant="inverse">Domínio público</Badge>
+                <Badge variant="inverse">{t("book.publicDomain")}</Badge>
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -250,10 +253,84 @@ export default async function AboutPage({ params }: { params: { locale: string }
         </div>
       </section>
 
+      <section id="autores" className="scroll-mt-24 border-b border-border/60 bg-papyrus-100/30">
+        <div className="container py-20 sm:py-24">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p className="flex items-center gap-2 text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-gold-800">
+                <UserRound className="size-4" aria-hidden="true" />
+                {t("about.rightsAuthorsTitle")}
+              </p>
+              <h2 className="mt-5 text-balance font-serif text-4xl font-medium leading-[1.08] tracking-[-0.03em] sm:text-5xl">
+                {t("about.rightsAuthorsTitle")}
+              </h2>
+              <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
+                {t("about.rightsAuthorsBody")}
+              </p>
+              <div className="mt-8">
+                <Badge variant="outline">
+                  <ShieldCheck className="size-3" aria-hidden="true" />
+                  {t("about.rightsAuthorsProtected")}
+                </Badge>
+              </div>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              {protectedAuthors.map((author) => {
+                const initials = author.name
+                  .split(/\s+/)
+                  .slice(0, 2)
+                  .map((part) => part[0])
+                  .join("");
+                return (
+                  <article
+                    key={author.id}
+                    className="flex h-full flex-col rounded-2xl border border-border/80 bg-card/80 p-5 shadow-soft"
+                  >
+                    <div className="flex items-start gap-3">
+                      <span
+                        className="grid size-11 shrink-0 place-items-center rounded-full bg-forest-950 font-serif text-lg text-papyrus-50"
+                        aria-hidden="true"
+                      >
+                        {initials}
+                      </span>
+                      <div>
+                        <h3 className="font-serif text-xl leading-tight">{author.name}</h3>
+                        <p className="mt-1 text-[0.62rem] font-semibold uppercase tracking-[0.13em] text-muted-foreground">
+                          {author.years} · {author.country}
+                        </p>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-gold-700">
+                      {author.role[locale]}
+                    </p>
+                    <p className="mt-2 flex-1 text-xs leading-relaxed text-muted-foreground">
+                      {author.summary[locale]}
+                    </p>
+                    <p className="mt-4 border-t border-border/60 pt-3 text-[0.64rem] leading-relaxed text-muted-foreground">
+                      {author.rightsNote[locale]}
+                    </p>
+                    <a
+                      href={author.officialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-[0.66rem] font-semibold text-forest-800 underline-offset-4 hover:underline"
+                    >
+                      {t("about.rightsAuthorsCta")} · {author.publisher}
+                      <ExternalLink className="size-3" aria-hidden="true" />
+                    </a>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container py-20 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <SectionHeading
-            eyebrow={t("about.sampleTitle")}
+            eyebrow={t("about.faqEyebrow")}
             title={t("about.faqTitle")}
             description={t("about.sampleBody")}
           />

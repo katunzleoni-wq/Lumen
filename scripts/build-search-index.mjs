@@ -16,7 +16,8 @@ const locales = ["pt", "en", "es", "fr"];
 const defaultLocale = "pt";
 
 const booksFile = JSON.parse(readFileSync(join(root, "content", "books.json"), "utf8"));
-const samples = JSON.parse(readFileSync(join(root, "content", "samples.json"), "utf8"));
+const toc = JSON.parse(readFileSync(join(root, "content", "toc.json"), "utf8"));
+const authorsFile = JSON.parse(readFileSync(join(root, "content", "authors.json"), "utf8"));
 const messages = Object.fromEntries(
   locales.map((locale) => [
     locale,
@@ -78,7 +79,7 @@ async function main() {
     const catalogContent = books
       .map(
         (book) =>
-          `${localized(book.title, locale)} — ${book.author}. ${localized(book.description, locale)}`,
+          `${localized(book.title, locale)} — ${book.author}. ${localized(book.description, locale)} ${book.source.provider}.`,
       )
       .join(" ");
     await add({
@@ -98,7 +99,12 @@ async function main() {
       )} ${t(locale, "about.missionBody")} ${t(locale, "about.preservationTitle")} ${t(
         locale,
         "about.preservationBody",
-      )}`,
+      )} ${t(locale, "about.rightsBody")} ${t(locale, "about.rightsAuthorsBody")} ${authorsFile.authors
+        .map(
+          (author) =>
+            `${author.name}. ${author.role[locale] ?? author.role.pt}. ${author.summary[locale] ?? author.summary.pt}`,
+        )
+        .join(" ")}`,
       meta: { title: t(locale, "about.title"), type: "page" },
       filters: { ...baseFilters, type: ["page"] },
     });
@@ -106,10 +112,7 @@ async function main() {
     for (const book of books) {
       const category = categories.find((item) => item.id === book.category);
       const categoryName = category ? localized(category.name, locale) : book.category;
-      const sample = book.language === locale ? samples[book.slug] : undefined;
-      const sampleContent = sample
-        ? sample.chapters.flatMap((chapter) => [chapter.title, ...chapter.paragraphs]).join(" ")
-        : "";
+      const chapters = toc[book.slug] ?? [];
       await add({
         url: `/${locale}/livro/${book.slug}`,
         language: locale,
@@ -122,9 +125,13 @@ async function main() {
           localized(book.description, locale),
           categoryName,
           t(locale, "book.readSample"),
-          t(locale, "book.epub"),
-          t(locale, "book.pdf"),
-          sampleContent,
+          t(locale, "book.publicDomain"),
+          book.source.provider,
+          book.source.publisher,
+          book.source.edition,
+          book.source.license,
+          book.formats.join(" "),
+          ...chapters,
         ].join(". "),
         meta: {
           title: localized(book.title, locale),

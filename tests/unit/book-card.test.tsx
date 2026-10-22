@@ -38,7 +38,7 @@ describe("BookCard", () => {
     const book = renderCard();
     expect(screen.getByRole("heading", { name: book.title.pt })).toBeInTheDocument();
     expect(screen.getAllByText(book.author).length).toBeGreaterThan(0);
-    expect(screen.getByText("690 min de leitura")).toBeInTheDocument();
+    expect(screen.getByText(`${book.readingMinutes} min de leitura`)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: book.title.pt })).toHaveAttribute(
       "href",
       `/pt/livro/${book.slug}`,
@@ -46,9 +46,10 @@ describe("BookCard", () => {
   });
 
   it("shows format badges and the favourite control", () => {
-    renderCard();
-    expect(screen.getByText("EPUB")).toBeInTheDocument();
-    expect(screen.getByText("PDF")).toBeInTheDocument();
+    const book = renderCard();
+    for (const format of book.formats) {
+      expect(screen.getByText(format.toUpperCase())).toBeInTheDocument();
+    }
     expect(screen.getByRole("button", { name: "Salvar" })).toBeInTheDocument();
   });
 });

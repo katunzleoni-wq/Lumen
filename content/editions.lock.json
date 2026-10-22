@@ -1,0 +1,75 @@
+{
+  "capturedAt": "2026-10-21",
+  "generatedAt": "2026-10-21",
+  "editions": {
+    "o-livro-dos-espiritos": {
+      "file": "public/books/o-livro-dos-espiritos.epub",
+      "sha256": "7bc15c428550327f996dcec69df4fc2fa17b5c370dca9e0fd5e4ccec72af05b9",
+      "bytes": 944573,
+      "language": "fr",
+      "chapters": 56,
+      "strategy": "wikisource"
+    },
+    "o-evangelho-segundo-o-espiritismo": {
+      "file": "public/books/o-evangelho-segundo-o-espiritismo.epub",
+      "sha256": "94757384c2c55e851e6d6c48c9dc04c588eb1d3755a5bf4bccf104074aa4d6b5",
+      "bytes": 913121,
+      "language": "fr",
+      "chapters": 29,
+      "strategy": "ocr"
+    },
+    "o-livro-dos-mediuns": {
+      "file": "public/books/o-livro-dos-mediuns.epub",
+      "sha256": "366706693690769abb6d4e312b855623d96a5ea141b494bbaeb5b643fa17c04a",
+      "bytes": 926658,
+      "language": "fr",
+      "chapters": 37,
+      "strategy": "ocr"
+    },
+    "a-genese": {
+      "file": "public/books/a-genese.epub",
+      "sha256": "23ee051801821cceb8bacac0472f62907ea5017b7bfb9f0642c251ea5daeaf6d",
+      "bytes": 871657,
+      "language": "fr",
+      "chapters": 19,
+      "strategy": "ocr"
+    },
+    "instrucao-pratica-sobre-as-manifestacoes-espiritas": {
+      "file": "public/books/instrucao-pratica-sobre-as-manifestacoes-espiritas.epub",
+      "sha256": "f2b707a2ecccd2d0e8eb44bac7a4fe9cbe5674c1dd3e36beaad3ec8bb6fa6718",
+      "bytes": 683882,
+      "language": "fr",
+      "chapters": 12,
+      "strategy": "ocr",
+      "pdf": {
+        "file": "public/books/instrucao-pratica-sobre-as-manifestacoes-espiritas.pdf",
+        "sha256": "4294cf76c8acbd7ab1a0288c74019327ab0553ba92dd41914cc117cc2bb1225f",
+        "bytes": 5076543
+      }
+    },
+    "mysterious-psychic-forces": {
+      "file": "public/books/mysterious-psychic-forces.epub",
+      "sha256": "f8c01d15f580d182c181aec35ca3c38912f73bba64e11fc11244a436d4179600",
+      "bytes": 1816884,
+      "language": "en",
+      "chapters": 16,
+      "strategy": "copy-epub"
+    },
+    "lumen": {
+      "file": "public/books/lumen.epub",
+      "sha256": "39f6e955f6fcc029b7f502d379304022122b15d13d8ffbc955341da850aff8c2",
+      "bytes": 277321,
+      "language": "en",
+      "chapters": 8,
+      "strategy": "copy-epub"
+    },
+    "the-vital-message": {
+      "file": "public/books/the-vital-message.epub",
+      "sha256": "39e8e1d41bac0ceba41d0fe224ad87d4a4fc392cfdd9d448c3a4ec1e2868d49b",
+      "bytes": 149787,
+      "language": "en",
+      "chapters": 2,
+      "strategy": "copy-epub"
+    }
+  }
+}

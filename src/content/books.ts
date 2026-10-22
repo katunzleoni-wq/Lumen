@@ -1,10 +1,24 @@
 import booksJson from "../../content/books.json";
-import samplesJson from "../../content/samples.json";
+import tocJson from "../../content/toc.json";
 import type { Locale } from "@/i18n";
 
 export type BookFormat = "epub" | "pdf";
 
 export type LocalizedText = Record<Locale, string>;
+
+export type RightsStatus = "public-domain" | "copyrighted";
+export type Availability = "full" | "catalog-only";
+
+export interface BookSource {
+  provider: string;
+  publisher: string;
+  url: string;
+  license: string;
+  licenseUrl: string;
+  edition: string;
+  editionNote: string;
+  capturedAt: string;
+}
 
 export interface Book {
   id: string;
@@ -14,16 +28,18 @@ export interface Book {
   year: number;
   language: Locale;
   category: string;
-  pages: number;
   readingMinutes: number;
   formats: BookFormat[];
   featured: boolean;
   addedAt: string;
+  rights: RightsStatus;
+  availability: Availability;
   palette: [string, string, string];
   motif: string;
   title: LocalizedText;
   subtitle: LocalizedText;
   description: LocalizedText;
+  source: BookSource;
 }
 
 export interface Category {
@@ -32,18 +48,10 @@ export interface Category {
   description: LocalizedText;
 }
 
-export interface SampleChapter {
-  title: string;
-  paragraphs: string[];
-}
-
-export interface BookSample {
-  label: string;
-  chapters: SampleChapter[];
-}
-
 export const books = booksJson.books as Book[];
 export const categories = booksJson.categories as Category[];
+
+const toc = tocJson as Record<string, string[]>;
 
 export function getBooks(): Book[] {
   return books;
@@ -77,8 +85,8 @@ export function getCategoryName(categoryId: string, locale: Locale): string {
   return category.name[locale] ?? category.name.pt;
 }
 
-export function getBookSample(slug: string): BookSample | undefined {
-  return (samplesJson as Record<string, BookSample>)[slug];
+export function getBookToc(slug: string): string[] {
+  return toc[slug] ?? [];
 }
 
 export function getBookAsset(slug: string, format: BookFormat): string {
@@ -97,6 +105,9 @@ export function getBookSearchText(book: Book, locale: Locale): string {
     book.originalTitle,
     getCategoryName(book.category, locale),
     book.description[locale],
+    book.source.provider,
+    book.source.publisher,
+    ...getBookToc(book.slug),
   ]
     .join(" ")
     .toLocaleLowerCase();

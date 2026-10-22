@@ -1,0 +1,85 @@
+{
+  "authors": [
+    {
+      "id": "chico-xavier",
+      "name": "Chico Xavier",
+      "fullName": "Francisco Cândido Xavier",
+      "years": "1910–2002",
+      "country": "Brasil",
+      "publisher": "FEB Editora",
+      "officialUrl": "https://www.febeditora.com.br/",
+      "role": {
+        "pt": "Médium e autor psicógrafo",
+        "en": "Medium and psychographic author",
+        "es": "Médium y autor psicógrafo",
+        "fr": "Médium et auteur psychographe"
+      },
+      "summary": {
+        "pt": "Uma das figuras centrais da literatura mediúnica brasileira. Sua extensa obra psicográfica é protegida por direitos autorais e segue disponível em edições comerciais.",
+        "en": "One of the central figures of Brazilian mediumistic literature. His extensive psychographic work remains under copyright and is available through commercial editions.",
+        "es": "Una de las figuras centrales de la literatura mediúmnica brasileña. Su extensa obra psicográfica está protegida por derechos de autor y sigue disponible en ediciones comerciales.",
+        "fr": "L’une des figures centrales de la littérature médiumnique brésilienne. Son œuvre psychographique est protégée par le droit d’auteur et reste disponible en éditions commerciales."
+      },
+      "rightsNote": {
+        "pt": "Texto integral não hospedado. Consulte a editora oficial para aquisição ou empréstimo.",
+        "en": "Full text not hosted here. Please consult the official publisher for purchase or lending.",
+        "es": "Texto integral no alojado aquí. Consulta la editorial oficial para compra o préstamo.",
+        "fr": "Texte intégral non hébergé ici. Consultez l’éditeur officiel pour l’achat ou le prêt."
+      }
+    },
+    {
+      "id": "divaldo-franco",
+      "name": "Divaldo Pereira Franco",
+      "fullName": "Divaldo Pereira Franco",
+      "years": "1927–",
+      "country": "Brasil",
+      "publisher": "LEAL — Livraria Espírita Alvorada Editora",
+      "officialUrl": "https://www.livrarialeal.com.br/",
+      "role": {
+        "pt": "Médium, orador e autor psicógrafo",
+        "en": "Medium, speaker and psychographic author",
+        "es": "Médium, orador y autor psicógrafo",
+        "fr": "Médium, conférencier et auteur psychographe"
+      },
+      "summary": {
+        "pt": "Médium e conferencista brasileiro, fundador da Mansão do Caminho. Sua obra, escrita em parceria com autores espirituais, integra o catálogo da editora LEAL.",
+        "en": "Brazilian medium and lecturer, founder of Mansão do Caminho. His work, written with spiritual authors, is published by LEAL.",
+        "es": "Médium y conferencista brasileño, fundador de Mansão do Caminho. Su obra, escrita con autores espirituales, forma parte del catálogo de LEAL.",
+        "fr": "Médium et conférencier brésilien, fondateur de Mansão do Caminho. Son œuvre, écrite avec des auteurs spirituels, est publiée par LEAL."
+      },
+      "rightsNote": {
+        "pt": "Autor vivo e obra protegida. A Lumen apresenta apenas dados biográficos e o caminho para a editora.",
+        "en": "Living author; works protected. Lumen provides only biographical data and a link to the publisher.",
+        "es": "Autor vivo y obra protegida. Lumen presenta solo datos biográficos y el enlace a la editorial.",
+        "fr": "Auteur vivant et œuvre protégée. Lumen présente uniquement des données biographiques et le lien vers l’éditeur."
+      }
+    },
+    {
+      "id": "yvonne-do-amaral-pereira",
+      "name": "Yvonne do Amaral Pereira",
+      "fullName": "Yvonne do Amaral Pereira",
+      "years": "1900–1980",
+      "country": "Brasil",
+      "publisher": "FEB Editora",
+      "officialUrl": "https://www.febeditora.com.br/",
+      "role": {
+        "pt": "Médium e escritora",
+        "en": "Medium and writer",
+        "es": "Médium y escritora",
+        "fr": "Médium et écrivaine"
+      },
+      "summary": {
+        "pt": "Autora de romances e estudos sobre mediunidade e obsessão espiritual. Seus livros continuam em catálogo sob responsabilidade da FEB.",
+        "en": "Author of novels and studies on mediumship and spiritual obsession. Her books remain in print under FEB’s stewardship.",
+        "es": "Autora de novelas y estudios sobre mediumnidad y obsesión espiritual. Sus libros siguen en catálogo bajo la responsabilidad de la FEB.",
+        "fr": "Autrice de romans et d’études sur la médiumnité et l’obsession spirituelle. Ses livres restent au catalogue sous la responsabilité de la FEB."
+      },
+      "rightsNote": {
+        "pt": "Obra protegida até o término do prazo legal. Nenhum texto é disponibilizado pela Lumen.",
+        "en": "Works protected for the full legal term. Lumen does not host any text by this author.",
+        "es": "Obra protegida hasta el final del plazo legal. Lumen no aloja ningún texto de esta autora.",
+        "fr": "Œuvres protégées pendant toute la durée légale. Lumen n’héberge aucun texte de cette autrice."
+      }
+    }
+  ]
+}

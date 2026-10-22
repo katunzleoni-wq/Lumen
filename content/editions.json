@@ -1,0 +1,128 @@
+{
+  "o-livro-dos-espiritos": {
+    "strategy": "wikisource",
+    "rawFile": "livre-esprits-wikisource.html",
+    "fetchUrl": "https://fr.wikisource.org/w/api.php?action=parse&page=Le%20Livre%20des%20Esprits%2FTexte%20entier&prop=text&format=json&formatversion=2",
+    "language": "fr",
+    "year": 1857,
+    "editionNote": "Édition Didier, Paris, 1860",
+    "sourceNote": "Texte transcrit sur Wikisource française. L’œuvre est dans le domaine public ; la transcription est publiée sous CC BY-SA 4.0."
+  },
+  "o-evangelho-segundo-o-espiritismo": {
+    "strategy": "ocr",
+    "rawFile": "evangile.txt",
+    "fetchUrl": "https://archive.org/download/bub_gb_yfcU9eVzmVMC/bub_gb_yfcU9eVzmVMC_djvu.txt",
+    "language": "fr",
+    "year": 1864,
+    "editionNote": "3e édition, Paris, 1866",
+    "introStart": 170,
+    "end": 21514,
+    "chapters": [
+      1779, 2293, 2638, 3212, 3930, 5554, 5850, 6561, 7228, 7601, 8295, 8990, 9761, 10928, 11501,
+      11920, 12887, 13720, 14459, 14909, 15150, 15806, 16004, 16591, 17077, 17421, 17688, 18498
+    ],
+    "chapterTitles": [
+      "Je ne suis point venu détruire la loi",
+      "Mon royaume n’est pas de ce monde",
+      "Il y a plusieurs demeures dans la maison de mon Père",
+      "Personne ne peut voir le royaume de Dieu s’il ne naît de nouveau",
+      "Bienheureux les affligés",
+      "Le Christ consolateur",
+      "Bienheureux les pauvres d’esprit",
+      "Bienheureux ceux qui ont le cœur pur",
+      "Bienheureux ceux qui sont doux et pacifiques",
+      "Bienheureux ceux qui sont miséricordieux",
+      "Aimer son prochain comme soi-même",
+      "Aimez vos ennemis",
+      "Que votre main gauche ne sache pas ce que donne votre main droite",
+      "Honorez votre père et votre mère",
+      "Hors la charité, point de salut",
+      "On ne peut servir Dieu et Mammon",
+      "Soyez parfaits",
+      "Beaucoup d’appelés et peu d’élus",
+      "La foi transporte les montagnes",
+      "Les ouvriers de la dernière heure",
+      "Il y aura de faux christs et de faux prophètes",
+      "Ne séparez pas ce que Dieu a joint",
+      "Morale étrange",
+      "Ne mettez pas la lampe sous le boisseau",
+      "Cherchez et vous trouverez",
+      "Donnez gratuitement ce que vous avez reçu gratuitement",
+      "Demandez et vous obtiendrez",
+      "Recueil de prières spirites"
+    ]
+  },
+  "o-livro-dos-mediuns": {
+    "strategy": "ocr",
+    "rawFile": "mediums.txt",
+    "fetchUrl": "https://archive.org/download/bub_gb_bfFnqBlQGq8C/bub_gb_bfFnqBlQGq8C_djvu.txt",
+    "language": "fr",
+    "year": 1861,
+    "editionNote": "9e édition, Paris, 1865",
+    "introStart": 105,
+    "end": 22256,
+    "chapters": [
+      325, 658, 1166, 1827, 2766, 3087, 3258, 3424, 4091, 5347, 6443, 6928, 7371, 7665, 7851, 8141,
+      8412, 8621, 9444, 9716, 10658, 11519, 11677, 12366, 12867, 13011, 13369, 14229, 15327, 16889,
+      17823, 18393, 19000, 20010, 20523, 22117
+    ],
+    "parts": [
+      { "start": 0, "label": "Première partie" },
+      { "start": 2766, "label": "Seconde partie" }
+    ]
+  },
+  "a-genese": {
+    "strategy": "ocr",
+    "rawFile": "genese.txt",
+    "fetchUrl": "https://archive.org/download/bub_gb_DIErB97VOk8C/bub_gb_DIErB97VOk8C_djvu.txt",
+    "language": "fr",
+    "year": 1868,
+    "editionNote": "Édition A. Lacroix, Paris, 1868",
+    "introStart": 90,
+    "end": 21090,
+    "chapters": [
+      257, 2338, 3257, 4123, 4599, 5041, 6953, 8341, 8731, 9263, 10053, 11557, 12719, 13369, 15094,
+      17597, 18200, 19922
+    ]
+  },
+  "instrucao-pratica-sobre-as-manifestacoes-espiritas": {
+    "strategy": "ocr",
+    "rawFile": "instruction.txt",
+    "fetchUrl": "https://archive.org/download/bub_gb_o2bo1lt3i00C/bub_gb_o2bo1lt3i00C_djvu.txt",
+    "language": "fr",
+    "year": 1858,
+    "editionNote": "Édition E. Dentu, Paris, 1858",
+    "introStart": 260,
+    "end": 6891,
+    "chapters": [2674, 3074, 3553, 3836, 4380, 4939, 5232, 5405, 6429, 6555, 6625],
+    "pdfSource": "instruction-pratique.source.pdf",
+    "pdfFetchUrl": "https://archive.org/download/bub_gb_o2bo1lt3i00C/bub_gb_o2bo1lt3i00C.pdf"
+  },
+  "mysterious-psychic-forces": {
+    "strategy": "copy-epub",
+    "rawFile": "mysterious-psychic-forces.source.epub",
+    "fetchUrl": "https://www.gutenberg.org/ebooks/39279.epub3.images",
+    "language": "en",
+    "year": 1907,
+    "editionNote": "Author’s English edition, 1907",
+    "sourceEpub": "mysterious-psychic-forces.source.epub"
+  },
+  "lumen": {
+    "strategy": "copy-epub",
+    "rawFile": "lumen.source.epub",
+    "fetchUrl": "https://www.gutenberg.org/ebooks/43835.epub3.images",
+    "language": "en",
+    "year": 1872,
+    "editionNote": "English translation, Project Gutenberg eBook #43835",
+    "sourceEpub": "lumen.source.epub"
+  },
+  "the-vital-message": {
+    "strategy": "copy-epub",
+    "rawFile": "the-vital-message.source.epub",
+    "fetchUrl": "https://www.gutenberg.org/ebooks/439.epub3.images",
+    "language": "en",
+    "year": 1919,
+    "editionNote": "First edition, 1919",
+    "sourceEpub": "the-vital-message.source.epub"
+  }
+}
