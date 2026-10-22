@@ -1,0 +1,21 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "react/jsx-no-target-blank": "error",
+    "jsx-a11y/no-autofocus": "off"
+  },
+  "ignorePatterns": [
+    ".next/",
+    "node_modules/",
+    "public/pagefind/",
+    "public/pdf.worker.min.mjs",
+    "coverage/",
+    "playwright-report/",
+    "test-results/"
+  ]
+}

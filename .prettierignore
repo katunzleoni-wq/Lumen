@@ -1,0 +1,11 @@
+.next
+node_modules
+coverage
+playwright-report
+test-results
+public/pagefind
+public/pdfjs
+public/pdf.worker.min.mjs
+public/books
+public/covers
+package-lock.json
