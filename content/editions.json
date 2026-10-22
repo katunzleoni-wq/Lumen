@@ -53,23 +53,10 @@
     ]
   },
   "o-livro-dos-mediuns": {
-    "strategy": "ocr",
-    "rawFile": "mediums.txt",
-    "fetchUrl": "https://archive.org/download/bub_gb_bfFnqBlQGq8C/bub_gb_bfFnqBlQGq8C_djvu.txt",
-    "language": "fr",
+    "strategy": "external",
+    "language": "pt",
     "year": 1861,
-    "editionNote": "9e édition, Paris, 1865",
-    "introStart": 105,
-    "end": 22256,
-    "chapters": [
-      325, 658, 1166, 1827, 2766, 3087, 3258, 3424, 4091, 5347, 6443, 6928, 7371, 7665, 7851, 8141,
-      8412, 8621, 9444, 9716, 10658, 11519, 11677, 12366, 12867, 13011, 13369, 14229, 15327, 16889,
-      17823, 18393, 19000, 20010, 20523, 22117
-    ],
-    "parts": [
-      { "start": 0, "label": "Première partie" },
-      { "start": 2766, "label": "Seconde partie" }
-    ]
+    "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "a-genese": {
     "strategy": "ocr",

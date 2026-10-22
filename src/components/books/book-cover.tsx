@@ -6,6 +6,7 @@ interface BookCoverProps {
   slug: string;
   title: string;
   alt: string;
+  src?: string;
   priority?: boolean;
   className?: string;
   sizes?: string;
@@ -15,6 +16,7 @@ export function BookCover({
   slug,
   title,
   alt,
+  src,
   priority = false,
   className,
   sizes = "(max-width: 768px) 50vw, 25vw",
@@ -28,7 +30,7 @@ export function BookCover({
       data-book-cover={slug}
     >
       <Image
-        src={getBookCover(slug)}
+        src={src ?? getBookCover(slug)}
         alt={alt}
         fill
         priority={priority}

@@ -96,13 +96,14 @@
       "author": "Allan Kardec",
       "originalTitle": "Le Livre des Médiums",
       "year": 1861,
-      "language": "fr",
+      "language": "pt",
       "category": "mediunidade",
       "readingMinutes": 540,
-      "formats": ["epub"],
+      "formats": ["pdf", "epub"],
       "featured": true,
-      "addedAt": "2026-10-21",
-      "rights": "public-domain",
+      "addedAt": "2026-10-22",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
       "availability": "full",
       "palette": ["#252b4a", "#4f5d8c", "#d9c79a"],
       "motif": "constellation",
@@ -125,32 +126,15 @@
         "fr": "Une étude des manifestations spirites, des facultés médiumniques et des conditions morales de la médiumnité."
       },
       "source": {
-        "provider": "Internet Archive",
-        "publisher": "Didier et Cie",
-        "url": "https://archive.org/details/bub_gb_bfFnqBlQGq8C",
-        "license": "Public Domain Mark 1.0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "edition": "9e édition, Paris, 1865",
-        "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
-        "capturedAt": "2026-10-21"
-      },
-      "alternateEditions": [
-        {
-          "id": "pt-feb-guillon",
-          "language": "pt",
-          "label": {
-            "pt": "Português — tradução de Guillon Ribeiro",
-            "en": "Portuguese — Guillon Ribeiro translation",
-            "es": "Portugués — traducción de Guillon Ribeiro",
-            "fr": "Portugais — traduction de Guillon Ribeiro"
-          },
-          "translator": "Guillon Ribeiro",
-          "license": "Licença FEB 2026 · uso não comercial · texto integral",
-          "pdf": "/books/o-livro-dos-mediuns.pt.pdf",
-          "epub": "/books/o-livro-dos-mediuns.pt.epub",
-          "cover": "/covers/o-livro-dos-mediuns-pt.svg"
-        }
-      ]
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febeditora.com.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução de Guillon Ribeiro · edição FEB",
+        "editionNote": "Texto integral autorizado pela FEB em 22/10/2026; capa e projeto gráfico Lumen.",
+        "capturedAt": "2026-10-22"
+      }
     },
     {
       "id": "a-genese",

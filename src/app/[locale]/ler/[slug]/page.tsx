@@ -67,7 +67,7 @@ export default async function ReaderPage({
       book={book}
       edition={edition}
       initialFormat={initialFormat}
-      readingId={edition ? `${book.id}:${edition.id}` : book.id}
+      readingId={book.contentVersion ? `${book.id}:${book.contentVersion}` : book.id}
     />
   );
 }

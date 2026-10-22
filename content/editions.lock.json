@@ -1,6 +1,6 @@
 {
   "capturedAt": "2026-10-21",
-  "generatedAt": "2026-10-21",
+  "generatedAt": "2026-10-22",
   "editions": {
     "o-livro-dos-espiritos": {
       "file": "public/books/o-livro-dos-espiritos.epub",
@@ -20,11 +20,16 @@
     },
     "o-livro-dos-mediuns": {
       "file": "public/books/o-livro-dos-mediuns.epub",
-      "sha256": "366706693690769abb6d4e312b855623d96a5ea141b494bbaeb5b643fa17c04a",
-      "bytes": 926658,
-      "language": "fr",
+      "sha256": "7c45d1fd7ed862c655f578dbc1292542bbbe6dd752ad65be9a8c41ecd794335c",
+      "bytes": 655184,
+      "language": "pt",
       "chapters": 37,
-      "strategy": "ocr"
+      "strategy": "feb",
+      "pdf": {
+        "file": "public/books/o-livro-dos-mediuns.pdf",
+        "sha256": "f5c5a19ae07452037052bc602503e660a9ea864a9699528f479346edb84a4c4a",
+        "bytes": 2567052
+      }
     },
     "a-genese": {
       "file": "public/books/a-genese.epub",

@@ -351,7 +351,7 @@ async function main() {
   const chapters = await extractChapters();
   console.log(`[feb] ${chapters.length} sections extracted`);
   const svg = coverSvg();
-  writeFileSync(join(coverDir, `${config.slug}-pt.svg`), svg);
+  writeFileSync(join(coverDir, `${config.slug}.svg`), svg);
 
   const browser = await chromium.launch();
   try {
@@ -362,7 +362,7 @@ async function main() {
       `<style>html,body{margin:0;background:#000}img{display:block;width:600px;height:900px}</style><img src="${coverData}" alt="">`,
       { waitUntil: "networkidle" },
     );
-    const coverPng = join(root, "content-sources", "build", `${config.slug}-pt.png`);
+    const coverPng = join(root, "content-sources", "build", `${config.slug}.png`);
     mkdirSync(dirname(coverPng), { recursive: true });
     await coverPage.screenshot({ path: coverPng });
     await coverPage.close();
@@ -371,7 +371,7 @@ async function main() {
     const pdfPage = await browser.newPage();
     await pdfPage.setContent(html, { waitUntil: "load", timeout: 120_000 });
     await pdfPage.emulateMedia({ media: "print" });
-    const pdfPath = join(bookDir, `${config.slug}.pt.pdf`);
+    const pdfPath = join(bookDir, `${config.slug}.pdf`);
     await pdfPage.pdf({
       path: pdfPath,
       format: "A5",
@@ -413,7 +413,7 @@ async function main() {
       epubChapters,
       3,
     );
-    const epubPath = join(bookDir, `${config.slug}.pt.epub`);
+    const epubPath = join(bookDir, `${config.slug}.epub`);
     writeFileSync(epubPath, Buffer.from(epubBuffer));
 
     const pdfBytes = readFileSync(pdfPath);
@@ -424,13 +424,13 @@ async function main() {
       config,
       chapters: chapters.length,
       pdf: {
-        file: `public/books/${config.slug}.pt.pdf`,
+        file: `public/books/${config.slug}.pdf`,
         bytes: pdfBytes.length,
         pages: pdfMeta.getPageCount(),
         sha256: createHash("sha256").update(pdfBytes).digest("hex"),
       },
       epub: {
-        file: `public/books/${config.slug}.pt.epub`,
+        file: `public/books/${config.slug}.epub`,
         bytes: epubBytes.length,
         sha256: createHash("sha256").update(epubBytes).digest("hex"),
       },
@@ -439,6 +439,24 @@ async function main() {
       join(root, "content", "feb-editions.lock.json"),
       `${JSON.stringify(lock, null, 2)}\n`,
     );
+
+    const editionsLockPath = join(root, "content", "editions.lock.json");
+    const editionsLock = JSON.parse(readFileSync(editionsLockPath, "utf8"));
+    editionsLock.generatedAt = "2026-10-22";
+    editionsLock.editions[config.slug] = {
+      file: lock.epub.file,
+      sha256: lock.epub.sha256,
+      bytes: lock.epub.bytes,
+      language: "pt",
+      chapters: chapters.length,
+      strategy: "feb",
+      pdf: {
+        file: lock.pdf.file,
+        sha256: lock.pdf.sha256,
+        bytes: lock.pdf.bytes,
+      },
+    };
+    writeFileSync(editionsLockPath, `${JSON.stringify(editionsLock, null, 2)}\n`);
     console.log(`[feb] PDF ${pdfMeta.getPageCount()} pages, EPUB ${chapters.length + 1} sections`);
     console.log(`[feb] ${pdfPath}`);
     console.log(`[feb] ${epubPath}`);

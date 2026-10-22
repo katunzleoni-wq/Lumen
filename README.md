@@ -17,7 +17,7 @@ Uma biblioteca digital editorial para leitura de obras espíritas em **EPUB** e 
 - **Acessibilidade** com navegação por teclado, skip link, foco visível, rótulos, `aria-pressed`, diálogos Radix, contraste e respeito a `prefers-reduced-motion`.
 - **Qualidade automatizada**: ESLint, TypeScript `strict`, Prettier, Husky, lint-staged, commitlint, Vitest + Testing Library, Playwright e GitHub Actions.
 
-> **Escopo do acervo:** as oito obras são **edições integrais em domínio público**, obtidas de Wikisource, Internet Archive e Project Gutenberg. _O Livro dos Médiuns_ também tem uma edição em português licenciada pela FEB, com texto de Guillon Ribeiro e projeto gráfico próprio. A fonte, a edição de origem, a licença e a data de captura estão no catálogo e em [`docs/content-sources.md`](docs/content-sources.md). Autores com direitos ativos aparecem apenas como perfis editoriais, sem textos hospedados.
+> **Escopo do acervo:** sete obras são **edições integrais em domínio público**, obtidas de Wikisource, Internet Archive e Project Gutenberg. _O Livro dos Médiuns_ é uma edição integral em português licenciada pela FEB, com texto de Guillon Ribeiro e projeto gráfico próprio; ela substituiu por completo a antiga edição francesa do Internet Archive. A fonte, a edição de origem, a licença e a data de captura estão no catálogo e em [`docs/content-sources.md`](docs/content-sources.md). Autores com direitos ativos aparecem apenas como perfis editoriais, sem textos hospedados.
 
 ## Telas
 
@@ -236,7 +236,7 @@ npm run test:e2e
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.
-- O acervo hospedado está em francês e inglês, nos idiomas originais, com _O Livro dos Médiuns_ também em português; títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas sem licença.
+- O acervo hospedado está em francês e inglês, com _O Livro dos Médiuns_ integralmente em português; títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas sem licença.
 
 ## Próximos passos naturais
 

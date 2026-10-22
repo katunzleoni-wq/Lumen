@@ -33,8 +33,13 @@ describe("filterBooks", () => {
     );
 
     const formatResult = filterBooks(books, "pt", { ...baseFilters, format: "pdf" });
-    expect(formatResult).toHaveLength(1);
-    expect(formatResult[0]?.id).toBe("instrucao-pratica-sobre-as-manifestacoes-espiritas");
+    expect(formatResult).toHaveLength(2);
+    expect(formatResult.map((book) => book.id)).toEqual(
+      expect.arrayContaining([
+        "o-livro-dos-mediuns",
+        "instrucao-pratica-sobre-as-manifestacoes-espiritas",
+      ]),
+    );
 
     const languageResult = filterBooks(books, "pt", { ...baseFilters, language: "en" });
     expect(languageResult.length).toBeGreaterThan(0);

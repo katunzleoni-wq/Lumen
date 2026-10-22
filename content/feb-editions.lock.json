@@ -15,14 +15,14 @@
   },
   "chapters": 37,
   "pdf": {
-    "file": "public/books/o-livro-dos-mediuns.pt.pdf",
+    "file": "public/books/o-livro-dos-mediuns.pdf",
     "bytes": 2567052,
     "pages": 501,
-    "sha256": "696a0932640b621801b1b2189d0f9a4068500d4837f77e72039d535bdee5424b"
+    "sha256": "f5c5a19ae07452037052bc602503e660a9ea864a9699528f479346edb84a4c4a"
   },
   "epub": {
-    "file": "public/books/o-livro-dos-mediuns.pt.epub",
-    "bytes": 655182,
-    "sha256": "fd90132f9958b1c0d99e99994e494271b0ad23180a52b2e97273fa8188061fd5"
+    "file": "public/books/o-livro-dos-mediuns.epub",
+    "bytes": 655184,
+    "sha256": "7c45d1fd7ed862c655f578dbc1292542bbbe6dd752ad65be9a8c41ecd794335c"
   }
 }

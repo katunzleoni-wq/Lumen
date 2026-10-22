@@ -6,7 +6,7 @@ export type BookFormat = "epub" | "pdf";
 
 export type LocalizedText = Record<Locale, string>;
 
-export type RightsStatus = "public-domain" | "copyrighted";
+export type RightsStatus = "public-domain" | "copyrighted" | "licensed";
 export type Availability = "full" | "catalog-only";
 
 export interface BookSource {
@@ -44,6 +44,7 @@ export interface Book {
   featured: boolean;
   addedAt: string;
   rights: RightsStatus;
+  contentVersion?: string;
   availability: Availability;
   palette: [string, string, string];
   motif: string;

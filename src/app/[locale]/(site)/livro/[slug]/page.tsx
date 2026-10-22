@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
-  BookOpen,
   CalendarDays,
   ChevronRight,
   Clock3,
@@ -144,7 +143,12 @@ export default async function BookPage({ params }: { params: { locale: string; s
                 </div>
 
                 <div className="mt-7 rounded-2xl border border-border/80 bg-card/80 p-5 shadow-soft">
-                  <BookReadingActions bookId={book.id} slug={book.slug} title={title} />
+                  <BookReadingActions
+                    bookId={book.id}
+                    slug={book.slug}
+                    title={title}
+                    readingId={book.contentVersion ? `${book.id}:${book.contentVersion}` : book.id}
+                  />
                   <div
                     className={`mt-4 grid gap-2 ${book.formats.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
                   >
@@ -164,7 +168,7 @@ export default async function BookPage({ params }: { params: { locale: string; s
                     className="mt-0.5 size-3.5 shrink-0 text-gold-600"
                     aria-hidden="true"
                   />
-                  {t("book.sampleNote")}
+                  {book.rights === "licensed" ? t("book.licensedNote") : t("book.sampleNote")}
                 </div>
               </div>
             </div>
@@ -180,7 +184,7 @@ export default async function BookPage({ params }: { params: { locale: string; s
                 <Badge variant="muted">{t(`languages.${book.language}`)}</Badge>
                 <Badge variant="secondary">
                   <ShieldCheck className="size-3" aria-hidden="true" />
-                  {t("book.publicDomain")}
+                  {book.rights === "licensed" ? t("book.licensedByFeb") : t("book.publicDomain")}
                 </Badge>
               </div>
 
@@ -244,67 +248,6 @@ export default async function BookPage({ params }: { params: { locale: string; s
                   </p>
                 </div>
               </div>
-
-              {book.alternateEditions?.map((edition) => (
-                <section
-                  key={edition.id}
-                  className="mt-8 rounded-2xl border border-forest-200/70 bg-forest-50/50 p-5 sm:p-6"
-                  aria-labelledby={`edition-${edition.id}`}
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <div>
-                      <p className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-forest-700">
-                        <Languages className="size-3.5" aria-hidden="true" />
-                        {t("book.otherLanguages")}
-                      </p>
-                      <h2
-                        id={`edition-${edition.id}`}
-                        className="mt-2 font-serif text-xl font-medium"
-                      >
-                        {edition.label[locale]}
-                      </h2>
-                      {edition.translator && (
-                        <p className="mt-1 text-xs text-muted-foreground">
-                          {edition.translator} · {edition.license}
-                        </p>
-                      )}
-                    </div>
-                    <Badge variant="secondary">
-                      <ShieldCheck className="size-3" aria-hidden="true" />
-                      {t("book.licensedByFeb")}
-                    </Badge>
-                  </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {edition.pdf && (
-                      <Button asChild size="sm">
-                        <Link href={`/ler/${book.slug}?lang=${edition.language}&formato=pdf`}>
-                          <BookOpen className="size-4" aria-hidden="true" />
-                          {t("book.readThisEdition")}
-                        </Link>
-                      </Button>
-                    )}
-                    {edition.pdf && (
-                      <Button asChild variant="outline" size="sm">
-                        <a href={edition.pdf} download>
-                          <Download className="size-3.5" aria-hidden="true" />
-                          PDF
-                        </a>
-                      </Button>
-                    )}
-                    {edition.epub && (
-                      <Button asChild variant="outline" size="sm">
-                        <a href={edition.epub} download>
-                          <Download className="size-3.5" aria-hidden="true" />
-                          EPUB
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                  <p className="mt-3 text-[0.66rem] leading-relaxed text-muted-foreground">
-                    {t("book.sampleNote")}
-                  </p>
-                </section>
-              ))}
 
               {toc.length > 0 && (
                 <section className="mt-12" aria-labelledby="toc-heading">
@@ -415,7 +358,9 @@ export default async function BookPage({ params }: { params: { locale: string; s
 
               <div className="mt-6 flex items-start gap-3 rounded-2xl border border-gold-200/70 bg-gold-50/60 p-5">
                 <FileText className="mt-0.5 size-4 shrink-0 text-gold-700" aria-hidden="true" />
-                <p className="text-xs leading-relaxed text-gold-900/80">{t("book.sampleNote")}</p>
+                <p className="text-xs leading-relaxed text-gold-900/80">
+                  {book.rights === "licensed" ? t("book.licensedNote") : t("book.sampleNote")}
+                </p>
               </div>
             </div>
           </div>

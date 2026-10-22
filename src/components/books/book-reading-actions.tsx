@@ -3,6 +3,7 @@
 import { BookOpen, Play } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
+import type { BookEdition } from "@/content/books";
 import { useReadingProgress } from "@/lib/use-library";
 import { Button } from "@/components/ui/button";
 import { FavoriteButton } from "@/components/site/favorite-button";
@@ -12,19 +13,32 @@ interface BookReadingActionsProps {
   bookId: string;
   slug: string;
   title: string;
+  readingId?: string;
+  edition?: BookEdition;
 }
 
-export function BookReadingActions({ bookId, slug, title }: BookReadingActionsProps) {
+export function BookReadingActions({
+  bookId,
+  slug,
+  title,
+  readingId = bookId,
+  edition,
+}: BookReadingActionsProps) {
   const t = useTranslations();
-  const epubProgress = useReadingProgress(bookId, "epub");
-  const pdfProgress = useReadingProgress(bookId, "pdf");
+  const epubProgress = useReadingProgress(readingId, "epub");
+  const pdfProgress = useReadingProgress(readingId, "pdf");
 
   const latest =
     [epubProgress, pdfProgress]
       .filter((progress) => progress !== undefined)
       .sort((a, b) => b.updatedAt - a.updatedAt)[0] ?? null;
   const hasProgress = Boolean(latest && latest.percent > 0);
-  const href = latest ? `/ler/${slug}?formato=${latest.format}` : `/ler/${slug}`;
+  const editionQuery = edition ? `lang=${edition.language}&` : "";
+  const defaultFormat = edition?.pdf ? "pdf" : "epub";
+  const defaultHref = edition
+    ? `/ler/${slug}?${editionQuery}formato=${defaultFormat}`
+    : `/ler/${slug}`;
+  const href = latest ? `/ler/${slug}?${editionQuery}formato=${latest.format}` : defaultHref;
 
   return (
     <div className="space-y-4">

@@ -504,6 +504,10 @@ function sha256(buffer) {
 }
 
 async function main() {
+  const previousLock = JSON.parse(
+    readFileSync(join(root, "content", "editions.lock.json"), "utf8"),
+  );
+  const previousToc = JSON.parse(readFileSync(join(root, "content", "toc.json"), "utf8"));
   const manifest = {};
   const toc = {};
   const browser = await chromium.launch();
@@ -511,6 +515,14 @@ async function main() {
     for (const book of books) {
       const config = editions[book.slug];
       if (!config) throw new Error(`Missing edition config for ${book.slug}`);
+      if (config.strategy === "external") {
+        if (previousLock.editions[book.slug]) {
+          manifest[book.slug] = previousLock.editions[book.slug];
+        }
+        toc[book.slug] = previousToc[book.slug] ?? [];
+        console.log(`[edition] ${book.slug} ← external (preserved)`);
+        continue;
+      }
       const svg = coverSvg(book);
       writeFileSync(join(coverDir, `${book.slug}.svg`), svg);
       console.log(`[cover] ${book.slug}.svg`);
@@ -555,7 +567,9 @@ async function main() {
       console.log(`[edition] ${book.slug}.epub ← ${config.strategy} (${chapters.length} sections)`);
     }
 
-    const instruction = books.find((book) => book.formats.includes("pdf"));
+    const instruction = books.find(
+      (book) => book.formats.includes("pdf") && editions[book.slug]?.pdfSource,
+    );
     if (instruction) {
       const config = editions[instruction.slug];
       const sourcePdf = join(rawDir, config.pdfSource);
