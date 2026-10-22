@@ -43,11 +43,16 @@
     },
     "a-genese": {
       "file": "public/books/a-genese.epub",
-      "sha256": "23ee051801821cceb8bacac0472f62907ea5017b7bfb9f0642c251ea5daeaf6d",
-      "bytes": 871657,
-      "language": "fr",
+      "sha256": "a477370276505b811aa5e46e66c779df1513f492b5a94509e4aef72f4ac38ebb",
+      "bytes": 597513,
+      "language": "pt",
       "chapters": 19,
-      "strategy": "ocr"
+      "strategy": "feb",
+      "pdf": {
+        "file": "public/books/a-genese.pdf",
+        "sha256": "155a9cb00f404226e1fbb98586d46001ab6b9c0b65a541ddd3def93295691270",
+        "bytes": 2285852
+      }
     },
     "instrucao-pratica-sobre-as-manifestacoes-espiritas": {
       "file": "public/books/instrucao-pratica-sobre-as-manifestacoes-espiritas.epub",
@@ -85,6 +90,19 @@
       "language": "en",
       "chapters": 2,
       "strategy": "copy-epub"
+    },
+    "o-ceu-e-o-inferno": {
+      "file": "public/books/o-ceu-e-o-inferno.epub",
+      "sha256": "8520b36d05a0ea9d087d752a72b1860358b20fedf57c73b2a7bb89d8d92932b5",
+      "bytes": 606664,
+      "language": "pt",
+      "chapters": 19,
+      "strategy": "feb",
+      "pdf": {
+        "file": "public/books/o-ceu-e-o-inferno.pdf",
+        "sha256": "f2e3e1251abeea40ed4faf977d491eca06da4a97349a136545c6cb83c8f707c8",
+        "bytes": 2353648
+      }
     }
   }
 }

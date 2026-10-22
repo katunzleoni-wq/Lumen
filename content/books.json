@@ -144,13 +144,14 @@
       "author": "Allan Kardec",
       "originalTitle": "La Genèse",
       "year": 1868,
-      "language": "fr",
+      "language": "pt",
       "category": "fundamentos",
       "readingMinutes": 420,
-      "formats": ["epub"],
+      "formats": ["epub", "pdf"],
       "featured": false,
-      "addedAt": "2026-10-21",
-      "rights": "public-domain",
+      "addedAt": "2026-10-22",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
       "availability": "full",
       "palette": ["#1f3e45", "#477079", "#ddc38e"],
       "motif": "seed",
@@ -173,14 +174,60 @@
         "fr": "La création, les miracles et les prophéties relus à la lumière des lois naturelles et de la recherche spirite."
       },
       "source": {
-        "provider": "Internet Archive",
-        "publisher": "Librairie Internationale / A. Lacroix",
-        "url": "https://archive.org/details/bub_gb_DIErB97VOk8C",
-        "license": "Public Domain Mark 1.0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "edition": "A. Lacroix, Paris, 1868",
-        "editionNote": "Digitalização Google; OCR convertido pela Lumen em EPUB.",
-        "capturedAt": "2026-10-21"
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febeditora.com.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução de Guillon Ribeiro · edição FEB",
+        "editionNote": "Texto integral autorizado pela FEB em 22/10/2026; capa e projeto gráfico Lumen.",
+        "capturedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "o-ceu-e-o-inferno",
+      "slug": "o-ceu-e-o-inferno",
+      "author": "Allan Kardec",
+      "originalTitle": "Le Ciel et l'Enfer",
+      "year": 1865,
+      "language": "pt",
+      "category": "fundamentos",
+      "readingMinutes": 520,
+      "formats": ["epub", "pdf"],
+      "featured": false,
+      "addedAt": "2026-10-22",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
+      "availability": "full",
+      "palette": ["#2b233d", "#5b4a73", "#d8b976"],
+      "motif": "rays",
+      "title": {
+        "pt": "O Céu e o Inferno",
+        "en": "Heaven and Hell",
+        "es": "El Cielo y el Infierno",
+        "fr": "Le Ciel et l'Enfer"
+      },
+      "subtitle": {
+        "pt": "A justiça divina segundo o Espiritismo",
+        "en": "Divine justice according to Spiritism",
+        "es": "La justicia divina según el Espiritismo",
+        "fr": "La justice divine selon le spiritisme"
+      },
+      "description": {
+        "pt": "Exame comparado das doutrinas sobre a vida após a morte, as penas e recompensas futuras, os anjos e demônios, com exemplos da situação real da alma.",
+        "en": "A comparative study of teachings on life after death, future penalties and rewards, angels and demons, with examples of the soul's real condition.",
+        "es": "Un estudio comparado de las doctrinas sobre la vida después de la muerte, las penas y recompensas futuras, los ángeles y demonios, con ejemplos de la situación real del alma.",
+        "fr": "Une étude comparée des doctrines sur la vie après la mort, les peines et récompenses futures, les anges et les démons, avec des exemples de la situation réelle de l'âme."
+      },
+      "source": {
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febeditora.com.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução de Guillon Ribeiro · edição FEB",
+        "editionNote": "Texto integral autorizado pela FEB em 22/10/2026; capa e projeto gráfico Lumen.",
+        "capturedAt": "2026-10-22"
       }
     },
     {

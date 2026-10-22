@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-22",
+  "config": {
+    "slug": "a-genese",
+    "source": "a-genese.pdf",
+    "startPage": 10,
+    "title": "A Gênese",
+    "subtitle": "Os milagres e as predições segundo o Espiritismo",
+    "author": "Allan Kardec",
+    "translator": "Guillon Ribeiro",
+    "license": "Obra de Allan Kardec. Tradução de Guillon Ribeiro. Tradução e edição © Federação Espírita Brasileira. Uso autorizado ao projeto Lumen para disponibilização gratuita e sem fins lucrativos.",
+    "description": "Estudo da Gênese, dos milagres e das predições à luz das leis naturais e da observação dos fenômenos espíritas.",
+    "year": 1868,
+    "editionNote": "Edição Lumen preparada a partir do texto da tradução de Guillon Ribeiro, com autorização da FEB."
+  },
+  "chapters": 19,
+  "pdf": {
+    "file": "public/books/a-genese.pdf",
+    "bytes": 2285852,
+    "pages": 424,
+    "sha256": "155a9cb00f404226e1fbb98586d46001ab6b9c0b65a541ddd3def93295691270"
+  },
+  "epub": {
+    "file": "public/books/a-genese.epub",
+    "bytes": 597513,
+    "sha256": "a477370276505b811aa5e46e66c779df1513f492b5a94509e4aef72f4ac38ebb"
+  }
+}

@@ -18,18 +18,16 @@
     "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "a-genese": {
-    "strategy": "ocr",
-    "rawFile": "genese.txt",
-    "fetchUrl": "https://archive.org/download/bub_gb_DIErB97VOk8C/bub_gb_DIErB97VOk8C_djvu.txt",
-    "language": "fr",
+    "strategy": "external",
+    "language": "pt",
     "year": 1868,
-    "editionNote": "Édition A. Lacroix, Paris, 1868",
-    "introStart": 90,
-    "end": 21090,
-    "chapters": [
-      257, 2338, 3257, 4123, 4599, 5041, 6953, 8341, 8731, 9263, 10053, 11557, 12719, 13369, 15094,
-      17597, 18200, 19922
-    ]
+    "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
+  },
+  "o-ceu-e-o-inferno": {
+    "strategy": "external",
+    "language": "pt",
+    "year": 1865,
+    "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "instrucao-pratica-sobre-as-manifestacoes-espiritas": {
     "strategy": "ocr",

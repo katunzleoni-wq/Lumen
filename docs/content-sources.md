@@ -14,7 +14,8 @@ modernas sem autorização, capas comerciais, nem textos de autores com direitos
 | O Livro dos Espíritos                                | Allan Kardec       | 1857 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-livro-dos-espiritos.epub` e `.pdf`                              |
 | O Evangelho segundo o Espiritismo                    | Allan Kardec       | 1864 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-evangelho-segundo-o-espiritismo.epub` e `.pdf`                  |
 | O Livro dos Médiuns                                  | Allan Kardec       | 1861 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-livro-dos-mediuns.epub` e `.pdf`                                |
-| La Genèse                                            | Allan Kardec       | 1868 | fr     | A. Lacroix, Paris, 1868             | Internet Archive  | https://archive.org/details/bub_gb_DIErB97VOk8C | Public Domain Mark 1.0                             | `a-genese.epub`                                                    |
+| O Céu e o Inferno                                    | Allan Kardec       | 1865 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-ceu-e-o-inferno.epub` e `.pdf`                                  |
+| A Gênese                                             | Allan Kardec       | 1868 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `a-genese.epub` e `.pdf`                                           |
 | Instruction pratique sur les manifestations spirites | Allan Kardec       | 1858 | fr     | E. Dentu, Paris, 1858               | Internet Archive  | https://archive.org/details/bub_gb_o2bo1lt3i00C | Public Domain Mark 1.0                             | `instrucao-pratica-sobre-as-manifestacoes-espiritas.epub` e `.pdf` |
 | Mysterious Psychic Forces                            | Camille Flammarion | 1907 | en     | English edition, 1907; eBook #39279 | Project Gutenberg | https://www.gutenberg.org/ebooks/39279          | Domínio público nos EUA; Project Gutenberg License | `mysterious-psychic-forces.epub`                                   |
 | Lumen                                                | Camille Flammarion | 1872 | en     | English translation; eBook #43835   | Project Gutenberg | https://www.gutenberg.org/ebooks/43835          | Domínio público nos EUA; Project Gutenberg License | `lumen.epub`                                                       |
@@ -38,8 +39,9 @@ cada edição; `source.provider`, `source.url`, `source.license` e
   preservadas sem modificação. A marca e a licença do Project Gutenberg são
   respeitadas; o projeto não cobra pelo acesso.
 - **FEB / Guillon Ribeiro:** _O Livro dos Espíritos_, _O Evangelho segundo o
-  Espiritismo_ e _O Livro dos Médiuns_ em português usam o texto da tradução de
-  Guillon Ribeiro com autorização da FEB de 22/10/2026, registrada em
+  Espiritismo_, _O Livro dos Médiuns_, _O Céu e o Inferno_ e _A Gênese_ em
+  português usam o texto da tradução de Guillon Ribeiro com autorização da FEB
+  de 22/10/2026, registrada em
   [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). As edições foram
   recompostas pela Lumen, com capa e projeto gráfico próprios; não usam capa,
   logotipo, diagramação ou notas editoriais da FEB.
@@ -102,6 +104,8 @@ npm run assets:verify     # valida estrutura, metadados, sumário, capa e hashes
 npm run build:feb            # gera O Livro dos Médiuns em PT
 npm run build:feb:espiritos  # gera O Livro dos Espíritos em PT
 npm run build:feb:evangelho  # gera O Evangelho segundo o Espiritismo em PT
+npm run build:feb:ceu        # gera O Céu e o Inferno em PT
+npm run build:feb:genese     # gera A Gênese em PT
 npm run verify:feb           # valida as edições PT, créditos, capa e sumário
 ```
 

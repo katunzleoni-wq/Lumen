@@ -55,7 +55,10 @@ for (const format of ["pdf", "epub"]) {
       const nav = navHref ? await zip.file(`${base}${navHref}`)?.async("string") : undefined;
       tocEntries = nav ? (nav.match(/<a\s[^>]*href=/gi) ?? []).length : 0;
     }
-    if (tocEntries < 30) errors.push(`epub: expected at least 30 TOC entries, found ${tocEntries}`);
+    const expectedTocEntries = (lock.chapters ?? 30) + 1;
+    if (tocEntries < expectedTocEntries) {
+      errors.push(`epub: expected at least ${expectedTocEntries} TOC entries, found ${tocEntries}`);
+    }
     const coverMeta = [...opfDom.window.document.getElementsByTagName("meta")]
       .find((meta) => meta.getAttribute("name") === "cover")
       ?.getAttribute("content");

@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-22",
+  "config": {
+    "slug": "o-ceu-e-o-inferno",
+    "source": "o-ceu-e-o-inferno.pdf",
+    "startPage": 10,
+    "title": "O Céu e o Inferno",
+    "subtitle": "ou A Justiça Divina segundo o Espiritismo",
+    "author": "Allan Kardec",
+    "translator": "Guillon Ribeiro",
+    "license": "Obra de Allan Kardec. Tradução de Guillon Ribeiro. Tradução e edição © Federação Espírita Brasileira. Uso autorizado ao projeto Lumen para disponibilização gratuita e sem fins lucrativos.",
+    "description": "Exame comparado das doutrinas sobre a passagem da vida corporal à vida espiritual, as penalidades e recompensas futuras, os anjos e demônios, seguido de exemplos da situação real da alma.",
+    "year": 1865,
+    "editionNote": "Edição Lumen preparada a partir do texto da tradução de Guillon Ribeiro, com autorização da FEB."
+  },
+  "chapters": 19,
+  "pdf": {
+    "file": "public/books/o-ceu-e-o-inferno.pdf",
+    "bytes": 2353648,
+    "pages": 450,
+    "sha256": "f2e3e1251abeea40ed4faf977d491eca06da4a97349a136545c6cb83c8f707c8"
+  },
+  "epub": {
+    "file": "public/books/o-ceu-e-o-inferno.epub",
+    "bytes": 606664,
+    "sha256": "8520b36d05a0ea9d087d752a72b1860358b20fedf57c73b2a7bb89d8d92932b5"
+  }
+}
