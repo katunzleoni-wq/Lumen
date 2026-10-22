@@ -4,11 +4,16 @@
   "editions": {
     "o-livro-dos-espiritos": {
       "file": "public/books/o-livro-dos-espiritos.epub",
-      "sha256": "7bc15c428550327f996dcec69df4fc2fa17b5c370dca9e0fd5e4ccec72af05b9",
-      "bytes": 944573,
-      "language": "fr",
-      "chapters": 56,
-      "strategy": "wikisource"
+      "sha256": "9f7c2c7f02fbef84b87a233e03b69f701eeb9d48ff4e8aa762d83181bb9f2000",
+      "bytes": 651431,
+      "language": "pt",
+      "chapters": 32,
+      "strategy": "feb",
+      "pdf": {
+        "file": "public/books/o-livro-dos-espiritos.pdf",
+        "sha256": "1480161b3a68196cde2ce255ed22e6503ab685c4308d9ec4d9d5e72c599b0bf5",
+        "bytes": 2617937
+      }
     },
     "o-evangelho-segundo-o-espiritismo": {
       "file": "public/books/o-evangelho-segundo-o-espiritismo.epub",

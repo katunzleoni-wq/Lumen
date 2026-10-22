@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-22",
+  "config": {
+    "slug": "o-livro-dos-espiritos",
+    "source": "o-livro-dos-espiritos.pdf",
+    "startPage": 13,
+    "title": "O Livro dos Espíritos",
+    "subtitle": "Princípios da Doutrina Espírita",
+    "author": "Allan Kardec",
+    "translator": "Guillon Ribeiro",
+    "license": "Obra de Allan Kardec. Tradução de Guillon Ribeiro. Tradução e edição © Federação Espírita Brasileira. Uso autorizado ao projeto Lumen para disponibilização gratuita e sem fins lucrativos.",
+    "description": "Princípios da Doutrina Espírita sobre a imortalidade da alma, a natureza dos Espíritos e suas relações com os homens, as leis morais, a vida presente e a vida futura.",
+    "year": 1857,
+    "editionNote": "Edição Lumen preparada a partir do texto da tradução de Guillon Ribeiro, com autorização da FEB."
+  },
+  "chapters": 32,
+  "pdf": {
+    "file": "public/books/o-livro-dos-espiritos.pdf",
+    "bytes": 2617937,
+    "pages": 537,
+    "sha256": "1480161b3a68196cde2ce255ed22e6503ab685c4308d9ec4d9d5e72c599b0bf5"
+  },
+  "epub": {
+    "file": "public/books/o-livro-dos-espiritos.epub",
+    "bytes": 651431,
+    "sha256": "9f7c2c7f02fbef84b87a233e03b69f701eeb9d48ff4e8aa762d83181bb9f2000"
+  }
+}

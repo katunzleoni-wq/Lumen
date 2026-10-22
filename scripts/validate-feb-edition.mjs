@@ -11,7 +11,8 @@ import { JSDOM } from "jsdom";
 import { PDFDocument } from "pdf-lib";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const lock = JSON.parse(readFileSync(join(root, "content", "feb-editions.lock.json"), "utf8"));
+const lockFile = process.argv[2] ?? "content/feb-editions.lock.json";
+const lock = JSON.parse(readFileSync(join(root, lockFile), "utf8"));
 const errors = [];
 const sha = (buffer) => createHash("sha256").update(buffer).digest("hex");
 

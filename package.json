@@ -26,8 +26,9 @@
     "assets:og": "node scripts/generate-og.mjs",
     "screenshots": "node scripts/capture-screenshots.mjs",
     "verify:editions": "node scripts/validate-editions.mjs",
-    "verify:feb": "node scripts/validate-feb-edition.mjs",
+    "verify:feb": "node scripts/validate-feb-edition.mjs content/feb-editions.lock.json && node scripts/validate-feb-edition.mjs content/feb-espiritos.lock.json",
     "build:feb": "node scripts/build-feb-edition.mjs",
+    "build:feb:espiritos": "node scripts/build-feb-espiritos.mjs",
     "postinstall": "node scripts/copy-pdf-worker.mjs",
     "prepare": "husky"
   },

@@ -8,7 +8,7 @@ test("opens the complete EPUB, changes reading theme and navigates", async ({ pa
 
   const frame = page.frameLocator("iframe");
   await expect(frame.locator("body")).toContainText(
-    /LUMEN|NOTE SUR CETTE ÉDITION|LE LIVRE DES ESPRITS/i,
+    /LUMEN|NOTA SOBRE ESTA EDIÇÃO|O LIVRO DOS ESPÍRITOS/i,
     {
       timeout: 20_000,
     },
@@ -56,15 +56,15 @@ test("switches format from the reader toolbar", async ({ page }) => {
 test("navigates through the EPUB table of contents", async ({ page }) => {
   await page.goto("/pt/ler/o-livro-dos-espiritos");
   const frame = page.frameLocator("iframe");
-  await expect(frame.locator("body")).toContainText(/LUMEN|NOTE SUR CETTE ÉDITION/i, {
+  await expect(frame.locator("body")).toContainText(/LUMEN|NOTA SOBRE ESTA EDIÇÃO/i, {
     timeout: 20_000,
   });
 
   await page.getByRole("button", { name: "Abrir sumário" }).click();
   const dialog = page.getByRole("dialog");
   await expect(dialog.getByRole("heading", { name: "Sumário" })).toBeVisible();
-  await dialog.getByRole("button", { name: "Introduction — I", exact: true }).click();
-  await expect(frame.locator("body")).toContainText("Pour les choses nouvelles", {
+  await dialog.getByRole("button", { name: "Introdução", exact: true }).click();
+  await expect(frame.locator("body")).toContainText("Para se designarem coisas novas", {
     timeout: 15_000,
   });
 });

@@ -9,16 +9,16 @@ modernas sem autorização, capas comerciais, nem textos de autores com direitos
 
 ## Obras incluídas
 
-| Obra                                                 | Autor              | Ano  | Idioma | Edição de origem                    | Fonte             | URL                                                              | Licença                                            | Arquivo                                                            |
-| ---------------------------------------------------- | ------------------ | ---- | ------ | ----------------------------------- | ----------------- | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------ |
-| Le Livre des Esprits                                 | Allan Kardec       | 1857 | fr     | Didier, Paris, 1860                 | Wikisource (fr)   | https://fr.wikisource.org/wiki/Le_Livre_des_Esprits/Texte_entier | Obra em domínio público; transcrição CC BY-SA 4.0  | `o-livro-dos-espiritos.epub`                                       |
-| L’Évangile selon le Spiritisme                       | Allan Kardec       | 1864 | fr     | 3e édition, Paris, 1866             | Internet Archive  | https://archive.org/details/bub_gb_yfcU9eVzmVMC                  | Public Domain Mark 1.0                             | `o-evangelho-segundo-o-espiritismo.epub`                           |
-| O Livro dos Médiuns                                  | Allan Kardec       | 1861 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                                   | Licença FEB 2026 · uso não comercial               | `o-livro-dos-mediuns.epub` e `.pdf`                                |
-| La Genèse                                            | Allan Kardec       | 1868 | fr     | A. Lacroix, Paris, 1868             | Internet Archive  | https://archive.org/details/bub_gb_DIErB97VOk8C                  | Public Domain Mark 1.0                             | `a-genese.epub`                                                    |
-| Instruction pratique sur les manifestations spirites | Allan Kardec       | 1858 | fr     | E. Dentu, Paris, 1858               | Internet Archive  | https://archive.org/details/bub_gb_o2bo1lt3i00C                  | Public Domain Mark 1.0                             | `instrucao-pratica-sobre-as-manifestacoes-espiritas.epub` e `.pdf` |
-| Mysterious Psychic Forces                            | Camille Flammarion | 1907 | en     | English edition, 1907; eBook #39279 | Project Gutenberg | https://www.gutenberg.org/ebooks/39279                           | Domínio público nos EUA; Project Gutenberg License | `mysterious-psychic-forces.epub`                                   |
-| Lumen                                                | Camille Flammarion | 1872 | en     | English translation; eBook #43835   | Project Gutenberg | https://www.gutenberg.org/ebooks/43835                           | Domínio público nos EUA; Project Gutenberg License | `lumen.epub`                                                       |
-| The Vital Message                                    | Arthur Conan Doyle | 1919 | en     | First edition, 1919; eBook #439     | Project Gutenberg | https://www.gutenberg.org/ebooks/439                             | Domínio público nos EUA; Project Gutenberg License | `the-vital-message.epub`                                           |
+| Obra                                                 | Autor              | Ano  | Idioma | Edição de origem                    | Fonte             | URL                                             | Licença                                            | Arquivo                                                            |
+| ---------------------------------------------------- | ------------------ | ---- | ------ | ----------------------------------- | ----------------- | ----------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------ |
+| O Livro dos Espíritos                                | Allan Kardec       | 1857 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-livro-dos-espiritos.epub` e `.pdf`                              |
+| L’Évangile selon le Spiritisme                       | Allan Kardec       | 1864 | fr     | 3e édition, Paris, 1866             | Internet Archive  | https://archive.org/details/bub_gb_yfcU9eVzmVMC | Public Domain Mark 1.0                             | `o-evangelho-segundo-o-espiritismo.epub`                           |
+| O Livro dos Médiuns                                  | Allan Kardec       | 1861 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `o-livro-dos-mediuns.epub` e `.pdf`                                |
+| La Genèse                                            | Allan Kardec       | 1868 | fr     | A. Lacroix, Paris, 1868             | Internet Archive  | https://archive.org/details/bub_gb_DIErB97VOk8C | Public Domain Mark 1.0                             | `a-genese.epub`                                                    |
+| Instruction pratique sur les manifestations spirites | Allan Kardec       | 1858 | fr     | E. Dentu, Paris, 1858               | Internet Archive  | https://archive.org/details/bub_gb_o2bo1lt3i00C | Public Domain Mark 1.0                             | `instrucao-pratica-sobre-as-manifestacoes-espiritas.epub` e `.pdf` |
+| Mysterious Psychic Forces                            | Camille Flammarion | 1907 | en     | English edition, 1907; eBook #39279 | Project Gutenberg | https://www.gutenberg.org/ebooks/39279          | Domínio público nos EUA; Project Gutenberg License | `mysterious-psychic-forces.epub`                                   |
+| Lumen                                                | Camille Flammarion | 1872 | en     | English translation; eBook #43835   | Project Gutenberg | https://www.gutenberg.org/ebooks/43835          | Domínio público nos EUA; Project Gutenberg License | `lumen.epub`                                                       |
+| The Vital Message                                    | Arthur Conan Doyle | 1919 | en     | First edition, 1919; eBook #439     | Project Gutenberg | https://www.gutenberg.org/ebooks/439            | Domínio público nos EUA; Project Gutenberg License | `the-vital-message.epub`                                           |
 
 O campo `source.publisher` de `content/books.json` registra a editora-fonte de
 cada edição; `source.provider`, `source.url`, `source.license` e
@@ -37,10 +37,11 @@ cada edição; `source.provider`, `source.url`, `source.license` e
 - **Project Gutenberg:** os três EPUBs são cópias oficiais do Project Gutenberg,
   preservadas sem modificação. A marca e a licença do Project Gutenberg são
   respeitadas; o projeto não cobra pelo acesso.
-- **FEB / Guillon Ribeiro:** _O Livro dos Médiuns_ em português usa o texto da
-  tradução de Guillon Ribeiro com autorização da FEB de 22/10/2026, registrada
-  em [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). A edição foi
-  recomposta pela Lumen, com capa e projeto gráfico próprios; não usa capa,
+- **FEB / Guillon Ribeiro:** _O Livro dos Espíritos_ e _O Livro dos Médiuns_ em
+  português usam o texto da tradução de Guillon Ribeiro com autorização da FEB
+  de 22/10/2026, registrada em
+  [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). As edições foram
+  recompostas pela Lumen, com capa e projeto gráfico próprios; não usam capa,
   logotipo, diagramação ou notas editoriais da FEB.
 
 ## Transformação editorial
@@ -98,8 +99,9 @@ canais oficiais.
 npm run sources:fetch     # baixa as fontes públicas para content-sources/raw
 npm run assets:generate   # reconstrói EPUBs, PDF e capas
 npm run assets:verify     # valida estrutura, metadados, sumário, capa e hashes
-npm run build:feb         # gera a edição PT autorizada (PDF + EPUB)
-npm run verify:feb        # valida a edição PT, créditos, capa e sumário
+npm run build:feb            # gera O Livro dos Médiuns em PT
+npm run build:feb:espiritos  # gera O Livro dos Espíritos em PT
+npm run verify:feb           # valida as edições PT, créditos, capa e sumário
 ```
 
 Os arquivos brutos e as capas PNG de build ficam em `content-sources/raw/` e

@@ -1,12 +1,9 @@
 {
   "o-livro-dos-espiritos": {
-    "strategy": "wikisource",
-    "rawFile": "livre-esprits-wikisource.html",
-    "fetchUrl": "https://fr.wikisource.org/w/api.php?action=parse&page=Le%20Livre%20des%20Esprits%2FTexte%20entier&prop=text&format=json&formatversion=2",
-    "language": "fr",
+    "strategy": "external",
+    "language": "pt",
     "year": 1857,
-    "editionNote": "Édition Didier, Paris, 1860",
-    "sourceNote": "Texte transcrit sur Wikisource française. L’œuvre est dans le domaine public ; la transcription est publiée sous CC BY-SA 4.0."
+    "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
   "o-evangelho-segundo-o-espiritismo": {
     "strategy": "ocr",

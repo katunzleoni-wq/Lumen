@@ -31,12 +31,11 @@ test("honours category deep links and opens an edition", async ({ page }) => {
 test("documents provenance and active-rights author profiles", async ({ page }) => {
   await page.goto("/pt/livro/o-livro-dos-espiritos");
   await expect(page.getByRole("heading", { name: "Fonte e licença" })).toBeVisible();
-  await expect(page.getByText("Domínio público").first()).toBeVisible();
-  await expect(page.getByText("Introduction — I", { exact: true })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Wikisource/ }).first()).toHaveAttribute(
-    "href",
-    "https://fr.wikisource.org/wiki/Le_Livre_des_Esprits/Texte_entier",
-  );
+  await expect(page.getByText("Licenciado pela FEB").first()).toBeVisible();
+  await expect(page.getByText("Introdução", { exact: true }).first()).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /Federação Espírita Brasileira/ }).first(),
+  ).toHaveAttribute("href", "https://www.febeditora.com.br/");
 
   await page.goto("/pt/sobre");
   await expect(page.getByRole("heading", { name: "Autores com direitos ativos" })).toBeVisible();

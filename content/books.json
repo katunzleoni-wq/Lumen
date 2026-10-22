@@ -6,13 +6,14 @@
       "author": "Allan Kardec",
       "originalTitle": "Le Livre des Esprits",
       "year": 1857,
-      "language": "fr",
+      "language": "pt",
       "category": "fundamentos",
       "readingMinutes": 540,
-      "formats": ["epub"],
+      "formats": ["epub", "pdf"],
       "featured": true,
-      "addedAt": "2026-10-21",
-      "rights": "public-domain",
+      "addedAt": "2026-10-22",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
       "availability": "full",
       "palette": ["#153f36", "#2f6b57", "#d4ad68"],
       "motif": "orbit",
@@ -35,14 +36,14 @@
         "fr": "L’œuvre fondatrice du spiritisme, en édition intégrale. Les questions et réponses explorent la nature des Esprits, les lois morales et la destinée humaine."
       },
       "source": {
-        "provider": "Wikisource (français)",
-        "publisher": "Didier",
-        "url": "https://fr.wikisource.org/wiki/Le_Livre_des_Esprits/Texte_entier",
-        "license": "Domínio público; transcrição CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "edition": "Didier, Paris, 1860",
-        "editionNote": "Transcrição colaborativa da edição de 1860.",
-        "capturedAt": "2026-10-21"
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febeditora.com.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução de Guillon Ribeiro · edição FEB",
+        "editionNote": "Texto integral autorizado pela FEB em 22/10/2026; capa e projeto gráfico Lumen.",
+        "capturedAt": "2026-10-22"
       }
     },
     {
