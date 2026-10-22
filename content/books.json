@@ -1,0 +1,368 @@
+{
+  "books": [
+    {
+      "id": "o-livro-dos-espiritos",
+      "slug": "o-livro-dos-espiritos",
+      "author": "Allan Kardec",
+      "originalTitle": "Le Livre des Esprits",
+      "year": 1857,
+      "language": "pt",
+      "category": "fundamentos",
+      "pages": 512,
+      "readingMinutes": 690,
+      "formats": ["epub", "pdf"],
+      "featured": true,
+      "addedAt": "2026-01-12",
+      "palette": ["#153f36", "#2f6b57", "#d4ad68"],
+      "motif": "orbit",
+      "title": {
+        "pt": "O Livro dos Espíritos",
+        "en": "The Spirits' Book",
+        "es": "El Libro de los Espíritus",
+        "fr": "Le Livre des Esprits"
+      },
+      "subtitle": {
+        "pt": "Princípios da doutrina espírita",
+        "en": "Principles of the Spiritist doctrine",
+        "es": "Principios de la doctrina espírita",
+        "fr": "Principes de la doctrine spirite"
+      },
+      "description": {
+        "pt": "A obra inaugural do Espiritismo, organizada em perguntas e respostas que investigam a natureza do Espírito, as leis morais e o sentido da existência.",
+        "en": "The founding work of Spiritism, arranged as questions and answers that examine the nature of the Spirit, moral law and the meaning of existence.",
+        "es": "La obra inaugural del Espiritismo, organizada en preguntas y respuestas que investigan la naturaleza del Espíritu, las leyes morales y el sentido de la existencia.",
+        "fr": "L'œuvre fondatrice du spiritisme, organisée en questions et réponses qui explorent la nature de l'Esprit, les lois morales et le sens de l'existence."
+      }
+    },
+    {
+      "id": "o-evangelho-segundo-o-espiritismo",
+      "slug": "o-evangelho-segundo-o-espiritismo",
+      "author": "Allan Kardec",
+      "originalTitle": "L'Évangile selon le Spiritisme",
+      "year": 1864,
+      "language": "pt",
+      "category": "evangelho",
+      "pages": 424,
+      "readingMinutes": 560,
+      "formats": ["epub", "pdf"],
+      "featured": true,
+      "addedAt": "2026-02-02",
+      "palette": ["#4a2c2a", "#8a5b46", "#e0bd83"],
+      "motif": "arches",
+      "title": {
+        "pt": "O Evangelho segundo o Espiritismo",
+        "en": "The Gospel According to Spiritism",
+        "es": "El Evangelio según el Espiritismo",
+        "fr": "L'Évangile selon le Spiritisme"
+      },
+      "subtitle": {
+        "pt": "A moral de Jesus à luz da razão",
+        "en": "The morality of Jesus in the light of reason",
+        "es": "La moral de Jesús a la luz de la razón",
+        "fr": "La morale de Jésus à la lumière de la raison"
+      },
+      "description": {
+        "pt": "Uma leitura serena das máximas evangélicas, aproximando a ética de Jesus das perguntas concretas da vida e da experiência espírita.",
+        "en": "A serene reading of the Gospel's teachings, bringing the ethics of Jesus close to the concrete questions of life and Spiritist experience.",
+        "es": "Una lectura serena de las máximas evangélicas, que acerca la ética de Jesús a las preguntas concretas de la vida y de la experiencia espírita.",
+        "fr": "Une lecture sereine des maximes évangéliques, qui rapproche l'éthique de Jésus des questions concrètes de la vie et de l'expérience spirite."
+      }
+    },
+    {
+      "id": "o-livro-dos-mediuns",
+      "slug": "o-livro-dos-mediuns",
+      "author": "Allan Kardec",
+      "originalTitle": "Le Livre des Médiums",
+      "year": 1861,
+      "language": "pt",
+      "category": "mediunidade",
+      "pages": 448,
+      "readingMinutes": 600,
+      "formats": ["epub", "pdf"],
+      "featured": true,
+      "addedAt": "2026-01-28",
+      "palette": ["#252b4a", "#4f5d8c", "#d9c79a"],
+      "motif": "constellation",
+      "title": {
+        "pt": "O Livro dos Médiuns",
+        "en": "The Mediums' Book",
+        "es": "El Libro de los Médiums",
+        "fr": "Le Livre des Médiums"
+      },
+      "subtitle": {
+        "pt": "O estudo da mediunidade e das manifestações",
+        "en": "The study of mediumship and manifestations",
+        "es": "El estudio de la mediumnidad y de las manifestaciones",
+        "fr": "L'étude de la médiumnité et des manifestations"
+      },
+      "description": {
+        "pt": "Um guia para compreender a mediunidade com discernimento: faculdades, práticas, riscos e a responsabilidade moral de quem serve.",
+        "en": "A guide to understanding mediumship with discernment: faculties, practices, risks and the moral responsibility of those who serve.",
+        "es": "Una guía para comprender la mediumnidad con discernimiento: facultades, prácticas, riesgos y la responsabilidad moral de quien sirve.",
+        "fr": "Un guide pour comprendre la médiumnité avec discernement : facultés, pratiques, risques et responsabilité morale de celui qui sert."
+      }
+    },
+    {
+      "id": "o-ceu-e-o-inferno",
+      "slug": "o-ceu-e-o-inferno",
+      "author": "Allan Kardec",
+      "originalTitle": "Le Ciel et l'Enfer",
+      "year": 1865,
+      "language": "pt",
+      "category": "filosofia",
+      "pages": 360,
+      "readingMinutes": 480,
+      "formats": ["epub", "pdf"],
+      "featured": true,
+      "addedAt": "2026-02-18",
+      "palette": ["#3b2440", "#6c4c6f", "#d7b77a"],
+      "motif": "moon",
+      "title": {
+        "pt": "O Céu e o Inferno",
+        "en": "Heaven and Hell",
+        "es": "El Cielo y el Infierno",
+        "fr": "Le Ciel et l'Enfer"
+      },
+      "subtitle": {
+        "pt": "A justiça divina segundo o Espiritismo",
+        "en": "Divine justice according to Spiritism",
+        "es": "La justicia divina según el Espiritismo",
+        "fr": "La justice divine selon le spiritisme"
+      },
+      "description": {
+        "pt": "Uma meditação sobre justiça, esperança e continuidade da vida, afastando imagens de castigo eterno e abrindo espaço para a reparação.",
+        "en": "A meditation on justice, hope and the continuity of life, setting aside images of eternal punishment and making room for reparation.",
+        "es": "Una meditación sobre la justicia, la esperanza y la continuidad de la vida, que deja atrás las imágenes de castigo eterno y abre espacio a la reparación.",
+        "fr": "Une méditation sur la justice, l'espérance et la continuité de la vie, qui écarte les images de châtiment éternel et ouvre l'espace de la réparation."
+      }
+    },
+    {
+      "id": "a-genese",
+      "slug": "a-genese",
+      "author": "Allan Kardec",
+      "originalTitle": "La Genèse",
+      "year": 1868,
+      "language": "pt",
+      "category": "fundamentos",
+      "pages": 336,
+      "readingMinutes": 450,
+      "formats": ["epub", "pdf"],
+      "featured": false,
+      "addedAt": "2026-03-03",
+      "palette": ["#1f3e45", "#477079", "#ddc38e"],
+      "motif": "seed",
+      "title": {
+        "pt": "A Gênese",
+        "en": "Genesis",
+        "es": "El Génesis",
+        "fr": "La Genèse"
+      },
+      "subtitle": {
+        "pt": "Os milagres e as predições",
+        "en": "Miracles and predictions",
+        "es": "Los milagros y las predicciones",
+        "fr": "Les miracles et les prédictions"
+      },
+      "description": {
+        "pt": "Uma ponte entre ciência, criação e espiritualidade, propondo ler os relatos bíblicos como linguagem simbólica e convite à investigação.",
+        "en": "A bridge between science, creation and spirituality, proposing to read biblical accounts as symbolic language and an invitation to inquiry.",
+        "es": "Un puente entre ciencia, creación y espiritualidad, que propone leer los relatos bíblicos como lenguaje simbólico y una invitación a la investigación.",
+        "fr": "Un pont entre science, création et spiritualité, proposant de lire les récits bibliques comme un langage symbolique et une invitation à la recherche."
+      }
+    },
+    {
+      "id": "o-que-e-o-espiritismo",
+      "slug": "o-que-e-o-espiritismo",
+      "author": "Allan Kardec",
+      "originalTitle": "Qu'est-ce que le Spiritisme ?",
+      "year": 1859,
+      "language": "pt",
+      "category": "introducao",
+      "pages": 168,
+      "readingMinutes": 220,
+      "formats": ["epub", "pdf"],
+      "featured": false,
+      "addedAt": "2026-03-19",
+      "palette": ["#3e3524", "#80704b", "#e4ca91"],
+      "motif": "rays",
+      "title": {
+        "pt": "O Que é o Espiritismo?",
+        "en": "What Is Spiritism?",
+        "es": "¿Qué es el Espiritismo?",
+        "fr": "Qu'est-ce que le Spiritisme ?"
+      },
+      "subtitle": {
+        "pt": "Perguntas e respostas para começar",
+        "en": "Questions and answers for beginners",
+        "es": "Preguntas y respuestas para comenzar",
+        "fr": "Questions et réponses pour commencer"
+      },
+      "description": {
+        "pt": "Uma porta de entrada acessível: noções essenciais, respostas às objeções mais comuns e um convite ao estudo sem pressa.",
+        "en": "An accessible doorway: essential notions, answers to common objections and an invitation to unhurried study.",
+        "es": "Una puerta de entrada accesible: nociones esenciales, respuestas a las objeciones más comunes y una invitación al estudio sin prisa.",
+        "fr": "Une porte d'entrée accessible : notions essentielles, réponses aux objections courantes et invitation à une étude sans hâte."
+      }
+    },
+    {
+      "id": "obras-postumas",
+      "slug": "obras-postumas",
+      "author": "Allan Kardec",
+      "originalTitle": "Œuvres posthumes",
+      "year": 1890,
+      "language": "pt",
+      "category": "filosofia",
+      "pages": 304,
+      "readingMinutes": 410,
+      "formats": ["epub", "pdf"],
+      "featured": false,
+      "addedAt": "2026-04-07",
+      "palette": ["#34252a", "#67515a", "#d9bfa4"],
+      "motif": "waves",
+      "title": {
+        "pt": "Obras Póstumas",
+        "en": "Posthumous Works",
+        "es": "Obras Póstumas",
+        "fr": "Œuvres posthumes"
+      },
+      "subtitle": {
+        "pt": "Reflexões sobre a vida e o além",
+        "en": "Reflections on life and the beyond",
+        "es": "Reflexiones sobre la vida y el más allá",
+        "fr": "Réflexions sur la vie et l'au-delà"
+      },
+      "description": {
+        "pt": "Notas e meditações que retomam a travessia da morte, o papel da fé e a construção de uma esperança lúcida e responsável.",
+        "en": "Notes and meditations revisiting the passage of death, the role of faith and the building of a lucid, responsible hope.",
+        "es": "Notas y meditaciones que retoman el tránsito de la muerte, el papel de la fe y la construcción de una esperanza lúcida y responsable.",
+        "fr": "Notes et méditations qui revisitent le passage de la mort, le rôle de la foi et la construction d'une espérance lucide et responsable."
+      }
+    },
+    {
+      "id": "revista-espirita",
+      "slug": "revista-espirita",
+      "author": "Allan Kardec",
+      "originalTitle": "Revue Spirite",
+      "year": 1858,
+      "language": "pt",
+      "category": "revista",
+      "pages": 256,
+      "readingMinutes": 330,
+      "formats": ["epub", "pdf"],
+      "featured": false,
+      "addedAt": "2026-04-24",
+      "palette": ["#283d30", "#58725d", "#d8c08a"],
+      "motif": "grid",
+      "title": {
+        "pt": "Revista Espírita — Antologia",
+        "en": "Spiritist Review — Anthology",
+        "es": "Revista Espírita — Antología",
+        "fr": "Revue Spirite — Anthologie"
+      },
+      "subtitle": {
+        "pt": "Uma janela para o século XIX",
+        "en": "A window onto the nineteenth century",
+        "es": "Una ventana al siglo XIX",
+        "fr": "Une fenêtre sur le XIXe siècle"
+      },
+      "description": {
+        "pt": "Uma seleção de crônicas e estudos que mostram como o movimento espírita nasceu em diálogo com a imprensa, a ciência e a vida cotidiana.",
+        "en": "A selection of columns and studies showing how the Spiritist movement emerged in dialogue with the press, science and everyday life.",
+        "es": "Una selección de crónicas y estudios que muestran cómo el movimiento espírita nació en diálogo con la prensa, la ciencia y la vida cotidiana.",
+        "fr": "Une sélection de chroniques et d'études montrant comment le mouvement spirite est né au dialogue avec la presse, la science et la vie quotidienne."
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "fundamentos",
+      "name": {
+        "pt": "Fundamentos",
+        "en": "Foundations",
+        "es": "Fundamentos",
+        "fr": "Fondements"
+      },
+      "description": {
+        "pt": "As obras que assentam os princípios do Espiritismo.",
+        "en": "The works that lay down the principles of Spiritism.",
+        "es": "Las obras que establecen los principios del Espiritismo.",
+        "fr": "Les œuvres qui posent les principes du spiritisme."
+      }
+    },
+    {
+      "id": "evangelho",
+      "name": {
+        "pt": "Evangelho",
+        "en": "Gospel",
+        "es": "Evangelio",
+        "fr": "Évangile"
+      },
+      "description": {
+        "pt": "A moral evangélica lida com razão e liberdade.",
+        "en": "Gospel morality read with reason and freedom.",
+        "es": "La moral evangélica leída con razón y libertad.",
+        "fr": "La morale évangélique lue avec raison et liberté."
+      }
+    },
+    {
+      "id": "mediunidade",
+      "name": {
+        "pt": "Mediunidade",
+        "en": "Mediumship",
+        "es": "Mediumnidad",
+        "fr": "Médiumnité"
+      },
+      "description": {
+        "pt": "Estudo, discernimento e responsabilidade.",
+        "en": "Study, discernment and responsibility.",
+        "es": "Estudio, discernimiento y responsabilidad.",
+        "fr": "Étude, discernement et responsabilité."
+      }
+    },
+    {
+      "id": "filosofia",
+      "name": {
+        "pt": "Filosofia",
+        "en": "Philosophy",
+        "es": "Filosofía",
+        "fr": "Philosophie"
+      },
+      "description": {
+        "pt": "Perguntas sobre justiça, destino e continuidade.",
+        "en": "Questions about justice, destiny and continuity.",
+        "es": "Preguntas sobre justicia, destino y continuidad.",
+        "fr": "Questions sur la justice, le destin et la continuité."
+      }
+    },
+    {
+      "id": "introducao",
+      "name": {
+        "pt": "Introdução",
+        "en": "Introduction",
+        "es": "Introducción",
+        "fr": "Introduction"
+      },
+      "description": {
+        "pt": "Primeiros passos para quem chega agora.",
+        "en": "First steps for those arriving now.",
+        "es": "Primeros pasos para quien llega ahora.",
+        "fr": "Premiers pas pour celles et ceux qui arrivent."
+      }
+    },
+    {
+      "id": "revista",
+      "name": {
+        "pt": "Revista",
+        "en": "Journal",
+        "es": "Revista",
+        "fr": "Revue"
+      },
+      "description": {
+        "pt": "Crônicas, cartas e estudos de época.",
+        "en": "Columns, letters and studies from the period.",
+        "es": "Crónicas, cartas y estudios de época.",
+        "fr": "Chroniques, lettres et études d'époque."
+      }
+    }
+  ]
+}

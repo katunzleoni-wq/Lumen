@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 38% 96%;
+    --foreground: 167 27% 13%;
+    --card: 44 44% 98%;
+    --card-foreground: 167 27% 13%;
+    --primary: 166 45% 18%;
+    --primary-foreground: 43 44% 96%;
+    --secondary: 41 28% 91%;
+    --secondary-foreground: 166 28% 18%;
+    --muted: 41 22% 91%;
+    --muted-foreground: 164 9% 40%;
+    --accent: 38 51% 51%;
+    --accent-foreground: 166 40% 12%;
+    --accent-soft: 41 58% 91%;
+    --destructive: 0 64% 44%;
+    --destructive-foreground: 42 40% 97%;
+    --border: 40 18% 84%;
+    --input: 40 18% 80%;
+    --ring: 166 38% 32%;
+    --radius: 0.9rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-dvh bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(34, 55, 46, 0.055) 1px, transparent 0),
+      radial-gradient(70rem 40rem at 92% -8%, rgba(201, 161, 87, 0.11), transparent 65%),
+      radial-gradient(55rem 35rem at -8% 28%, rgba(49, 100, 82, 0.07), transparent 62%);
+    background-size:
+      22px 22px,
+      auto,
+      auto;
+  }
+
+  ::selection {
+    background: rgba(197, 156, 78, 0.32);
+    color: hsl(var(--foreground));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid hsl(var(--background));
+    border-radius: 999px;
+    background: hsl(var(--muted-foreground) / 0.35);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .surface-paper {
+    background-color: hsl(var(--card));
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(250, 246, 236, 0.2) 48%,
+      rgba(236, 226, 204, 0.22) 100%
+    );
+  }
+
+  .rule-gold {
+    background-image: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.55), transparent);
+  }
+
+  .cover-stack-perspective {
+    perspective: 1400px;
+    transform-style: preserve-3d;
+  }
+
+  .book-3d {
+    transform: rotateY(-13deg) rotateX(4deg);
+    transition:
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 500ms ease;
+  }
+
+  .book-3d:hover {
+    transform: rotateY(-5deg) rotateX(1deg) translateY(-6px);
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reader-shell iframe {
+    border: 0;
+    background: transparent;
+  }
+
+  .reader-shell .epub-container {
+    background: transparent !important;
+  }
+
+  .reader-shell .react-pdf__Page {
+    margin-inline: auto;
+    box-shadow: 0 24px 60px -32px rgba(10, 20, 16, 0.7);
+  }
+
+  .reader-shell .react-pdf__Page canvas {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .reader-shell .react-pdf__message {
+    @apply font-sans text-sm;
+  }
+
+  .reader-shell .textLayer {
+    overflow: hidden;
+  }
+
+  .reader-shell .textLayer ::selection {
+    background: rgba(197, 156, 78, 0.38);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
