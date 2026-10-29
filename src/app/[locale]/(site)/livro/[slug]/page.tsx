@@ -19,6 +19,7 @@ import {
   books,
   getBookBySlug,
   getBookCover,
+  getBookEditions,
   getBookToc,
   getCategoryName,
   getRelatedBooks,
@@ -51,8 +52,8 @@ export async function generateMetadata({
   const locale: Locale = params.locale;
   return createPageMetadata({
     locale,
-    title: book.title[locale],
-    description: book.description[locale],
+    title: book.title[book.language],
+    description: book.description[book.language],
     path: `/${locale}/livro/${book.slug}`,
     pathForLocale: (item) => `/${item}/livro/${book.slug}`,
     type: "article",
@@ -70,7 +71,10 @@ export default async function BookPage({ params }: { params: { locale: string; s
   const categoryName = getCategoryName(book.category, locale);
   const toc = getBookToc(book.slug);
   const related = getRelatedBooks(book, 3);
-  const title = book.title[locale];
+  const editions = getBookEditions(book);
+  const hasEditionInLocale = editions.some((edition) => edition.language === locale);
+  const title = book.title[book.language];
+  const subtitle = book.subtitle[book.language];
   const coverUrl = absoluteUrl(getBookCover(book.slug));
   const bookUrl = absoluteUrl(`/${locale}/livro/${book.slug}`);
   const sourceHost = new URL(book.source.url).hostname.replace(/^www\./, "");
@@ -188,10 +192,54 @@ export default async function BookPage({ params }: { params: { locale: string; s
                 </Badge>
               </div>
 
+              {book.language !== locale && (
+                <div
+                  role="status"
+                  className="mt-5 flex items-start gap-3 rounded-2xl border border-gold-200/80 bg-gold-50/70 p-4 text-xs leading-relaxed text-gold-900/85"
+                >
+                  <Languages className="mt-0.5 size-4 shrink-0 text-gold-700" aria-hidden="true" />
+                  <div>
+                    <p>
+                      {t("book.editionLanguageNotice", {
+                        language: t(`languages.${book.language}`),
+                        interfaceLanguage: t(`languages.${locale}`),
+                      })}
+                    </p>
+                    {!hasEditionInLocale && (
+                      <p className="mt-1 font-medium">
+                        {t("book.noEditionInLanguage", { language: t(`languages.${locale}`) })}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {editions.length > 1 && (
+                <div className="mt-5 flex flex-wrap items-center gap-2 text-xs">
+                  <span className="font-semibold text-muted-foreground">
+                    {t("book.otherEditions")}:
+                  </span>
+                  {editions.map((edition) => (
+                    <Link
+                      key={edition.id}
+                      href={`/livro/${edition.slug}`}
+                      aria-current={edition.slug === book.slug ? "page" : undefined}
+                      className={
+                        edition.slug === book.slug
+                          ? "rounded-full bg-primary px-3 py-1.5 font-semibold text-primary-foreground"
+                          : "rounded-full border border-border px-3 py-1.5 font-semibold text-forest-700 transition-colors hover:border-gold-300"
+                      }
+                    >
+                      {t(`languages.${edition.language}`)}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
               <h1 className="mt-5 text-balance font-serif text-[clamp(2.5rem,5vw,4.6rem)] font-medium leading-[0.98] tracking-[-0.04em]">
                 {title}
               </h1>
-              <p className="mt-4 text-lg font-medium text-forest-700">{book.subtitle[locale]}</p>
+              <p className="mt-4 text-lg font-medium text-forest-700">{subtitle}</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 {t("book.eyebrow")} · {book.year} · {book.author}
               </p>

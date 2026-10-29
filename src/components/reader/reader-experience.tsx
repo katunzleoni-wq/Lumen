@@ -5,7 +5,7 @@ import { ArrowLeft, Check, Download, Maximize2, Minimize2, Settings2, Type } fro
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/navigation";
-import type { Book, BookEdition, BookFormat } from "@/content/books";
+import { getBookEditions, type Book, type BookEdition, type BookFormat } from "@/content/books";
 import {
   MAX_FONT_SIZE,
   MIN_FONT_SIZE,
@@ -142,7 +142,8 @@ export function ReaderExperience({
     );
   }
 
-  const title = book.title[locale as keyof typeof book.title] ?? book.title.pt;
+  const title = book.title[book.language] ?? book.title.pt;
+  const editions = getBookEditions(book);
   const formats = edition
     ? [
         ...(edition.epub ? (["epub"] as BookFormat[]) : []),
@@ -186,35 +187,24 @@ export function ReaderExperience({
         </div>
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          {book.alternateEditions && book.alternateEditions.length > 0 && (
+          {editions.length > 1 && (
             <div
               className="hidden items-center rounded-full border border-black/10 bg-white/40 p-0.5 sm:flex"
               role="group"
               aria-label={tCommon("language")}
             >
-              <Link
-                href={`/ler/${book.slug}`}
-                aria-current={!edition ? "page" : undefined}
-                className={
-                  !edition
-                    ? "rounded-full bg-primary px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-primary-foreground"
-                    : "rounded-full px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-muted-foreground hover:text-foreground"
-                }
-              >
-                {book.language.toUpperCase()}
-              </Link>
-              {book.alternateEditions.map((alt) => (
+              {editions.map((editionOption) => (
                 <Link
-                  key={alt.id}
-                  href={`/ler/${book.slug}?lang=${alt.language}${alt.pdf ? "&formato=pdf" : ""}`}
-                  aria-current={edition?.id === alt.id ? "page" : undefined}
+                  key={editionOption.id}
+                  href={`/ler/${editionOption.slug}`}
+                  aria-current={editionOption.slug === book.slug ? "page" : undefined}
                   className={
-                    edition?.id === alt.id
+                    editionOption.slug === book.slug
                       ? "rounded-full bg-primary px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-primary-foreground"
                       : "rounded-full px-2.5 py-1 text-[0.6rem] font-semibold uppercase text-muted-foreground hover:text-foreground"
                   }
                 >
-                  {alt.language.toUpperCase()}
+                  {editionOption.language.toUpperCase()}
                 </Link>
               ))}
             </div>

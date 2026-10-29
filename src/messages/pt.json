@@ -129,7 +129,10 @@
     "gridView": "Grade",
     "listView": "Lista",
     "openFilters": "Abrir filtros",
-    "filterCount": "{count, plural, =0 {Sem filtros} one {# filtro ativo} other {# filtros ativos}}"
+    "filterCount": "{count, plural, =0 {Sem filtros} one {# filtro ativo} other {# filtros ativos}}",
+    "showingIn": "Exibindo edições em {language}.",
+    "showingAll": "Edições em vários idiomas; capa e título seguem o idioma de cada obra.",
+    "noEditionsInLocale": "Ainda não há obras em {language}; mostrando todas as edições."
   },
   "book": {
     "breadcrumb": "Biblioteca",
@@ -180,7 +183,11 @@
     "unknownAuthor": "Autoria desconhecida",
     "notFoundTitle": "Obra não encontrada",
     "notFoundBody": "Esta obra pode ter mudado de endereço ou não faz parte do acervo.",
-    "backToLibrary": "Voltar à biblioteca"
+    "backToLibrary": "Voltar à biblioteca",
+    "editionLanguageNotice": "Idioma desta edição: {language}. A interface está em {interfaceLanguage}; o texto integral ainda não foi traduzido.",
+    "otherEditions": "Edições disponíveis",
+    "noEditionInLanguage": "Ainda não há edição em {language}.",
+    "readEditionIn": "Ler em {language}"
   },
   "reader": {
     "backToBook": "Voltar à obra",

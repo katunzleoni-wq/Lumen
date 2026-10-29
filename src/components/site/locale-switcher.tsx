@@ -2,6 +2,7 @@
 
 import { Check, Globe } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { books } from "@/content/books";
 import { isLocale, localeLabels, locales } from "@/i18n";
 import { usePathname } from "@/navigation";
 import { cn } from "@/lib/utils";
@@ -25,6 +26,25 @@ export function LocaleSwitcher({ inverted = false, className }: LocaleSwitcherPr
   const pathname = usePathname();
   const activeLocale = isLocale(currentLocale) ? currentLocale : "pt";
 
+  function localizedHref(option: (typeof locales)[number]) {
+    const base = `/${option}${pathname && pathname !== "/" ? pathname : ""}`;
+    const match = pathname?.match(/^\/(livro|ler)\/([^/?#]+)/);
+    if (!match) return base;
+
+    const [, section, slug] = match;
+    const current = books.find((book) => book.slug === slug);
+    if (!current) return base;
+
+    const sibling = books.find(
+      (book) =>
+        book.language === option &&
+        book.author === current.author &&
+        book.originalTitle.trim().toLocaleLowerCase() ===
+          current.originalTitle.trim().toLocaleLowerCase(),
+    );
+    return `/${option}/${section}/${sibling?.slug ?? current.slug}`;
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
@@ -46,7 +66,7 @@ export function LocaleSwitcher({ inverted = false, className }: LocaleSwitcherPr
         {locales.map((option) => (
           <DropdownMenuItem key={option} asChild>
             <a
-              href={`/${option}${pathname && pathname !== "/" ? pathname : ""}`}
+              href={localizedHref(option)}
               hrefLang={option}
               className="flex w-full items-center justify-between"
             >

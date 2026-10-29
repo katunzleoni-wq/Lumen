@@ -39,7 +39,17 @@ export default async function HomePage({ params }: { params: { locale: string } 
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale });
-  const featured = getFeaturedBooks();
+  const allFeatured = getFeaturedBooks();
+  const localeBooks = books.filter((book) => book.language === locale);
+  const localizedFeatured = allFeatured.filter((book) => book.language === locale);
+  const featured = localizedFeatured.length
+    ? [
+        ...localizedFeatured,
+        ...localeBooks.filter((book) => !localizedFeatured.includes(book)),
+      ].slice(0, 4)
+    : localeBooks.length
+      ? localeBooks.slice(0, 4)
+      : allFeatured;
   const primary = featured[0]!;
   const secondary = featured[1] ?? primary;
   const tertiary = featured[2] ?? primary;

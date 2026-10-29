@@ -1,4 +1,4 @@
-﻿import { expect, test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test("redirects the root to the detected locale", async ({ page }) => {
   await page.goto("/");
@@ -14,6 +14,7 @@ test("switches language without losing the current page", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "The whole library, in one place",
   );
+  await expect(page.getByTestId("book-card")).toHaveCount(3);
 });
 
 test("exposes every localized edition from the home page", async ({ page }) => {

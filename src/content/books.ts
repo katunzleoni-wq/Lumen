@@ -79,14 +79,28 @@ export function getFeaturedBooks(): Book[] {
   return books.filter((book) => book.featured);
 }
 
+export function getBookEditions(book: Book): Book[] {
+  const key = book.originalTitle.trim().toLocaleLowerCase();
+  return books
+    .filter(
+      (candidate) =>
+        candidate.author === book.author &&
+        candidate.originalTitle.trim().toLocaleLowerCase() === key,
+    )
+    .sort((a, b) => a.language.localeCompare(b.language));
+}
+
 export function getRelatedBooks(book: Book, limit = 3): Book[] {
-  const sameCategory = books.filter(
-    (candidate) => candidate.id !== book.id && candidate.category === book.category,
+  const candidates = books.filter((candidate) => candidate.id !== book.id);
+  const sameCategory = candidates.filter((candidate) => candidate.category === book.category);
+  const sameCategorySameLanguage = sameCategory.filter(
+    (candidate) => candidate.language === book.language,
   );
-  const fallback = books.filter(
-    (candidate) => candidate.id !== book.id && candidate.category !== book.category,
+  const sameCategoryOtherLanguage = sameCategory.filter(
+    (candidate) => candidate.language !== book.language,
   );
-  return [...sameCategory, ...fallback].slice(0, limit);
+  const fallback = candidates.filter((candidate) => candidate.category !== book.category);
+  return [...sameCategorySameLanguage, ...sameCategoryOtherLanguage, ...fallback].slice(0, limit);
 }
 
 export function getCategory(categoryId: string): Category | undefined {

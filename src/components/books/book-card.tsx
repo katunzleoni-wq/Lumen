@@ -17,7 +17,8 @@ interface BookCardProps {
 
 export function BookCard({ book, locale, layout = "grid", priority = false }: BookCardProps) {
   const t = useTranslations();
-  const title = book.title[locale];
+  const title = book.title[book.language];
+  const description = book.description[book.language];
   const isList = layout === "list";
 
   return (
@@ -59,6 +60,9 @@ export function BookCard({ book, locale, layout = "grid", priority = false }: Bo
           </span>
           <span className="size-0.5 rounded-full bg-border" aria-hidden="true" />
           <span className="text-[0.68rem] text-muted-foreground">{book.year}</span>
+          <Badge variant="muted" className="px-2 py-0.5 text-[0.58rem] uppercase">
+            {book.language}
+          </Badge>
         </div>
         <h3 className="font-serif text-xl font-medium leading-snug tracking-[-0.01em] text-foreground sm:text-[1.35rem]">
           <Link
@@ -71,7 +75,7 @@ export function BookCard({ book, locale, layout = "grid", priority = false }: Bo
         <p className="mt-1 text-sm text-muted-foreground">{book.author}</p>
         {isList && (
           <p className="mt-3 line-clamp-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            {book.description[locale]}
+            {description}
           </p>
         )}
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.7rem] text-muted-foreground">

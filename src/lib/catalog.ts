@@ -21,10 +21,15 @@ export const DEFAULT_FILTERS: CatalogFilters = {
   sort: "featured",
 };
 
-export function countActiveFilters(filters: CatalogFilters) {
-  return [filters.category !== "all", filters.format !== "all", filters.language !== "all"].filter(
-    Boolean,
-  ).length;
+export function countActiveFilters(
+  filters: CatalogFilters,
+  defaultLanguage: CatalogFilters["language"] = "all",
+) {
+  return [
+    filters.category !== "all",
+    filters.format !== "all",
+    filters.language !== defaultLanguage,
+  ].filter(Boolean).length;
 }
 
 export function filterBooks(books: Book[], locale: Locale, filters: CatalogFilters): Book[] {

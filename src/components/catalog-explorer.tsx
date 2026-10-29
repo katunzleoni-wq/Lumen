@@ -40,12 +40,14 @@ export function CatalogExplorer({ books, locale }: CatalogExplorerProps) {
   const router = useRouter();
   const initialCategory = searchParams.get("categoria") ?? "all";
   const initialQuery = searchParams.get("q") ?? "";
+  const defaultLanguage = books.some((book) => book.language === locale) ? locale : "all";
 
   const [filters, setFilters] = useState<CatalogFilters>({
     ...DEFAULT_FILTERS,
     category: categories.some((category) => category.id === initialCategory)
       ? initialCategory
       : "all",
+    language: defaultLanguage,
     query: initialQuery,
   });
   const [view, setView] = useState<"grid" | "list">("grid");
@@ -56,7 +58,7 @@ export function CatalogExplorer({ books, locale }: CatalogExplorerProps) {
     () => filterBooks(books, locale, { ...filters, query: deferredQuery }),
     [books, filters, deferredQuery, locale],
   );
-  const activeFilters = countActiveFilters(filters);
+  const activeFilters = countActiveFilters(filters, defaultLanguage);
 
   function updateFilter<K extends keyof CatalogFilters>(key: K, value: CatalogFilters[K]) {
     setFilters((current) => ({ ...current, [key]: value }));
@@ -65,6 +67,7 @@ export function CatalogExplorer({ books, locale }: CatalogExplorerProps) {
   function clearFilters() {
     setFilters((current) => ({
       ...DEFAULT_FILTERS,
+      language: defaultLanguage,
       sort: current.sort,
     }));
     const params = new URLSearchParams(searchParams.toString());
@@ -274,6 +277,13 @@ export function CatalogExplorer({ books, locale }: CatalogExplorerProps) {
             </Button>
           )}
         </div>
+        <p className="mt-1 text-[0.68rem] text-muted-foreground/80">
+          {filters.language === "all"
+            ? defaultLanguage === "all"
+              ? t("library.noEditionsInLocale", { language: t(`languages.${locale}`) })
+              : t("library.showingAll")
+            : t("library.showingIn", { language: t(`languages.${filters.language}`) })}
+        </p>
       </div>
 
       <div className="mt-10">

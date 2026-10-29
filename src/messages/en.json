@@ -129,7 +129,10 @@
     "gridView": "Grid",
     "listView": "List",
     "openFilters": "Open filters",
-    "filterCount": "{count, plural, =0 {No filters} one {# active filter} other {# active filters}}"
+    "filterCount": "{count, plural, =0 {No filters} one {# active filter} other {# active filters}}",
+    "showingIn": "Showing editions in {language}.",
+    "showingAll": "Editions in multiple languages; cover and title follow each work's language.",
+    "noEditionsInLocale": "There are no works in {language} yet; showing all editions."
   },
   "book": {
     "breadcrumb": "Library",
@@ -180,7 +183,11 @@
     "unknownAuthor": "Unknown author",
     "notFoundTitle": "Work not found",
     "notFoundBody": "This work may have moved or may not be part of the collection.",
-    "backToLibrary": "Back to the library"
+    "backToLibrary": "Back to the library",
+    "editionLanguageNotice": "This edition's language is {language}. The interface is in {interfaceLanguage}; the full text has not been translated yet.",
+    "otherEditions": "Available editions",
+    "noEditionInLanguage": "There is no edition in {language} yet.",
+    "readEditionIn": "Read in {language}"
   },
   "reader": {
     "backToBook": "Back to the work",

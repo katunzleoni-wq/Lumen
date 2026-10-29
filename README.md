@@ -7,6 +7,7 @@ Uma biblioteca digital editorial para leitura de obras espíritas em **EPUB** e 
 ## O que está pronto
 
 - **Catálogo em quatro idiomas** (`/pt`, `/en`, `/es`, `/fr`) com metadados localizados, filtros combináveis, ordenação, visualização em grade/lista e páginas estáticas por obra.
+- **Biblioteca ciente do idioma**: abre no idioma da interface; título e capa seguem o idioma real da edição; quando não há tradução, a obra mostra um aviso e as edições disponíveis.
 - **Leitor EPUB** com epub.js + react-reader, sumário, navegação, temas (papel, sépia, noturno), tamanho de texto, tela cheia e retomada por CFI.
 - **Leitor PDF** com react-pdf/PDF.js, renderização responsiva, navegação por página, zoom e retomada por página.
 - **Progresso e favoritos locais** com Dexie/IndexedDB — sem cadastro e sem servidor para a estante.
@@ -186,7 +187,7 @@ Preferências do leitor usam `localStorage` (`lumen-reader-preferences`), versio
 
 ## Busca
 
-O índice é gerado com a API Node do Pagefind a partir de 72 registros: **3 páginas + 15 obras por idioma**. O conteúdo inclui metadados localizados, fonte, licença e os títulos reais do sumário de cada edição. O cliente:
+O índice é gerado com a API Node do Pagefind a partir de 72 registros: **3 páginas + 15 obras em quatro idiomas**. O conteúdo inclui metadados localizados, fonte, licença e os títulos reais do sumário de cada edição. O cliente:
 
 1. importa `/pagefind/pagefind.js` apenas quando necessário;
 2. aplica filtros `locale`, `type` e `category`;
@@ -212,7 +213,7 @@ npm run test:e2e
 ```
 
 - **Unitários/componentes:** filtros do catálogo, schemas, store do leitor, paridade de mensagens, card de obra e newsletter (validação + persistência mockada).
-- **E2E:** redirecionamento de locale, troca de idioma, filtros e deep links, busca Pagefind, leitor EPUB (tema, sumário e navegação), leitor PDF de 164 páginas (paginação e largura responsiva), troca de formato, favoritos com persistência após reload.
+- **E2E:** 24 cenários cobrindo redirecionamento e troca de idioma, catálogo por idioma, capa e edição coerentes, troca de edição na página e no leitor, filtros e deep links, busca Pagefind, leitor EPUB (tema, sumário e navegação), leitor PDF de 501 páginas (paginação e largura responsiva), troca de formato e favoritos com persistência após reload.
 - **Hooks:** `pre-commit` roda lint-staged; `commit-msg` aplica Conventional Commits.
 - **CI:** dois jobs no GitHub Actions — qualidade/build e Playwright com Chromium.
 
@@ -241,7 +242,7 @@ npm run test:e2e
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.
-- O acervo hospedado está em português, francês e inglês, com as cinco obras de Kardec e três obras de Léon Denis em português; _Après la mort_, _Dans l’invisible_ e _La Grande Énigme_ estão nos originais franceses. Títulos, sinopses e interface existem em quatro idiomas. Não hospedamos traduções modernas sem licença.
+- O acervo hospedado está em português, francês e inglês, com as cinco obras de Kardec e três obras de Léon Denis em português; _Après la mort_, _Dans l’invisible_ e _La Grande Énigme_ estão nos originais franceses. Títulos, sinopses e interface existem em quatro idiomas. Nem toda obra tem edição em todos os idiomas: a biblioteca abre no idioma da interface, o filtro “Todos os idiomas” mostra as demais edições e cada página sinaliza quando o texto não está no idioma da interface. Não hospedamos traduções modernas sem licença.
 
 ## Próximos passos naturais
 
