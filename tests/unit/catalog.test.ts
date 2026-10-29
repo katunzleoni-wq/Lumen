@@ -33,7 +33,7 @@ describe("filterBooks", () => {
     );
 
     const formatResult = filterBooks(books, "pt", { ...baseFilters, format: "pdf" });
-    expect(formatResult).toHaveLength(6);
+    expect(formatResult).toHaveLength(8);
     expect(formatResult.map((book) => book.id)).toEqual(
       expect.arrayContaining([
         "o-livro-dos-espiritos",
@@ -42,6 +42,8 @@ describe("filterBooks", () => {
         "a-genese",
         "o-livro-dos-mediuns",
         "instrucao-pratica-sobre-as-manifestacoes-espiritas",
+        "depois-da-morte",
+        "apres-la-mort",
       ]),
     );
 

@@ -32,6 +32,38 @@ for (const book of books) {
     errors.push(`${book.slug}: missing lock entry`);
     continue;
   }
+  if (book.pdfOnly) {
+    const pdfRecord = record.pdf;
+    if (!pdfRecord) {
+      errors.push(`${book.slug}: PDF-only book missing PDF lock entry`);
+      continue;
+    }
+    const pdfPath = join(root, pdfRecord.file);
+    if (!existsSync(pdfPath)) {
+      errors.push(`${book.slug}: PDF not found at ${pdfRecord.file}`);
+      continue;
+    }
+    const bytes = readFileSync(pdfPath);
+    if (sha256(bytes) !== pdfRecord.sha256) {
+      errors.push(`${book.slug}: PDF hash does not match editions.lock.json`);
+    }
+    try {
+      const document = await PDFDocument.load(bytes);
+      const pages = document.getPageCount();
+      if (pages < 1) errors.push(`${book.slug}: PDF has no pages`);
+      rows.push({
+        work: `${book.slug}.pdf`,
+        lang: book.language,
+        toc: `${pages} pages`,
+        cover: "yes",
+        size: `${Math.round(bytes.length / 1024)} kB`,
+        hash: "ok",
+      });
+    } catch {
+      errors.push(`${book.slug}: invalid PDF`);
+    }
+    continue;
+  }
   const epubPath = join(root, record.file);
   if (!existsSync(epubPath)) {
     errors.push(`${book.slug}: EPUB not found at ${record.file}`);
@@ -176,4 +208,4 @@ if (errors.length) {
   for (const error of errors) console.error(` - ${error}`);
   process.exit(1);
 }
-console.log(`\nAll ${books.length} EPUBs and the PDF passed structural validation.`);
+console.log(`\nAll ${books.length} editions passed structural validation.`);

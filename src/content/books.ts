@@ -45,6 +45,7 @@ export interface Book {
   addedAt: string;
   rights: RightsStatus;
   contentVersion?: string;
+  pdfOnly?: boolean;
   availability: Availability;
   palette: [string, string, string];
   motif: string;

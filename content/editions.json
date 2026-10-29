@@ -29,6 +29,18 @@
     "year": 1865,
     "editionNote": "Tradução de Guillon Ribeiro · edição FEB autorizada em 2026"
   },
+  "depois-da-morte": {
+    "strategy": "external",
+    "language": "pt",
+    "year": 1890,
+    "editionNote": "Tradução FEB · PDF integral autorizado em 2026"
+  },
+  "apres-la-mort": {
+    "strategy": "external",
+    "language": "fr",
+    "year": 1890,
+    "editionNote": "Édition de 1922 · original em domínio público"
+  },
   "instrucao-pratica-sobre-as-manifestacoes-espiritas": {
     "strategy": "ocr",
     "rawFile": "instruction.txt",

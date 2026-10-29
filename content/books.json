@@ -409,6 +409,100 @@
         "editionNote": "EPUB oficial do Project Gutenberg, preservado sem alterações.",
         "capturedAt": "2026-10-21"
       }
+    },
+    {
+      "id": "depois-da-morte",
+      "slug": "depois-da-morte",
+      "author": "Léon Denis",
+      "originalTitle": "Après la mort",
+      "year": 1890,
+      "language": "pt",
+      "category": "espiritualismo",
+      "readingMinutes": 600,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
+      "availability": "full",
+      "palette": ["#1b2738", "#3f4f6b", "#d8bd83"],
+      "motif": "orbit",
+      "title": {
+        "pt": "Depois da Morte",
+        "en": "After Death",
+        "es": "Después de la Muerte",
+        "fr": "Après la Mort"
+      },
+      "subtitle": {
+        "pt": "Exposição da doutrina dos Espíritos",
+        "en": "An exposition of the doctrine of Spirits",
+        "es": "Exposición de la doctrina de los Espíritus",
+        "fr": "Exposé de la doctrine des Esprits"
+      },
+      "description": {
+        "pt": "A obra de estreia de Léon Denis: a sobrevivência da alma, as vidas sucessivas e a justiça divina explicadas pela doutrina espírita.",
+        "en": "Léon Denis's first work: the survival of the soul, successive lives and divine justice explained through Spiritist doctrine.",
+        "es": "La primera obra de Léon Denis: la supervivencia del alma, las vidas sucesivas y la justicia divina explicadas por la doctrina espírita.",
+        "fr": "La première œuvre de Léon Denis : la survie de l'âme, les vies successives et la justice divine expliquées par la doctrine spirite."
+      },
+      "source": {
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febnet.org.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução FEB · edição digital 2008",
+        "editionNote": "PDF integral da edição FEB, com capa e apresentação Lumen. Uso autorizado pela FEB.",
+        "capturedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "apres-la-mort",
+      "slug": "apres-la-mort",
+      "author": "Léon Denis",
+      "originalTitle": "Après la mort",
+      "year": 1890,
+      "language": "fr",
+      "category": "espiritualismo",
+      "readingMinutes": 600,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "public-domain",
+      "contentVersion": "pd-1922",
+      "availability": "full",
+      "palette": ["#2a211b", "#5a4b3f", "#d8bd83"],
+      "motif": "constellation",
+      "title": {
+        "pt": "Depois da Morte",
+        "en": "After Death",
+        "es": "Después de la Muerte",
+        "fr": "Après la mort"
+      },
+      "subtitle": {
+        "pt": "Exposição da doutrina dos Espíritos",
+        "en": "An exposition of the doctrine of Spirits",
+        "es": "Exposición de la doctrina de los Espíritus",
+        "fr": "Exposé de la doctrine des Esprits"
+      },
+      "description": {
+        "pt": "Texto original francês de Léon Denis sobre a sobrevivência da alma, as vidas sucessivas e a justiça divina.",
+        "en": "Léon Denis's original French text on the survival of the soul, successive lives and divine justice.",
+        "es": "Texto original francés de Léon Denis sobre la supervivencia del alma, las vidas sucesivas y la justicia divina.",
+        "fr": "Texte original français de Léon Denis sur la survie de l'âme, les vies successives et la justice divine."
+      },
+      "source": {
+        "provider": "Centre Spirite Lyonnais Allan Kardec",
+        "publisher": "Librairie des Sciences Psychiques",
+        "url": "https://cslak.fr/",
+        "license": "Domínio público",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "Édition de 1922",
+        "editionNote": "PDF do original francês em domínio público, com capa e apresentação Lumen.",
+        "capturedAt": "2026-10-29"
+      }
     }
   ],
   "categories": [

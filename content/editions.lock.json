@@ -1,6 +1,6 @@
 {
   "capturedAt": "2026-10-21",
-  "generatedAt": "2026-10-22",
+  "generatedAt": "2026-10-29",
   "editions": {
     "o-livro-dos-espiritos": {
       "file": "public/books/o-livro-dos-espiritos.epub",
@@ -102,6 +102,24 @@
         "file": "public/books/o-ceu-e-o-inferno.pdf",
         "sha256": "f2e3e1251abeea40ed4faf977d491eca06da4a97349a136545c6cb83c8f707c8",
         "bytes": 2353648
+      }
+    },
+    "depois-da-morte": {
+      "language": "pt",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/depois-da-morte.pdf",
+        "sha256": "6c7af62a812cf63f6d814e91ff6dbca96e005fcc2f5af3d5d72f61253b7fdf80",
+        "bytes": 2245307
+      }
+    },
+    "apres-la-mort": {
+      "language": "fr",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/apres-la-mort.pdf",
+        "sha256": "88e0ece8d0af2bb4e28c5fdbca4d1e62c549ab4413c9be249e88987ced2e561a",
+        "bytes": 1130020
       }
     }
   }
