@@ -121,6 +121,42 @@
         "sha256": "88e0ece8d0af2bb4e28c5fdbca4d1e62c549ab4413c9be249e88987ced2e561a",
         "bytes": 1130020
       }
+    },
+    "no-invisivel": {
+      "language": "pt",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/no-invisivel.pdf",
+        "sha256": "f6622646fbd0765c8f436ebfeac36dee268906c1443b82b9e6cfa9a62db26ea6",
+        "bytes": 2881368
+      }
+    },
+    "dans-l-invisible": {
+      "language": "fr",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/dans-l-invisible.pdf",
+        "sha256": "fe5ad005a71ccd2dd21373eeae90d41f45a2cf5eb672cde9bcb470681b51e5bb",
+        "bytes": 1745464
+      }
+    },
+    "o-grande-enigma": {
+      "language": "pt",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/o-grande-enigma.pdf",
+        "sha256": "5f7df3eb99a1ee2ba9e7d66729bd5526de8821b3331576114a62d9086042d456",
+        "bytes": 1150308
+      }
+    },
+    "la-grande-enigme": {
+      "language": "fr",
+      "strategy": "pdf-only",
+      "pdf": {
+        "file": "public/books/la-grande-enigme.pdf",
+        "sha256": "ddc94feaefc43ac1b5a973612f32cab643fcbfc85c724f8d84b43adb44b958e9",
+        "bytes": 707471
+      }
     }
   }
 }

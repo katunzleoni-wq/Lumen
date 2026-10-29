@@ -503,6 +503,194 @@
         "editionNote": "PDF do original francês em domínio público, com capa e apresentação Lumen.",
         "capturedAt": "2026-10-29"
       }
+    },
+    {
+      "id": "no-invisivel",
+      "slug": "no-invisivel",
+      "author": "Léon Denis",
+      "originalTitle": "Dans l'invisible",
+      "year": 1911,
+      "language": "pt",
+      "category": "espiritualismo",
+      "readingMinutes": 800,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
+      "availability": "full",
+      "palette": ["#162a33", "#2f4858", "#d8bd83"],
+      "motif": "orbit",
+      "title": {
+        "pt": "No Invisível",
+        "en": "In the Invisible",
+        "es": "En lo Invisible",
+        "fr": "Dans l’invisible"
+      },
+      "subtitle": {
+        "pt": "Espiritismo e mediunidade",
+        "en": "Spiritism and mediumship",
+        "es": "Espiritismo y mediumnidad",
+        "fr": "Spiritisme et médiumnité"
+      },
+      "description": {
+        "pt": "Tratado experimental da mediunidade: as leis do mundo espiritual, os fenômenos, a educação do médium e os perigos da prática.",
+        "en": "An experimental treatise on mediumship: the laws of the spirit world, phenomena, mediumship training and its dangers.",
+        "es": "Tratado experimental de la mediumnidad: las leyes del mundo espiritual, los fenómenos, la educación del médium y sus peligros.",
+        "fr": "Traité expérimental de la médiumnité : les lois du monde spirituel, les phénomènes, la formation du médium et ses dangers."
+      },
+      "source": {
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febnet.org.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução FEB · edição digital 2008",
+        "editionNote": "PDF integral da edição FEB, com capa e apresentação Lumen. Uso autorizado pela FEB.",
+        "capturedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "dans-l-invisible",
+      "slug": "dans-l-invisible",
+      "author": "Léon Denis",
+      "originalTitle": "Dans l'invisible",
+      "year": 1911,
+      "language": "fr",
+      "category": "espiritualismo",
+      "readingMinutes": 800,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "public-domain",
+      "contentVersion": "pd-1911",
+      "availability": "full",
+      "palette": ["#241c2b", "#53415c", "#d8bd83"],
+      "motif": "constellation",
+      "title": {
+        "pt": "No Invisível",
+        "en": "In the Invisible",
+        "es": "En lo Invisible",
+        "fr": "Dans l’invisible"
+      },
+      "subtitle": {
+        "pt": "Espiritismo e mediunidade",
+        "en": "Spiritism and mediumship",
+        "es": "Espiritismo y mediumnidad",
+        "fr": "Spiritisme et médiumnité"
+      },
+      "description": {
+        "pt": "Texto original francês de Léon Denis sobre a mediunidade, suas leis, seus fenômenos e seus perigos.",
+        "en": "Léon Denis's original French treatise on mediumship, its laws, phenomena and dangers.",
+        "es": "Texto original francés de Léon Denis sobre la mediumnidad, sus leyes, fenómenos y peligros.",
+        "fr": "Texte original français de Léon Denis sur la médiumnité, ses lois, ses phénomènes et ses dangers."
+      },
+      "source": {
+        "provider": "Centre Spirite Lyonnais Allan Kardec",
+        "publisher": "Librairie des Sciences Psychiques",
+        "url": "https://cslak.fr/",
+        "license": "Domínio público",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "Édition de 1911",
+        "editionNote": "PDF do original francês em domínio público, com capa e apresentação Lumen.",
+        "capturedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "o-grande-enigma",
+      "slug": "o-grande-enigma",
+      "author": "Léon Denis",
+      "originalTitle": "La Grande Énigme",
+      "year": 1911,
+      "language": "pt",
+      "category": "espiritualismo",
+      "readingMinutes": 420,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "licensed",
+      "contentVersion": "feb-2026",
+      "availability": "full",
+      "palette": ["#2c2216", "#4b3a24", "#d8bd83"],
+      "motif": "sun",
+      "title": {
+        "pt": "O Grande Enigma",
+        "en": "The Great Enigma",
+        "es": "El Gran Enigma",
+        "fr": "La Grande Énigme"
+      },
+      "subtitle": {
+        "pt": "Deus e o Universo",
+        "en": "God and the Universe",
+        "es": "Dios y el Universo",
+        "fr": "Dieu et l’Univers"
+      },
+      "description": {
+        "pt": "Léon Denis diante do problema de Deus, da ordem do Universo, da lei circular da vida e do destino humano.",
+        "en": "Léon Denis on God, the order of the Universe, the circular law of life and human destiny.",
+        "es": "Léon Denis ante el problema de Dios, el orden del Universo, la ley circular de la vida y el destino humano.",
+        "fr": "Léon Denis face au problème de Dieu, à l'ordre de l'Univers, à la loi circulaire de la vie et à la destinée humaine."
+      },
+      "source": {
+        "provider": "Federação Espírita Brasileira",
+        "publisher": "FEB — Federação Espírita Brasileira",
+        "url": "https://www.febnet.org.br/",
+        "license": "Licença FEB 2026 · uso não comercial",
+        "licenseUrl": "https://www.febeditora.com.br/",
+        "edition": "Tradução FEB · edição digital 2008",
+        "editionNote": "PDF integral da edição FEB, com capa e apresentação Lumen. Uso autorizado pela FEB.",
+        "capturedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "la-grande-enigme",
+      "slug": "la-grande-enigme",
+      "author": "Léon Denis",
+      "originalTitle": "La Grande Énigme",
+      "year": 1911,
+      "language": "fr",
+      "category": "espiritualismo",
+      "readingMinutes": 420,
+      "formats": ["pdf"],
+      "pdfOnly": true,
+      "featured": false,
+      "addedAt": "2026-10-29",
+      "rights": "public-domain",
+      "contentVersion": "pd-1911",
+      "availability": "full",
+      "palette": ["#24281b", "#3b3f2a", "#d8bd83"],
+      "motif": "sun",
+      "title": {
+        "pt": "O Grande Enigma",
+        "en": "The Great Enigma",
+        "es": "El Gran Enigma",
+        "fr": "La Grande Énigme"
+      },
+      "subtitle": {
+        "pt": "Deus e o Universo",
+        "en": "God and the Universe",
+        "es": "Dios y el Universo",
+        "fr": "Dieu et l’Univers"
+      },
+      "description": {
+        "pt": "Texto original francês de Léon Denis sobre Deus, a ordem do Universo e o destino humano.",
+        "en": "Léon Denis's original French text on God, the order of the Universe and human destiny.",
+        "es": "Texto original francés de Léon Denis sobre Dios, el orden del Universo y el destino humano.",
+        "fr": "Texte original français de Léon Denis sur Dieu, l'ordre de l'Univers et la destinée humaine."
+      },
+      "source": {
+        "provider": "Centre Spirite Lyonnais Allan Kardec",
+        "publisher": "Librairie des Sciences Psychiques",
+        "url": "https://cslak.fr/",
+        "license": "Domínio público",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "edition": "Édition de 1911",
+        "editionNote": "PDF do original francês em domínio público, com capa e apresentação Lumen.",
+        "capturedAt": "2026-10-29"
+      }
     }
   ],
   "categories": [

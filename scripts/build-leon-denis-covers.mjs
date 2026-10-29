@@ -65,6 +65,38 @@ const works = [
     footer: "ÉDITION DE 1922 · FRANÇAIS · DOMAINE PUBLIC",
     accent: "#5a4b3f",
   },
+  {
+    slug: "no-invisivel",
+    title: "No Invisível",
+    subtitle: "Espiritismo e mediunidade",
+    author: "LÉON DENIS",
+    footer: "EDIÇÃO FEB · PORTUGUÊS · USO AUTORIZADO",
+    accent: "#2f4858",
+  },
+  {
+    slug: "dans-l-invisible",
+    title: "Dans l’invisible",
+    subtitle: "Spiritisme et médiumnité",
+    author: "LÉON DENIS",
+    footer: "ÉDITION 1911 · FRANÇAIS · DOMAINE PUBLIC",
+    accent: "#53415c",
+  },
+  {
+    slug: "o-grande-enigma",
+    title: "O Grande Enigma",
+    subtitle: "Deus e o Universo",
+    author: "LÉON DENIS",
+    footer: "EDIÇÃO FEB · PORTUGUÊS · USO AUTORIZADO",
+    accent: "#4b3a24",
+  },
+  {
+    slug: "la-grande-enigme",
+    title: "La Grande Énigme",
+    subtitle: "Dieu et l’Univers",
+    author: "LÉON DENIS",
+    footer: "ÉDITION 1911 · FRANÇAIS · DOMAINE PUBLIC",
+    accent: "#3b3f2a",
+  },
 ];
 
 for (const work of works) {

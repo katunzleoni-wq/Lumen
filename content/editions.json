@@ -80,5 +80,29 @@
     "year": 1919,
     "editionNote": "First edition, 1919",
     "sourceEpub": "the-vital-message.source.epub"
+  },
+  "no-invisivel": {
+    "strategy": "external",
+    "language": "pt",
+    "year": 1911,
+    "editionNote": "Tradução FEB · PDF integral autorizado em 2026"
+  },
+  "dans-l-invisible": {
+    "strategy": "external",
+    "language": "fr",
+    "year": 1911,
+    "editionNote": "Édition de 1911 · original em domínio público"
+  },
+  "o-grande-enigma": {
+    "strategy": "external",
+    "language": "pt",
+    "year": 1911,
+    "editionNote": "Tradução FEB · PDF integral autorizado em 2026"
+  },
+  "la-grande-enigme": {
+    "strategy": "external",
+    "language": "fr",
+    "year": 1911,
+    "editionNote": "Édition de 1911 · original em domínio público"
   }
 }

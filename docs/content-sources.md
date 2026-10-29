@@ -18,6 +18,10 @@ modernas sem autorização, capas comerciais, nem textos de autores com direitos
 | A Gênese                                             | Allan Kardec       | 1868 | pt     | Tradução de Guillon Ribeiro · FEB   | FEB               | https://www.febeditora.com.br/                  | Licença FEB 2026 · uso não comercial               | `a-genese.epub` e `.pdf`                                           |
 | Depois da Morte                                      | Léon Denis         | 1890 | pt     | Tradução FEB · edição digital 2008  | FEB               | https://www.febnet.org.br/                      | Licença FEB global de 29/10/2026                   | `depois-da-morte.pdf`                                              |
 | Après la mort                                        | Léon Denis         | 1890 | fr     | Édition de 1922                     | cslak             | https://cslak.fr/                               | Domínio público                                    | `apres-la-mort.pdf`                                                |
+| No Invisível                                         | Léon Denis         | 1911 | pt     | Tradução FEB · edição digital 2008  | FEB               | https://www.febnet.org.br/                      | Licença FEB global de 29/10/2026                   | `no-invisivel.pdf`                                                 |
+| Dans l’invisible                                     | Léon Denis         | 1911 | fr     | Édition de 1911                     | cslak             | https://cslak.fr/                               | Domínio público                                    | `dans-l-invisible.pdf`                                             |
+| O Grande Enigma                                      | Léon Denis         | 1911 | pt     | Tradução FEB · edição digital 2008  | FEB               | https://www.febnet.org.br/                      | Licença FEB global de 29/10/2026                   | `o-grande-enigma.pdf`                                              |
+| La Grande Énigme                                     | Léon Denis         | 1911 | fr     | Édition de 1911                     | cslak             | https://cslak.fr/                               | Domínio público                                    | `la-grande-enigme.pdf`                                             |
 | Instruction pratique sur les manifestations spirites | Allan Kardec       | 1858 | fr     | E. Dentu, Paris, 1858               | Internet Archive  | https://archive.org/details/bub_gb_o2bo1lt3i00C | Public Domain Mark 1.0                             | `instrucao-pratica-sobre-as-manifestacoes-espiritas.epub` e `.pdf` |
 | Mysterious Psychic Forces                            | Camille Flammarion | 1907 | en     | English edition, 1907; eBook #39279 | Project Gutenberg | https://www.gutenberg.org/ebooks/39279          | Domínio público nos EUA; Project Gutenberg License | `mysterious-psychic-forces.epub`                                   |
 | Lumen                                                | Camille Flammarion | 1872 | en     | English translation; eBook #43835   | Project Gutenberg | https://www.gutenberg.org/ebooks/43835          | Domínio público nos EUA; Project Gutenberg License | `lumen.epub`                                                       |
@@ -40,13 +44,15 @@ cada edição; `source.provider`, `source.url`, `source.license` e
 - **Project Gutenberg:** os três EPUBs são cópias oficiais do Project Gutenberg,
   preservadas sem modificação. A marca e a licença do Project Gutenberg são
   respeitadas; o projeto não cobra pelo acesso.
-- **FEB:** as cinco obras de Kardec e _Depois da Morte_, de Léon Denis, usam
-  edições FEB autorizadas. A licença global de 29/10/2026 está registrada em
-  [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). As edições Lumen têm capa
-  própria; as capas e os elementos editoriais da FEB só devem ser usados quando
-  expressamente cobertos pela licença.
-- **Léon Denis (francês):** _Après la mort_ usa o original de 1922 em domínio
-  público, obtido em `cslak.fr`; a capa é uma criação Lumen.
+- **FEB:** as cinco obras de Kardec e _Depois da Morte_, _No Invisível_ e
+  _O Grande Enigma_, de Léon Denis, usam edições FEB autorizadas. A licença
+  global de 29/10/2026 está registrada em
+  [`docs/licenses/feb-2026.md`](licenses/feb-2026.md). As capas do catálogo são
+  criações Lumen; as capas e os elementos editoriais da FEB só devem ser usados
+  quando expressamente cobertos pela licença.
+- **Léon Denis (francês):** _Après la mort_ (1922), _Dans l’invisible_ (1911) e
+  _La Grande Énigme_ (1911) usam os originais em domínio público, obtidos em
+  `cslak.fr`; as capas são criações Lumen.
 
 ## Transformação editorial
 

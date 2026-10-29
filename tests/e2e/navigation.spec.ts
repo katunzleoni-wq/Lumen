@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+﻿import { expect, test } from "@playwright/test";
 
 test("redirects the root to the detected locale", async ({ page }) => {
   await page.goto("/");
@@ -21,7 +21,7 @@ test("exposes every localized edition from the home page", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Lee con tiempo");
   await page.getByRole("link", { name: "Explorar el acervo" }).first().click();
   await expect(page).toHaveURL(/\/es\/biblioteca$/);
-  await expect(page.getByTestId("book-card")).toHaveCount(11);
+  await expect(page.getByTestId("book-card")).toHaveCount(15);
 });
 
 test("keeps key pages free of horizontal overflow", async ({ page }) => {
