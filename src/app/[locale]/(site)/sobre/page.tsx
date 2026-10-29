@@ -16,6 +16,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { isLocale, locales, type Locale } from "@/i18n";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
+import { isContactConfigured } from "@/lib/contact";
 import { protectedAuthors } from "@/content/authors";
 import { JsonLd } from "@/components/json-ld";
 import { ContactForm } from "@/components/about/contact-form";
@@ -50,7 +51,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
   const locale: Locale = params.locale;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
+  const contactEnabled = isContactConfigured();
 
   const faq = [
     { question: t("about.faq1Question"), answer: t("about.faq1Answer") },

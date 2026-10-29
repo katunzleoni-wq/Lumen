@@ -77,6 +77,10 @@ NEXT_PUBLIC_SITE_URL=https://sua-biblioteca.example
 
 A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.txt`.
 
+Para contato em produção, configure `RESEND_API_KEY`, `CONTACT_TO_EMAIL`,
+`CONTACT_FROM_EMAIL` e `NEXT_PUBLIC_CONTACT_ENABLED=true`. O passo a passo de
+preview, domínio e variáveis está em [`docs/deploy.md`](docs/deploy.md).
+
 ## Scripts
 
 | Comando                           | O que faz                                                 |
@@ -88,6 +92,7 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 | `npm run typecheck`               | `tsc --noEmit` em modo strict                             |
 | `npm test`                        | Testes unitários e de componente (Vitest)                 |
 | `npm run test:e2e`                | Fluxos críticos no Chromium (Playwright)                  |
+| `npm run screenshots`             | Atualiza as capturas em `docs/screenshots/`               |
 | `npm run format` / `format:check` | Prettier                                                  |
 | `npm run search:index`            | Reconstrói o índice Pagefind                              |
 | `npm run sources:fetch`           | Baixa as fontes públicas para `content-sources/raw/`      |
@@ -234,13 +239,13 @@ npm run test:e2e
 - Validação Zod no cliente e no servidor; honeypot e rate limit em memória no contato.
 - Trechos de busca sanitizados; JSON-LD serializado com escape de `<`.
 - Cabeçalhos `nosniff`, `Referrer-Policy`, `X-Frame-Options` e `Permissions-Policy`.
-- Nenhum segredo no cliente. O contato fica desativado por padrão (`NEXT_PUBLIC_CONTACT_ENABLED=false`); se habilitado, grava em `.data/contact.jsonl` (ignorado pelo Git) e ainda precisa de um provedor/queue em produção.
+- Nenhum segredo no cliente. O contato fica desativado por padrão (`NEXT_PUBLIC_CONTACT_ENABLED=false`); quando habilitado, envia via Resend e exige as variáveis `RESEND_API_KEY`, `CONTACT_TO_EMAIL` e `CONTACT_FROM_EMAIL`.
 
 ## Limitações conhecidas
 
 - As edições são integrais, mas não são edições críticas. Os textos franceses do Internet Archive passaram por OCR e podem conter erros residuais; a transcrição de _O Livro dos Espíritos_ vem do Wikisource e está sob CC BY-SA 4.0.
 - A “carta editorial” persiste apenas localmente na demonstração; não há envio de e-mail.
-- O contato está desativado por padrão. Quando habilitado, grava em disco local, apropriado para execução local/self-hosted, não para serverless somente-leitura.
+- O contato está desativado por padrão. Quando habilitado, depende do Resend e de um remetente com domínio verificado; o rate limit ainda é em memória.
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.
