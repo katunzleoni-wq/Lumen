@@ -112,6 +112,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  href="/licencas"
+                  className="text-papyrus-100/80 transition-colors hover:text-papyrus-50"
+                >
+                  {t("footer.licenses")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/sobre"
                   className="text-papyrus-100/80 transition-colors hover:text-papyrus-50"
                 >

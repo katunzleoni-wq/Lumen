@@ -22,6 +22,10 @@ function isRateLimited(key: string) {
 }
 
 export async function POST(request: Request) {
+  if (process.env.NEXT_PUBLIC_CONTACT_ENABLED !== "true") {
+    return NextResponse.json({ ok: false, error: "contact_disabled" }, { status: 503 });
+  }
+
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     request.headers.get("x-real-ip") ??

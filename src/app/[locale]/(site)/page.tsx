@@ -222,7 +222,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                 </div>
                 <div className="mt-3 flex items-center gap-2 border-t border-border/60 pt-3 text-[0.65rem] text-muted-foreground">
                   <span className="size-1.5 rounded-full bg-gold-500" aria-hidden="true" />
-                  {t("book.savedOffline")}
+                  {t("book.savedLocal")}
                   <span className="ml-auto flex gap-1.5">
                     {primary.formats.map((format) => (
                       <Badge key={format} variant="outline" className="px-2 py-0.5 text-[0.55rem]">

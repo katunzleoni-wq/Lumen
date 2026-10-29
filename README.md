@@ -14,7 +14,8 @@ Uma biblioteca digital editorial para leitura de obras espíritas em **EPUB** e 
 - **Busca multilíngue Pagefind** sobre obras, descrições, sumários e metadados de fonte, com filtros por idioma, tipo e categoria.
 - **Edições em português autorizadas pela FEB**: as cinco obras de Kardec, com texto de Guillon Ribeiro e PDF/EPUB próprios, e _Depois da Morte_, _No Invisível_ e _O Grande Enigma_, de Léon Denis, em PDF integral da edição FEB.
 - **Léon Denis em francês**: _Après la mort_, _Dans l’invisible_ e _La Grande Énigme_, nos originais em domínio público, em PDF.
-- **Formulários validados** com react-hook-form + Zod: inscrição na carta editorial (persistência local) e contato com API local, honeypot e rate limit.
+- **Formulários validados** com react-hook-form + Zod: carta editorial com persistência local e sem envio; contato desativado por padrão até existir um provedor seguro.
+- **Página de licenças** com a autorização FEB, o domínio público, os autores com direitos ativos e a licença do código.
 - **Design system próprio** baseado em Tailwind CSS e componentes shadcn/ui sobre Radix, com tipografia Plus Jakarta Sans + Lora, capas SVG geradas e identidade editorial consistente.
 - **Acessibilidade** com navegação por teclado, skip link, foco visível, rótulos, `aria-pressed`, diálogos Radix, contraste e respeito a `prefers-reduced-motion`.
 - **Qualidade automatizada**: ESLint, TypeScript `strict`, Prettier, Husky, lint-staged, commitlint, Vitest + Testing Library, Playwright e GitHub Actions.
@@ -152,6 +153,7 @@ A variável alimenta canonical, `hreflang`, Open Graph, `sitemap.xml` e `robots.
 | `/[locale]/busca`                        | Busca Pagefind com filtros                                  |
 | `/[locale]/favoritos`                    | Estante local via IndexedDB                                 |
 | `/[locale]/sobre`                        | Projeto, direitos, privacidade, FAQ e contato               |
+| `/[locale]/licencas`                     | Licenças, autorização FEB e procedência                     |
 
 ### Decisões de engenharia
 
@@ -213,7 +215,7 @@ npm run test:e2e
 ```
 
 - **Unitários/componentes:** filtros do catálogo, schemas, store do leitor, paridade de mensagens, card de obra e newsletter (validação + persistência mockada).
-- **E2E:** 24 cenários cobrindo redirecionamento e troca de idioma, catálogo por idioma, capa e edição coerentes, troca de edição na página e no leitor, filtros e deep links, busca Pagefind, leitor EPUB (tema, sumário e navegação), leitor PDF de 501 páginas (paginação e largura responsiva), troca de formato e favoritos com persistência após reload.
+- **E2E:** 26 cenários cobrindo redirecionamento e troca de idioma, catálogo por idioma, capa e edição coerentes, troca de edição na página e no leitor, filtros e deep links, busca Pagefind, leitor EPUB (tema, sumário e navegação), leitor PDF de 501 páginas (paginação e largura responsiva), troca de formato, favoritos, licenças e contato desativado.
 - **Hooks:** `pre-commit` roda lint-staged; `commit-msg` aplica Conventional Commits.
 - **CI:** dois jobs no GitHub Actions — qualidade/build e Playwright com Chromium.
 
@@ -232,13 +234,13 @@ npm run test:e2e
 - Validação Zod no cliente e no servidor; honeypot e rate limit em memória no contato.
 - Trechos de busca sanitizados; JSON-LD serializado com escape de `<`.
 - Cabeçalhos `nosniff`, `Referrer-Policy`, `X-Frame-Options` e `Permissions-Policy`.
-- Nenhum segredo no cliente. O endpoint de contato grava em `.data/contact.jsonl` (ignorado pelo Git) e deve ser trocado por um provedor/queue em produção.
+- Nenhum segredo no cliente. O contato fica desativado por padrão (`NEXT_PUBLIC_CONTACT_ENABLED=false`); se habilitado, grava em `.data/contact.jsonl` (ignorado pelo Git) e ainda precisa de um provedor/queue em produção.
 
 ## Limitações conhecidas
 
 - As edições são integrais, mas não são edições críticas. Os textos franceses do Internet Archive passaram por OCR e podem conter erros residuais; a transcrição de _O Livro dos Espíritos_ vem do Wikisource e está sob CC BY-SA 4.0.
 - A “carta editorial” persiste apenas localmente na demonstração; não há envio de e-mail.
-- O contato grava em disco local, apropriado para execução local/self-hosted, não para serverless somente-leitura.
+- O contato está desativado por padrão. Quando habilitado, grava em disco local, apropriado para execução local/self-hosted, não para serverless somente-leitura.
 - Não há autenticação, sincronização entre dispositivos, anotações ou DRM.
 - O leitor EPUB cobre obras reflowable; layouts fixos e EPUBs protegidos não são suportados.
 - O PDF é exibido página a página, com zoom; não há seleção contínua de múltiplas páginas.

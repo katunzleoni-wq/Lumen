@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1, changeFrequency: "weekly" as const },
     { path: "/biblioteca", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/sobre", priority: 0.6, changeFrequency: "monthly" as const },
+    { path: "/licencas", priority: 0.5, changeFrequency: "yearly" as const },
   ];
 
   const staticRoutes = locales.flatMap((locale) =>

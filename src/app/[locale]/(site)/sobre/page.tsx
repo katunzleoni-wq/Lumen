@@ -50,6 +50,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
   const locale: Locale = params.locale;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
+  const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
 
   const faq = [
     { question: t("about.faq1Question"), answer: t("about.faq1Answer") },
@@ -374,7 +375,28 @@ export default async function AboutPage({ params }: { params: { locale: string }
               </div>
             </div>
             <div className="bg-background p-7 sm:p-10 lg:p-12">
-              <ContactForm locale={locale} />
+              {contactEnabled ? (
+                <ContactForm locale={locale} />
+              ) : (
+                <div
+                  role="status"
+                  className="flex min-h-[20rem] flex-col justify-center rounded-2xl border border-gold-200/80 bg-gold-50/70 p-7"
+                >
+                  <p className="font-serif text-2xl leading-snug text-gold-900">
+                    {t("about.contactUnavailableTitle")}
+                  </p>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-gold-900/75">
+                    {t("about.contactUnavailableBody")}
+                  </p>
+                  <a
+                    href={`/${locale}/licencas`}
+                    className="mt-5 inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-forest-800 underline-offset-4 hover:underline"
+                  >
+                    {t("footer.licenses")}
+                    <ExternalLink className="size-3.5" aria-hidden="true" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

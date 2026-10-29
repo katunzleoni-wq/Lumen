@@ -79,7 +79,7 @@ export function BookReadingActions({
       )}
 
       <div className="flex items-center justify-between border-t border-border/60 pt-2">
-        <p className="text-[0.68rem] text-muted-foreground">{t("book.savedOffline")}</p>
+        <p className="text-[0.68rem] text-muted-foreground">{t("book.savedLocal")}</p>
         <ShareButton title={title} />
       </div>
     </div>

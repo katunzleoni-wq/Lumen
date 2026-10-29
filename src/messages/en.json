@@ -64,13 +64,13 @@
     "eyebrow": "International Spiritist Digital Library",
     "titleLead": "Read slowly.",
     "titleAccent": "Think freely.",
-    "description": "Foundational works, editorial curation and a reading experience designed for attention. Four languages, favourites and offline reading — on desktop or mobile.",
+    "description": "Foundational works, editorial curation and a reading experience designed for attention. Interface in four languages, favourites and progress in your browser — on desktop or mobile.",
     "primaryCta": "Explore the collection",
     "secondaryCta": "About the project",
     "statsBooks": "{count} works",
     "statsLanguages": "4 languages",
     "statsFormats": "EPUB + PDF",
-    "trust": "Public domain · offline reading · no sign-up"
+    "trust": "Public domain · browser reading · no sign-up"
   },
   "home": {
     "featuredEyebrow": "Curated",
@@ -88,13 +88,13 @@
     "quoteAuthor": "Allan Kardec",
     "quoteSource": "The Gospel According to Spiritism, ch. XV",
     "quoteNote": "A sentence to return to. Not as dogma, but as direction.",
-    "newsletterEyebrow": "One letter a month",
+    "newsletterEyebrow": "Local demo",
     "newsletterTitle": "Letters from Lumen",
-    "newsletterDescription": "One letter a month with a work, a passage and a question to carry with you. No noise, no hurry.",
+    "newsletterDescription": "This is a preview of the editorial letter flow. Sending is not active yet; the email is stored only in this browser.",
     "newsletterPlaceholder": "Your best email",
-    "newsletterCta": "Subscribe",
-    "newsletterSuccess": "Done. You are on the list — the next letter is on its way.",
-    "newsletterPrivacy": "Your details stay on this device. You can leave whenever you wish.",
+    "newsletterCta": "Save in this browser",
+    "newsletterSuccess": "Email saved only in this browser. No message was sent; letter delivery is not active yet.",
+    "newsletterPrivacy": "Your details stay only in this browser. Nothing is sent to servers.",
     "newsletterInvalid": "Enter a valid email address.",
     "principlesEyebrow": "Made for reading",
     "principlesTitle": "The essentials, carefully made",
@@ -104,7 +104,9 @@
     "offlineBody": "Favourites and reading progress stay in your browser, private and without an account.",
     "accessibilityTitle": "Access without barriers",
     "accessibilityBody": "Keyboard navigation, visible focus, careful contrast and respect for reduced-motion preferences.",
-    "sampleNotice": "Complete public-domain editions with source, licence and capture date recorded in our provenance register."
+    "sampleNotice": "Complete public-domain editions with source, licence and capture date recorded in our provenance register.",
+    "description": "Foundational works, editorial curation and a reading experience designed for attention. Interface in four languages, favourites and progress in your browser — on desktop or mobile.",
+    "trust": "Public domain · browser reading · no sign-up"
   },
   "library": {
     "eyebrow": "Collection",
@@ -172,7 +174,6 @@
     "relatedDescription": "Other works in conversation with this reading.",
     "contents": "In this edition",
     "chapter": "Chapter",
-    "savedOffline": "Available for offline reading",
     "share": "Share",
     "preview": "Preview",
     "quoteLabel": "Selected passage",
@@ -187,7 +188,8 @@
     "editionLanguageNotice": "This edition's language is {language}. The interface is in {interfaceLanguage}; the full text has not been translated yet.",
     "otherEditions": "Available editions",
     "noEditionInLanguage": "There is no edition in {language} yet.",
-    "readEditionIn": "Read in {language}"
+    "readEditionIn": "Read in {language}",
+    "savedLocal": "Download available · browser reading"
   },
   "reader": {
     "backToBook": "Back to the work",
@@ -281,22 +283,22 @@
     "rightsAuthorsView": "View profiles and publishers",
     "rightsAuthorsProtected": "Protected work",
     "privacyTitle": "Private by default",
-    "privacyBody": "We use no advertising trackers. Favourites, reading progress and the newsletter sign-up stay in your browser through IndexedDB. The only exception is the contact form, which sends what you type to the project's local storage. You can erase everything by clearing this site's data.",
+    "privacyBody": "We use no advertising trackers. Favourites, progress and the editorial letter stay in your browser through IndexedDB. The contact form remains disabled until a secure delivery channel is configured. You can erase everything by clearing this site's data.",
     "sampleTitle": "About the editions",
     "faqEyebrow": "Frequently asked questions",
     "sampleBody": "The editions are complete and were obtained from public collections: Wikisource, Internet Archive and Project Gutenberg. Original French and English sources are preserved; Portuguese, Spanish and English descriptions describe the works but do not replace licensed translations.",
     "faqTitle": "Frequently asked questions",
     "faq1Question": "Do I need an account to read?",
     "faq1Answer": "No. All reading is open. Favourites and progress stay in your browser and are not sent to servers.",
-    "faq2Question": "Are the books available offline?",
-    "faq2Answer": "Yes. Once a work is open, the file can be downloaded as EPUB or PDF. Progress and your shelf remain local.",
+    "faq2Question": "Can I download the books?",
+    "faq2Answer": "Yes. Each work can be downloaded as EPUB or PDF and read in your preferred app. The site does not yet keep an automatic offline cache.",
     "faq3Question": "How does search work?",
     "faq3Answer": "The Pagefind index is generated at build time in four languages. Search runs in the browser and never sends your queries away.",
     "faq4Question": "Can I contribute to the collection?",
     "faq4Answer": "The project is designed to receive new public-domain editions. Curation prioritises accurate metadata, accessibility and editorial clarity.",
     "contactTitle": "Talk to Lumen",
-    "contactBody": "Found an error, have a work to suggest or want to talk about the project? Write to us.",
-    "contactCta": "Send a message",
+    "contactBody": "Found an error, have a work to suggest or want to talk about the project? The contact channel is being prepared; in the meantime, see the sources and licences.",
+    "contactCta": "View contact channel",
     "contactName": "Name",
     "contactEmail": "Email",
     "contactMessage": "Message",
@@ -306,7 +308,9 @@
     "contactError": "We could not send it just now. Please try again.",
     "contactNameError": "Please enter your name.",
     "contactEmailError": "Please enter a valid email.",
-    "contactMessageError": "Please write at least 20 characters."
+    "contactMessageError": "Please write at least 20 characters.",
+    "contactUnavailableTitle": "Contact channel in preparation",
+    "contactUnavailableBody": "The form is not active in this version yet. In the meantime, sources and licences are documented on the licences page."
   },
   "footer": {
     "tagline": "A library for reading slowly, thinking freely and returning when you need to.",
@@ -320,7 +324,8 @@
     "terms": "Terms of use",
     "contact": "Contact",
     "source": "Source code",
-    "language": "Language"
+    "language": "Language",
+    "licenses": "Licences and rights"
   },
   "a11y": {
     "favoriteAdd": "Add {title} to favourites",
@@ -339,5 +344,23 @@
     "title": "This page lost its way",
     "description": "The address may have changed, or the page never existed. The library remains open.",
     "cta": "Back to home"
+  },
+  "licenses": {
+    "eyebrow": "Transparency",
+    "title": "Licences and rights",
+    "lead": "The collection combines public-domain editions and licensed editions. Every work states its source, edition and terms of use.",
+    "febTitle": "FEB authorisation",
+    "febBody": "The five Kardec works and the three Léon Denis works use editions from the Brazilian Spiritist Federation authorised by the global licence of 29 October 2026, valid for six years and worldwide. Credits and textual integrity are preserved. Later editions require a supplementary authorisation.",
+    "febLink": "Open the FEB authorisation (PDF)",
+    "publicTitle": "Public domain",
+    "publicBody": "The original texts of Allan Kardec, Léon Denis, Camille Flammarion and Arthur Conan Doyle are in the public domain. Each edition states its source and capture date.",
+    "authorsTitle": "Authors with active rights",
+    "authorsBody": "Chico Xavier, Divaldo Pereira Franco and Yvonne do Amaral Pereira appear only as editorial profiles. No protected text is hosted; please consult the official publishers.",
+    "codeTitle": "Code",
+    "codeBody": "The application code is under the MIT licence. Covers, descriptions and the visual identity are Lumen editorial productions.",
+    "correctionsTitle": "Corrections and contact",
+    "correctionsBody": "Found a text, attribution or licence error? The contact channel is being prepared; record the work, page and edition.",
+    "back": "Back to the library",
+    "updated": "Last updated: 29 October 2026"
   }
 }

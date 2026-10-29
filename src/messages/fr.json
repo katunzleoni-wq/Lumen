@@ -64,13 +64,13 @@
     "eyebrow": "Bibliothèque numérique spirite internationale",
     "titleLead": "Lire avec le temps.",
     "titleAccent": "Penser en liberté.",
-    "description": "Des œuvres fondamentales, une curation éditoriale et une expérience de lecture pensée pour l'attention. Quatre langues, des favoris et la lecture hors ligne — sur ordinateur ou mobile.",
+    "description": "Œuvres fondamentales, curation éditoriale et expérience de lecture pensée pour l’attention. Interface en quatre langues, favoris et progression dans le navigateur — sur ordinateur ou mobile.",
     "primaryCta": "Explorer le fonds",
     "secondaryCta": "Découvrir le projet",
     "statsBooks": "{count} œuvres",
     "statsLanguages": "4 langues",
     "statsFormats": "EPUB + PDF",
-    "trust": "Domaine public · lecture hors ligne · sans inscription"
+    "trust": "Domaine public · lecture dans le navigateur · sans inscription"
   },
   "home": {
     "featuredEyebrow": "Curation",
@@ -88,13 +88,13 @@
     "quoteAuthor": "Allan Kardec",
     "quoteSource": "L'Évangile selon le Spiritisme, chap. XV",
     "quoteNote": "Une phrase à laquelle revenir. Non comme un dogme, mais comme une direction.",
-    "newsletterEyebrow": "Une lettre par mois",
+    "newsletterEyebrow": "Démonstration locale",
     "newsletterTitle": "Lettres de Lumen",
-    "newsletterDescription": "Une lettre par mois avec une œuvre, un passage et une question à emporter. Sans bruit, sans hâte.",
+    "newsletterDescription": "Ceci est un aperçu du flux de la lettre éditoriale. L’envoi n’est pas encore actif ; l’adresse est conservée uniquement dans ce navigateur.",
     "newsletterPlaceholder": "Votre meilleure adresse",
-    "newsletterCta": "Je m'abonne",
-    "newsletterSuccess": "C'est fait. Vous êtes inscrit — la prochaine lettre arrive bientôt.",
-    "newsletterPrivacy": "Vos données restent sur cet appareil. Vous pouvez partir quand vous le souhaitez.",
+    "newsletterCta": "Enregistrer dans ce navigateur",
+    "newsletterSuccess": "Adresse enregistrée uniquement dans ce navigateur. Aucun message n’a été envoyé ; l’envoi de la lettre n’est pas encore actif.",
+    "newsletterPrivacy": "Vos données restent uniquement dans ce navigateur. Rien n’est envoyé aux serveurs.",
     "newsletterInvalid": "Saisissez une adresse électronique valide.",
     "principlesEyebrow": "Pensé pour lire",
     "principlesTitle": "L'essentiel, avec soin",
@@ -104,7 +104,9 @@
     "offlineBody": "Les favoris et la progression de lecture restent dans votre navigateur, en toute confidentialité et sans inscription.",
     "accessibilityTitle": "Un accès sans barrières",
     "accessibilityBody": "Navigation au clavier, focus visible, contraste soigné et respect des préférences de mouvement réduit.",
-    "sampleNotice": "Éditions intégrales du domaine public, avec source, licence et date de capture consignées dans notre registre de provenance."
+    "sampleNotice": "Éditions intégrales du domaine public, avec source, licence et date de capture consignées dans notre registre de provenance.",
+    "description": "Œuvres fondamentales, curation éditoriale et expérience de lecture pensée pour l’attention. Interface en quatre langues, favoris et progression dans le navigateur — sur ordinateur ou mobile.",
+    "trust": "Domaine public · lecture dans le navigateur · sans inscription"
   },
   "library": {
     "eyebrow": "Fonds",
@@ -172,7 +174,6 @@
     "relatedDescription": "D'autres œuvres en dialogue avec cette lecture.",
     "contents": "Dans cette édition",
     "chapter": "Chapitre",
-    "savedOffline": "Lecture disponible hors ligne",
     "share": "Partager",
     "preview": "Aperçu",
     "quoteLabel": "Passage choisi",
@@ -187,7 +188,8 @@
     "editionLanguageNotice": "Langue de cette édition : {language}. L’interface est en {interfaceLanguage} ; le texte intégral n’a pas encore été traduit.",
     "otherEditions": "Éditions disponibles",
     "noEditionInLanguage": "Il n’y a pas encore d’édition en {language}.",
-    "readEditionIn": "Lire en {language}"
+    "readEditionIn": "Lire en {language}",
+    "savedLocal": "Téléchargement disponible · lecture dans le navigateur"
   },
   "reader": {
     "backToBook": "Retour à l'œuvre",
@@ -281,22 +283,22 @@
     "rightsAuthorsView": "Voir les profils et éditeurs",
     "rightsAuthorsProtected": "Œuvre protégée",
     "privacyTitle": "Confidentiel par défaut",
-    "privacyBody": "Aucun traceur publicitaire. Les favoris, la progression de lecture et l’inscription à la lettre éditoriale restent dans votre navigateur via IndexedDB. Seul le formulaire de contact envoie ce que vous saisissez vers le stockage local du projet. Vous pouvez tout effacer en supprimant les données de ce site.",
+    "privacyBody": "Aucun traceur publicitaire. Les favoris, la progression et la lettre éditoriale restent dans votre navigateur via IndexedDB. Le formulaire de contact reste désactivé jusqu’à la configuration d’un canal d’envoi sécurisé. Vous pouvez tout effacer en supprimant les données de ce site.",
     "sampleTitle": "À propos des éditions",
     "faqEyebrow": "Questions fréquentes",
     "sampleBody": "Les éditions sont intégrales et proviennent de collections publiques : Wikisource, Internet Archive et Project Gutenberg. Les sources originales en français et en anglais sont conservées ; les descriptions en portugais, espagnol et anglais ne remplacent pas des traductions sous licence.",
     "faqTitle": "Questions fréquentes",
     "faq1Question": "Faut-il un compte pour lire ?",
     "faq1Answer": "Non. Toute la lecture est ouverte. Les favoris et la progression restent dans votre navigateur et ne sont pas envoyés à des serveurs.",
-    "faq2Question": "Les livres sont-ils disponibles hors ligne ?",
-    "faq2Answer": "Oui. Après avoir ouvert une œuvre, le fichier peut être téléchargé en EPUB ou PDF. La progression et l'étagère restent locales.",
+    "faq2Question": "Puis-je télécharger les livres ?",
+    "faq2Answer": "Oui. Chaque œuvre peut être téléchargée en EPUB ou PDF et lue dans votre application préférée. Le site ne propose pas encore de cache automatique pour la lecture hors ligne.",
     "faq3Question": "Comment fonctionne la recherche ?",
     "faq3Answer": "L'index Pagefind est généré lors de la compilation, en quatre langues. La recherche s'exécute dans le navigateur et n'envoie jamais vos requêtes au-dehors.",
     "faq4Question": "Puis-je contribuer au fonds ?",
     "faq4Answer": "Le projet est conçu pour accueillir de nouvelles éditions du domaine public. La curation privilégie l'exactitude des métadonnées, l'accessibilité et la clarté éditoriale.",
     "contactTitle": "Parler à Lumen",
-    "contactBody": "Une erreur, une œuvre à suggérer ou l'envie de parler du projet ? Écrivez-nous.",
-    "contactCta": "Envoyer un message",
+    "contactBody": "Une erreur, une œuvre à suggérer ou l’envie de parler du projet ? Le canal de contact est en préparation ; en attendant, consultez les sources et les licences.",
+    "contactCta": "Voir le canal de contact",
     "contactName": "Nom",
     "contactEmail": "Courriel",
     "contactMessage": "Message",
@@ -306,7 +308,9 @@
     "contactError": "L'envoi n'a pas fonctionné. Réessayez.",
     "contactNameError": "Indiquez votre nom.",
     "contactEmailError": "Indiquez une adresse électronique valide.",
-    "contactMessageError": "Écrivez au moins 20 caractères."
+    "contactMessageError": "Écrivez au moins 20 caractères.",
+    "contactUnavailableTitle": "Canal de contact en préparation",
+    "contactUnavailableBody": "Le formulaire n’est pas encore actif dans cette version. En attendant, les sources et licences sont documentées sur la page des licences."
   },
   "footer": {
     "tagline": "Une bibliothèque pour lire avec le temps, penser en liberté et revenir quand vous en avez besoin.",
@@ -320,7 +324,8 @@
     "terms": "Conditions d'utilisation",
     "contact": "Contact",
     "source": "Code source",
-    "language": "Langue"
+    "language": "Langue",
+    "licenses": "Licences et droits"
   },
   "a11y": {
     "favoriteAdd": "Ajouter {title} aux favoris",
@@ -339,5 +344,23 @@
     "title": "Cette page s'est perdue en chemin",
     "description": "L'adresse a peut-être changé, ou la page n'a jamais existé. La bibliothèque reste ouverte.",
     "cta": "Retour à l'accueil"
+  },
+  "licenses": {
+    "eyebrow": "Transparence",
+    "title": "Licences et droits",
+    "lead": "Le fonds réunit des éditions du domaine public et des éditions sous licence. Chaque œuvre indique sa source, son édition et ses conditions d’utilisation.",
+    "febTitle": "Autorisation FEB",
+    "febBody": "Les cinq œuvres de Kardec et les trois œuvres de Léon Denis utilisent des éditions de la Fédération Spirite Brésilienne autorisées par la licence globale du 29 octobre 2026, valable six ans et dans le monde entier. Les crédits et l’intégrité du texte sont préservés. Les éditions ultérieures nécessitent une autorisation complémentaire.",
+    "febLink": "Ouvrir l’autorisation FEB (PDF)",
+    "publicTitle": "Domaine public",
+    "publicBody": "Les textes originaux d’Allan Kardec, de Léon Denis, de Camille Flammarion et d’Arthur Conan Doyle sont dans le domaine public. Chaque édition indique sa source et sa date de capture.",
+    "authorsTitle": "Auteurs dont les droits sont actifs",
+    "authorsBody": "Chico Xavier, Divaldo Pereira Franco et Yvonne do Amaral Pereira apparaissent uniquement comme profils éditoriaux. Aucun texte protégé n’est hébergé ; consultez les éditeurs officiels.",
+    "codeTitle": "Code",
+    "codeBody": "Le code de l’application est sous licence MIT. Les couvertures, descriptions et l’identité visuelle sont des productions éditoriales Lumen.",
+    "correctionsTitle": "Corrections et contact",
+    "correctionsBody": "Une erreur de texte, d’attribution ou de licence ? Le canal de contact est en préparation ; indiquez l’œuvre, la page et l’édition.",
+    "back": "Retour à la bibliothèque",
+    "updated": "Dernière mise à jour : 29 octobre 2026"
   }
 }
